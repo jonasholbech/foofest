@@ -22,6 +22,9 @@ class Festival {
     }
     this.eventFrequency = Number(freq);
   }
+  setReservationDuration(duration) {
+    this.reservationDuration = duration;
+  }
   tick() {
     observer.publish(events.TICK);
     setTimeout(this.tick.bind(this), this.eventFrequency * 1000);
