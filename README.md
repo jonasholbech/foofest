@@ -34,3 +34,7 @@ We need you to build a webapp where the user can get an overview of:
 - any cancellations that might occur.
 
 You are free to add other features to help the guests explore the music, like browsing by genre, searching etc
+
+## The API
+
+[Read the documentation](https://github.com/jonasholbech/foofest/blob/master/THE-API.md)
