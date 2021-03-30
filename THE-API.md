@@ -56,9 +56,21 @@ Send a PUT request with the following payload/footprint
   }
 ```
 
+This will give you an `id` for that reservation. Reservation is valid for X minutes while the user fille out the rest of the payment/ordering info. Use the `id` together with the `/fullfill-reservation` endpoint to complete the order
+
 The area and available slots can be found in the `/available-slots` endpoint
 
 #### POST `/fullfill-reservation`
+
+Finalizes the reservation
+
+Send a POST request with the following payload
+
+```js
+{
+  id: String;
+}
+```
 
 ### Optional endpoints
 
