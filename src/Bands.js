@@ -1,5 +1,24 @@
-[
-  {
+var faker = require("faker");
+const Bands = require("./static/bands.json");
+const numBands = 6 * 7 * 3;
+const copy = [...Bands];
+let start = Bands.length;
+for (; start < numBands; start++) {
+  const band = {
+    name: faker.company.companyName(),
+    members: getMembers(),
+    genre: faker.music.genre(),
+    logo: faker.image.abstract(720),
+    bio: faker.lorem.paragraphs(),
+  };
+  copy.push(band);
+}
+console.log(copy.length, numBands);
+function getMembers() {
+  return [];
+}
+/*
+{
     "name": "A Perfect Circle",
     "members": [
       "Maynard James Keenan",
@@ -12,18 +31,6 @@
     "logo-credits": "By Michael John Stinsman - Own work, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=15811084",
     "logo": "A_Perfect_Circle_Logo_2011_-_Michael_John_Stinsman_InvisibleStudio_Productions.png",
     "bio": "A Perfect Circle is an American rock supergroup formed in 1999 by guitarist Billy Howerdel and Tool vocalist Maynard James Keenan. A Perfect Circle has released four studio albums, the first three during the early 2000s: Mer de Noms, their debut album in 2000, and followed up by Thirteenth Step in 2003; then in 2004, Emotive—an album of radically re-worked cover songs. Shortly after Emotive's release, the band went on hiatus; Keenan returned to Tool and started up solo work under the band name Puscifer. and Howerdel released a solo album, Keep Telling Myself It's Alright, under the moniker Ashes Divide. Band activity was sporadic in the following years; the band reformed in 2010, and played live shows on and off between 2010 and 2013, but fell into inactivity after the release of their greatest hits album, Three Sixty, and a live album box set, A Perfect Circle Live: Featuring Stone and Echo in late 2013. The band reformed in 2017 to record a fourth album, Eat the Elephant, which was released on April 20, 2018."
-  },
-  {
-    "name": "Tool",
-    "members": [
-      "Danny Carey",
-      "Adam Jones",
-      "Maynard James Keenan",
-      "Justin Chancellor"
-    ],
-    "genre": "Alternative metal",
-    "logo-credits": "By Shisma 11:13, 11 August 2013 (UTC) - Vectorised by Shisma. Originally appeared on the Album 10.000 Days in 2006, Public Domain, https://commons.wikimedia.org/w/index.php?curid=27660583",
-    "logo": "Tool_logo_2006.svg",
-    "bio": "Tool is an American rock band from Los Angeles. Formed in 1990, the group's line-up includes drummer Danny Carey, guitarist Adam Jones, and vocalist Maynard James Keenan. Justin Chancellor has been the band's bassist since 1995, replacing their original bassist Paul D'Amour. Tool has won four Grammy Awards, performed worldwide tours, and produced albums topping the charts in several countries. "
   }
-]
+*/
+module.exports = copy;

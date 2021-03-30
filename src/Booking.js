@@ -45,6 +45,7 @@ class Booking {
     observer.subscribe("TICK", () => this.tick());
   }
   getData() {
+    //TODO: remove direction from output
     return this.areas;
   }
   reserveSpot(area, amount) {
