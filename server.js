@@ -21,8 +21,9 @@ app.get("/bands", function (req, res) {
 app.get("/schedule", function (req, res) {
   res.json(FooFest.schedule);
 });
-//TODO: day or stage
+//TODO: day
 app.get("/schedule/:day", function (req, res) {
+  //`mon`, `tue`, `wed`, `thu`, `fri`, `sat`, `sun`
   const day = parseInt(req.params.day);
   res.json(FooFest.schedule);
 });
