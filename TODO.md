@@ -28,3 +28,7 @@ ticket prize
 //reservation payload
 
 ` [ { firstName:"", lastName:"", email:"", slotId:" } ]`
+
+## Own DB
+
+All payment person info etc should be stored in their own database
