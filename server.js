@@ -21,7 +21,7 @@ app.get("/bands", function (req, res) {
 app.get("/schedule", function (req, res) {
   res.json(FooFest.schedule);
 });
-//TODO: day
+//TODO: day? vil jeg have den?
 app.get("/schedule/:day", function (req, res) {
   //`mon`, `tue`, `wed`, `thu`, `fri`, `sat`, `sun`
   const day = parseInt(req.params.day);
@@ -30,10 +30,9 @@ app.get("/schedule/:day", function (req, res) {
 app.get("/events", function (req, res) {
   res.json(FooFest.eventLog.getEvents());
 });
-app.get("/available-slots", function (req, res) {
+app.get("/available-spots", function (req, res) {
   res.json(FooFest.booking.getData());
 });
-//reservation duration: //TODO:
 app.post("/settings", function (req, res) {
   const structure = req.body;
   if (structure.eventFrequency) {

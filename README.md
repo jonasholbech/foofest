@@ -37,4 +37,4 @@ You are free to add other features to help the guests explore the music, like br
 
 ## The API
 
-[Read the documentation](https://github.com/jonasholbech/foofest/blob/master/THE-API.md)
+[Read the documentation](https://jonasholbech.github.io/Frontend-Exam-Spring-2021-API-Docs/)
