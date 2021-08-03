@@ -97,9 +97,9 @@ class Booking {
       } else if (this.areas[areaIndex].available > 20) {
         this.areas[areaIndex].direction = -1;
       }
-      console.log(
+      /* console.log(
         this.areas.map((a) => a.area + ": " + a.available).join("\n")
-      );
+      ); */
     }
   }
 }

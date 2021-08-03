@@ -1,14 +1,14 @@
 # Front End Design Elective
 
-## Spring 2021
+## Autumn 2021
 
 Your task is to build two systems for our festival called FooFest.
 
 For that purpose, we have a lot of data, but more on that later.
 
-## System 1, the booking platform
+## System 1, the booking site
 
-We need you to build a platform where users can:
+We need you to build a site where users can:
 
 - Buy tickets
 - Reserve a "slot" at the different camping areas
