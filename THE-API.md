@@ -20,7 +20,9 @@ You only need one server per group, so choose one to do it.
 
 ### Endpoints
 
-The server will give you the following endpoints
+All endpoints are [documented here](https://jonasholbech.github.io/Frontend-Exam-Spring-2022-API-Docs/)
+
+<!-- The server will give you the following endpoints
 
 #### GET `/bands`
 
@@ -96,3 +98,4 @@ const initialSettings = {
   reservationDuration: 60 * 1000, //milliseconds
 };
 ```
+ -->
