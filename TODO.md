@@ -2,10 +2,6 @@
 
 change slot to spot in api and documentation
 
-## Bands
-
-images? how
-
 ## Events.js
 
 subscriber for (almost?) all events

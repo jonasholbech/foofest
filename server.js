@@ -44,6 +44,7 @@ app.post("/settings", function (req, res) {
   if (structure.reservationDuration) {
     FooFest.setReservationDuration(structure.reservationDuration);
   }
+
   if (
     !structure.eventFrequency &&
     !structure.eventChance &&
@@ -51,7 +52,7 @@ app.post("/settings", function (req, res) {
   ) {
     res.send({
       error:
-        "Wrong data format supplied, need 'eventFrequency', 'reservationDuration' or 'eventChance'",
+        "Wrong data format supplied, need 'eventFrequency', 'reservationDuration', or 'eventChance'",
       status: 500,
     });
   } else {

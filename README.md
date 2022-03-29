@@ -1,6 +1,6 @@
 # Front End Design Elective
 
-## Autumn 2021
+## Spring 2022
 
 <a href="https://heroku.com/deploy?template=https://github.com/jonasholbech/foofest/tree/master"><img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy"></a>
 
@@ -39,4 +39,4 @@ You are free to add other features to help the guests explore the music, like br
 
 ## The API
 
-[Read the documentation](https://jonasholbech.github.io/Frontend-Exam-Spring-2021-API-Docs/)
+[Read the documentation](https://jonasholbech.github.io/Frontend-Exam-Spring-2022-API-Docs/)
