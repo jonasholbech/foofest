@@ -2,8 +2,6 @@
 
 ## Spring 2022
 
-<a href="https://heroku.com/deploy?template=https://github.com/jonasholbech/foofest/tree/master"><img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy"></a>
-
 Your task is to build two systems for our festival called FooFest.
 
 For that purpose, we have a lot of data, but more on that later.
@@ -13,7 +11,7 @@ For that purpose, we have a lot of data, but more on that later.
 We need you to build a site where users can:
 
 - Buy tickets
-- Reserve a "slot" at the different camping areas
+- Reserve a "spot" at the different camping areas
 - The user must also be able to associate various other products/services to their tickets
 
   - green camping option + 249

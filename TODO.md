@@ -1,7 +1,5 @@
 # TODO
 
-change slot to spot in api and documentation
-
 ## Events.js
 
 subscriber for (almost?) all events

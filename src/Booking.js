@@ -8,31 +8,31 @@ class Booking {
     this.areas = [
       {
         area: "Svartheim",
-        slots: 400,
+        spots: 400,
         available: rndBetween(0, 400),
         direction: -1,
       },
       {
         area: "Nilfheim",
-        slots: 300,
+        spots: 300,
         available: rndBetween(0, 300),
         direction: -1,
       },
       {
         area: "Helheim",
-        slots: 100,
+        spots: 100,
         available: rndBetween(0, 100),
         direction: -1,
       },
       {
         area: "Muspelheim",
-        slots: 200,
+        spots: 200,
         available: rndBetween(0, 200),
         direction: -1,
       },
       {
         area: "Alfheim",
-        slots: 250,
+        spots: 250,
         available: rndBetween(0, 250),
         direction: -1,
       },
@@ -47,7 +47,7 @@ class Booking {
   getData() {
     return this.areas.map((oneArea) => ({
       area: oneArea.area,
-      slots: oneArea.slots,
+      spots: oneArea.spots,
       available: oneArea.available,
     }));
   }

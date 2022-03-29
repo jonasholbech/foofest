@@ -39,13 +39,13 @@ Gives you list of acts playing on the specified day. Will accept the following s
 
 Gives you a list of events (cancellations) since your last call to the endpoint. You can use this list to grab the cancellations
 
-#### GET `/available-slots`
+#### GET `/available-spots`
 
-Gives you a list of camping areas, and how many available slots there are. It is updated each time a slot is bought / reserved, so we suggest calling it regularily
+Gives you a list of camping areas, and how many available spots there are. It is updated each time a spot is bought / reserved, so we suggest calling it regularily
 
 #### PUT `/reserve-spot`
 
-Reserves `amount` slots at a given `area`
+Reserves `amount` spots at a given `area`
 
 Send a PUT request with the following payload/footprint
 
@@ -58,7 +58,7 @@ Send a PUT request with the following payload/footprint
 
 This will give you an `id` for that reservation. Reservation is valid for X minutes while the user fille out the rest of the payment/ordering info. Use the `id` together with the `/fullfill-reservation` endpoint to complete the order
 
-The area and available slots can be found in the `/available-slots` endpoint
+The area and available spots can be found in the `/available-spots` endpoint
 
 #### POST `/fullfill-reservation`
 
