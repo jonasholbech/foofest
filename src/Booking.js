@@ -45,8 +45,11 @@ class Booking {
     observer.subscribe("TICK", () => this.tick());
   }
   getData() {
-    //TODO: remove direction from output
-    return this.areas;
+    return this.areas.map((oneArea) => ({
+      area: oneArea.area,
+      slots: oneArea.slots,
+      available: oneArea.available,
+    }));
   }
   reserveSpot(area, amount) {
     const thisArea = this.areas.filter((a) => a.area === area)[0];
