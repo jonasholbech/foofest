@@ -13,7 +13,7 @@ for (; start < numBands; start++) {
   };
   copy.push(band);
 }
-console.log(copy.length, numBands);
+//console.log(copy.length, numBands);
 function getMembers() {
   return [];
 }
