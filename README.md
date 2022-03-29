@@ -37,4 +37,8 @@ You are free to add other features to help the guests explore the music, like br
 
 ## The API
 
-[Read the documentation](https://jonasholbech.github.io/Frontend-Exam-Spring-2022-API-Docs/)
+The backend team has created a little documentation for you guys.
+
+[Documentation for setting up your servers](THE-API.md)
+
+[Documentation for the API](https://jonasholbech.github.io/Frontend-Exam-Spring-2022-API-Docs/)
