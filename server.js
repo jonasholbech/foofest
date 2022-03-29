@@ -13,6 +13,7 @@ app.use(function (req, res, next) {
   res.header("Access-Control-Allow-Methods", "GET, POST, PUT, OPTIONS"); //OPTIONS
   next();
 });
+app.use(express.static("public"));
 const { FooFest } = require("./src/foofest");
 
 app.get("/bands", function (req, res) {

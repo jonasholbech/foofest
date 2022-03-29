@@ -1,5 +1,9 @@
 # TODO
 
+Docs
+describe images (either https or logos folder)
+image credits if has property
+
 ## Events.js
 
 subscriber for (almost?) all events
