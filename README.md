@@ -2,6 +2,8 @@
 
 ## Autumn 2021
 
+<a href="https://heroku.com/deploy?template=https://github.com/jonasholbech/foofest/tree/master"><img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy"></a>
+
 Your task is to build two systems for our festival called FooFest.
 
 For that purpose, we have a lot of data, but more on that later.
