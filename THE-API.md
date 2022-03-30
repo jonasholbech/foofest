@@ -16,7 +16,7 @@ You only need one server per group, so choose one to do it.
 6. Click "Deploy App"
 7. Once it's complete you can click "open" or was it "view app"?
 8. That should give you a lot of JSON
-9. You're almost done. If the service crashes or runs out of tickets, you should restart the server. You do that by going to Heroku.com, logging in and clicking "Restart all dynos" <br><img src="restart.png">
+9. You're almost done. If the service crashes or runs out of tickets, you should restart the server. You do that by going to Heroku.com, logging in and clicking "Restart all dynos" <br><img src="restartServer.png">
 
 ### Endpoints
 
