@@ -14,16 +14,21 @@ We need you to build a site where users can:
 - Reserve a "spot" at the different camping areas
 - The user must also be able to associate various other products/services to their tickets
 
-  - green camping option + 249
-  - ticket prize
+### Ticket options
 
-    - Regular 799
-    - VIP 1299
+- ticket prize
 
-  - Prebook camping area 99
-  - Tents including set up (requires pre booking)
-    - 2 person 299
-    - 3 person 399
+  - Regular 799,-
+  - VIP 1299,-
+
+### Camping options
+
+- Prebook camping area 99,-
+- Green camping option +249,-
+
+- Tents including set up (requires pre booking)
+  - 2 person 299,-
+  - 3 person 399,-
 
 ## System 2, the festival app
 
