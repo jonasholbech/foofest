@@ -57,7 +57,7 @@ class Booking {
       thisArea.available -= amount;
       const timeoutId = setTimeout(() => {
         thisArea.available += amount;
-      }, 60000);
+      }, this.fest.reservationDuration);
       const id = uniqid();
       this.timeoutIds.push({
         clearCallback: timeoutId,
