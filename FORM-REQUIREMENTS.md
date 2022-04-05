@@ -20,6 +20,7 @@ The following are the minimal requirements for the booking site.
 - The flow should contain everything you would expect from an online shopping experience, like personal info, checkout, etc.
 - We need the personal info for the owner of each ticket.
 - Content from the form (except payment info) should be stored in a database. That database is not provided by the API
+- The site it self will be the landing page of our festival, so make it awesome. We do not yet have a logo or a visual identity, go crazy
 
 You are free to add other features.
 

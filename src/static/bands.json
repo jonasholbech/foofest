@@ -155,5 +155,34 @@
     "logo": "620px-Black_Sabbath_(Iommi,_Osbourne,_Ward_and_Butler).JPG",
     "bio": "Black Sabbath are an English rock band, formed in Birmingham in 1968, by guitarist and main songwriter Tony Iommi, bassist and main lyricist Geezer Butler, singer Ozzy Osbourne, and drummer Bill Ward. The band have since experienced multiple line-up changes, with guitarist Iommi being the only constant presence in the band through the years. Originally formed as a blues rock band, the group soon adopted the Black Sabbath moniker and began incorporating occult themes with horror-inspired lyrics and tuned-down guitars. Despite an association with these two themes, Black Sabbath also composed songs dealing with social instability, political corruption, the dangers of drug abuse and apocalyptic prophecies of the horrors of war.",
     "genre": "Hard Rock"
+  },
+  {
+    "name": "Raised Fist",
+    "members": [
+      "Jimmy Tikkanen",
+      "Daniel Holmgren",
+      "Andreas Johansson",
+      "Alexander Hagman",
+      "Robert Wiiand"
+    ],
+    "logo": "raised_fist.jpg",
+    "logoCredits": "By Notwist - Own work, CC BY 2.5, https://commons.wikimedia.org/w/index.php?curid=1780996",
+    "bio": "Raised Fist is a Swedish hardcore punk band formed in 1993 in Luleå. It currently consists of guitarists Jimmy Tikkanen and Daniel Holmgren, bassist Andreas Johansson, vocalist Alexander Hagman and drummer Robert Wiiand. ",
+    "genre": "Hardcore Punk"
+  },
+  {
+    "name": "Refused",
+    "members": [
+      "Jonas Lidgren",
+      "Pär Hansson",
+      "Henrik Jansson",
+      "Jon Brännström",
+      "Magnus Höggren",
+      "Ulf Nybérg"
+    ],
+    "logo": "1280px-RefusedWayOutWest.jpg",
+    "logoCredits": "By killua-po - Own work, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=20767071",
+    "bio": "Refused (also known as the Refused) is a Swedish hardcore punk band originating from Umeå and formed in 1991. Refused is composed of vocalist Dennis Lyxzén, guitarist Kristofer Steen, drummer David Sandström, and bassist Magnus Flagge. Guitarist Jon Brännström was a member from 1994, through reunions, until he was fired in late-2014. Their lyrics are often of a non-conformist and politically far-left nature.",
+    "genre": "Hardcore Punk"
   }
 ]
