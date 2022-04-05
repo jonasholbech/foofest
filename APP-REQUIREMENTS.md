@@ -14,6 +14,14 @@ The system should show the following information
 - who's playing, where
 - any cancellations that might occur.
 
+### Images
+
+Since we don't have all the images of the bands playing yet, you'll have to do a little magic
+
+In the data you'll find a property called `logo`. If it starts with `https://` then just use it directly. If it starts with anything else, we have the image, and you can find it at `https://YOURAPP.heroku.com/logos/`
+
+Some images will have a property called `logoCredits`. If that property exists, you must use the data in the UI to give the author credits.
+
 ### Using the API
 
 The main endpoints you should be working with are:
