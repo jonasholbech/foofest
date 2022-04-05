@@ -22,7 +22,8 @@ You only need one server per group, so choose one to do it.
    <img src="deployment/instructions4.png" alt="Link your repository">
 8. Click "Connect"<br>
    <img src="deployment/instructions5.png" alt="Connect">
-9. Once it has finished, you should be able to click "Open app". That will open a rather boring page, try appending `/bands` to the URL to verify it's working
+9. Activate "Automatic Deploy" and then "Deploy Branch"
+10. Once it has finished, you should be able to click "Open app". That will open a rather boring page, try appending `/bands` to the URL to verify it's working
 
 ### Endpoints
 

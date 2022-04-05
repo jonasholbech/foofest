@@ -12,6 +12,7 @@ The system should show the following information
 
 - the bands playing at the festival
 - who's playing, where
+- - The stages can be seen in the `/schedule` endpoint and won't change ("Midgard", "Vanaheim", "Jotunheim")
 - any cancellations that might occur.
 
 ### Images
