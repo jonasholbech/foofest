@@ -30,6 +30,6 @@ We need you to build a webapp where the user can get an overview of:
 
 The backend team has created a little documentation for you guys.
 
-[Documentation for setting up your servers](THE-API.md)
+[Documentation for setting up your servers](DEPLOYMENT.md)
 
 [Documentation for the API](https://jonasholbech.github.io/Frontend-Exam-Spring-2022-API-Docs/)
