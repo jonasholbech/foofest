@@ -1,4 +1,4 @@
-var faker = require("faker");
+//var faker = require("faker");
 const bands = require("./static/bands.json");
 const { shuffle } = require("./util/shuffle");
 const { numberToTime } = require("./util/numberToTime");
@@ -48,20 +48,20 @@ class Schedule {
     };
     return temp;
   }
-  _getMembers() {
+  /* _getMembers() {
     let members = [];
     const amount = Math.floor(Math.random() * 4);
     for (let i = 0; i < amount; i++) {
       members.push(faker.name.firstName() + " " + faker.name.lastName());
     }
     return members;
-  }
+  } */
   fillSlots() {
     const copy = bands.map((band) => band.name);
     let start = copy.length;
-    for (; start < 6 * 7 * 3; start++) {
+    /* for (; start < 6 * 7 * 3; start++) {
       copy.push(faker.company.companyName());
-    }
+    } */
     shuffle(copy);
     this._fillStage(this.scenes[0], copy.slice(0, 42));
     this._fillStage(this.scenes[1], copy.slice(42, 84));
