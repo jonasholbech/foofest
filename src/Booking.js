@@ -52,18 +52,19 @@ class Booking {
     }));
   }
   reserveSpot(area, amount) {
+    let cleanAmount = Number(amount);
     const thisArea = this.areas.filter((a) => a.area === area)[0];
-    if (thisArea && thisArea.available >= amount) {
-      thisArea.available -= amount;
+    if (thisArea && thisArea.available >= cleanAmount) {
+      thisArea.available -= cleanAmount;
       const timeoutId = setTimeout(() => {
-        thisArea.available += amount;
+        thisArea.available += cleanAmount;
       }, this.fest.reservationDuration);
       const id = uniqid();
       this.timeoutIds.push({
         clearCallback: timeoutId,
         id: id,
         area: thisArea,
-        amount,
+        cleanAmount,
       });
       return {
         message: "Reserved",

@@ -64,6 +64,12 @@ app.post("/settings", function (req, res) {
 });
 
 app.put("/reserve-spot", function (req, res) {
+  if (Number(req.body.amount) < 1) {
+    res.send({
+      error: `Unable to reserve ${req.body.amount} spots`,
+      status: 500,
+    });
+  }
   res.send(FooFest.booking.reserveSpot(req.body.area, req.body.amount));
 });
 
