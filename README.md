@@ -8,21 +8,9 @@ For that purpose, we have a lot of data, but more on that later.
 
 ## System 1, the booking site
 
-We need you to build a site where users can:
-
-- Buy tickets
-- Reserve a "spot" at the different camping areas
-- The user must also be able to associate various other products/services to their tickets
-
 [Requirements for the booking site](FORM-REQUIREMENTS.md)
 
 ## System 2, the festival app
-
-We need you to build a webapp where the user can get an overview of:
-
-- the bands playing at the festival
-- who's playing, where
-- Optionally: any cancellations that might occur.
 
 [Requirements for the festival app](APP-REQUIREMENTS.md)
 

@@ -1,5 +1,13 @@
 # Front End Design Elective - Spring 2020
 
+/\*
+We need you to build a webapp where the user can get an overview of:
+
+- the bands playing at the festival
+- who's playing, where
+- Optionally: any cancellations that might occur.
+  \*/
+
 ## System 2, the festival app, requirements
 
 The following are the minimal requirements for the festival app.

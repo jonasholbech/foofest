@@ -10,8 +10,9 @@ The following are the minimal requirements for the booking site.
     - Regular 799,-
     - VIP 1299,-
 
-- During the purchase, the user can choose to prebook a camping spot.
-  - Base price 99,-
+- During the purchase, the user must choose to prebook a camping spot.
+  - Fixed booking fee 99,-
+    - Only paid once, even if multiple tickets are bought
   - Optional "Green camping option +249,-"
   - Optional, pay to have the crew set up X tents for you.
     - 2 person tent (including the tent) 299,-
@@ -20,7 +21,7 @@ The following are the minimal requirements for the booking site.
 - The flow should contain everything you would expect from an online shopping experience, like personal info, checkout, etc.
 - We need the personal info for the owner of each ticket.
 - Content from the form (except payment info) should be stored in a database. That database is not provided by the API
-- The site it self will be the landing page of our festival, so make it awesome. We do not yet have a logo or a visual identity, go crazy
+- The site itself will be the landing page of our festival, so make it awesome. We do not yet have a logo or a visual identity, go crazy
 
 You are free to add other features.
 
