@@ -12,7 +12,7 @@ We need you to build a webapp where the user can get an overview of:
 
 The following are the minimal requirements for the festival app.
 
-You are free to add other features to help the guests explore the music, like browsing by genre, searching etc
+You are free to add other features to help the guests explore the music, like browsing by genre, searching, adding to favourites etc
 
 ### Requirements
 
@@ -21,7 +21,7 @@ The system should show the following information
 - the bands playing at the festival
 - who's playing, where
 - - The stages can be seen in the `/schedule` endpoint and won't change ("Midgard", "Vanaheim", "Jotunheim")
-- any cancellations that might occur.
+- Optionally: any cancellations that might occur.
 
 ### Images
 
@@ -40,3 +40,8 @@ The main endpoints you should be working with are:
 - `/events`
 
 The bands won't change over time, but the schedule and events will.
+
+### Notes
+
+Using the `/events` endpoint is optional.
+Cancellations happen on a regular basis, it is optional if you want to reflect that in your UI or not.
