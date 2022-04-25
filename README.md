@@ -22,7 +22,7 @@ We need you to build a webapp where the user can get an overview of:
 
 - the bands playing at the festival
 - who's playing, where
-- any cancellations that might occur.
+- Optionally: any cancellations that might occur.
 
 [Requirements for the festival app](APP-REQUIREMENTS.md)
 
