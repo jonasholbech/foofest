@@ -1,4 +1,4 @@
-# Front End Design Elective - Spring 2020
+# Front End Design Elective - Spring 2022
 
 ## System 1, the booking site, requirements
 
@@ -23,7 +23,7 @@ The following are the minimal requirements for the booking site.
 - Content from the form (except payment info) should be stored in a database. That database is not provided by the API
 - The site itself will be the landing page of our festival, so make it awesome. We do not yet have a logo or a visual identity, go crazy
 
-You are free to add other features.
+You are free, and encouraged, to add other features.
 
 ### Using the API
 

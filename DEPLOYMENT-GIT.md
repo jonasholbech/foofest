@@ -1,6 +1,6 @@
 # Front End Design Elective
 
-## Spring 2020
+## Spring 2022
 
 ### What is this?
 
