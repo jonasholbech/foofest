@@ -15,12 +15,16 @@ app.use(function (req, res, next) {
 });
 app.use(express.static("public"));
 const { FooFest } = require("./src/foofest");
-
+const { initialSettings } = require("./src/static/settings");
 app.get("/bands", function (req, res) {
   res.json(FooFest.bands);
 });
 app.get("/schedule", function (req, res) {
   res.json(FooFest.schedule);
+});
+
+app.get("/version", function (req, res) {
+  res.json({ version: initialSettings.version });
 });
 //TODO: day? vil jeg have den? nok ikke
 app.get("/schedule/:day", function (req, res) {
