@@ -75,7 +75,7 @@ class Booking {
       };
     } else {
       return {
-        error: "Invalid area or not enough available spots",
+        error: "Invalid area, expired id or not enough available spots",
         status: 500,
       };
     }
