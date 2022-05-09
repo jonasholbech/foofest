@@ -85,7 +85,10 @@ class Booking {
     const obj = this.timeoutIds.find((e) => e.id === id);
     if (obj !== undefined && obj.expires > Date.now()) {
       clearTimeout(obj.clearCallback);
-      this.timeoutIds.splice(obj.id, 1);
+      this.timeoutIds.splice(
+        this.timeoutIds.findIndex((e) => e.id === id),
+        1
+      );
       return { message: "Reservation completed" };
     } else {
       return {
