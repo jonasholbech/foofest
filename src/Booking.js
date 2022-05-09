@@ -58,12 +58,14 @@ class Booking {
       thisArea.available -= cleanAmount;
       const timeoutId = setTimeout(() => {
         thisArea.available += cleanAmount;
+        clearTimeout(timeoutId);
       }, this.fest.reservationDuration);
       const id = uniqid();
       this.timeoutIds.push({
         clearCallback: timeoutId,
         id: id,
         area: thisArea,
+        expires: Date.now() + this.fest.reservationDuration,
         cleanAmount,
       });
       return {
@@ -93,6 +95,9 @@ class Booking {
     }
   }
   tick() {
+    /* this.timeoutIds = this.timeoutIds.filter(
+      (oneTimeout) => Date.now() < oneTimeout.expires
+    ); */
     if (Math.random() * 100 < this.fest.eventChance) {
       const areaIndex = rndBetween(0, this.areas.length - 1);
       this.areas[areaIndex].available += this.areas[areaIndex].direction;
