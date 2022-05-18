@@ -25,6 +25,8 @@ The following are the minimal requirements for the booking site.
 
 You are free, and encouraged, to add other features.
 
+For your own sake: Make sure that the user can only buy tickets from one area at a time.
+
 ### Using the API
 
 The endpoint `/available-spots` will give you a list of available camping spots that can be booked, including how many spots are left.
