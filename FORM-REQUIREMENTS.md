@@ -17,7 +17,7 @@ The following are the minimal requirements for the booking site.
   - Optional, pay to have the crew set up X tents for you.
     - 2 person tent (including the tent) 299,-
     - 3 person tent (including the tent) 399,-
-    - The number to tents must match the number of people in the group (number of tickets).
+    - The number of tents must match the number of people in the group (number of tickets).
 - The flow should contain everything you would expect from an online shopping experience, like personal info, checkout, etc.
 - We need the personal info for the owner of each ticket.
 - Content from the form (except payment info) should be stored in a database. That database is not provided by the API
