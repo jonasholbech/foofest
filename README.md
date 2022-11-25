@@ -18,6 +18,6 @@ For that purpose, we have a lot of data, but more on that later.
 
 The backend team has created a little documentation for you guys.
 
-[Documentation for setting up your servers](DEPLOYMENT.md)
+[Documentation for setting up your servers](DEPLOYMENT-FLY.io.md)
 
 [Documentation for the API](https://jonasholbech.github.io/Foofest-Exam-API-Docs/)
