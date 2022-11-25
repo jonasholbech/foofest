@@ -17,7 +17,9 @@ You only need one server per group, so choose one to do it. We'll be using fly.i
 1. clone this repository
 2. open your terminal inside the project
 3. Follow these instructions https://fly.io/docs/speedrun/
-4. Once it has finished, you should be able to run `flyctl open`. That will open a rather boring page, try appending `/bands` to the URL to verify it's working
+4. When they ask for your credit card, click "try for free"
+   <img src="deployment/flyiofree.png" alt="" />
+5. Once it has finished, you should be able to run `flyctl open`. That will open a rather boring page, try appending `/bands` to the URL to verify it's working
 
 ### Local server
 
