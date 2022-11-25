@@ -81,4 +81,4 @@ app.post("/fullfill-reservation", function (req, res) {
   res.send(FooFest.booking.fullfillReservation(req.body.id));
 });
 
-app.listen(process.env.PORT || 3000);
+app.listen(process.env.PORT || 8080);

@@ -27,7 +27,7 @@ Should be used as you develop. It'll be faster and use less resources.
 2. `npm install`
 3. `npm run dev`
 
-This will give you a server running on http://localhost:3000 try hitting that in your browser and append `/bands` at the end
+This will give you a server running on http://localhost:8080 try hitting that in your browser and append `/bands` at the end
 
 ### Endpoints
 
