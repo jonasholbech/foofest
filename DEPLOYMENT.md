@@ -1,5 +1,7 @@
 # Front End Design Elective
 
+## Deployment Heroku / git auth
+
 ## Autumn 2022
 
 ### What is this?
@@ -18,4 +20,4 @@ You only need one server per group, so choose one to do it.
 
 ### Endpoints
 
-All endpoints are [documented here](https://jonasholbech.github.io/Frontend-Exam-Spring-2022-API-Docs/)
+All endpoints are [documented here](https://jonasholbech.github.io/Foofest-Exam-API-Docs/)

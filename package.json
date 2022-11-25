@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "develop": "yarn dev:start",
+    "dev": "yarn dev:start",
     "dev:start": "nodemon server.js",
     "deploy": "git push heroku master"
   },

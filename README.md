@@ -1,4 +1,4 @@
-# Front End Design Elective - Spring 2022
+# Front End Design Elective - Autumn 2022
 
 ## Overview
 
@@ -20,4 +20,4 @@ The backend team has created a little documentation for you guys.
 
 [Documentation for setting up your servers](DEPLOYMENT.md)
 
-[Documentation for the API](https://jonasholbech.github.io/Frontend-Exam-Spring-2022-API-Docs/)
+[Documentation for the API](https://jonasholbech.github.io/Foofest-Exam-API-Docs/)
