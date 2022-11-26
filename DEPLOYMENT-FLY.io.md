@@ -36,7 +36,7 @@ This will give you a server running on http://localhost:8080 try hitting that in
 
 ### I refuse to add my credit card
 
-Fair enough. The work locally and you will not have the option of testing/sharing it online.
+Fair enough. Then work locally and you will not have the option of testing/sharing it online.
 
 1. Make a very clear note in your documentation, stating that we need to run your project locally
 2. If you make changes to the server code (images etc) make sure you've forked the repo and give us a link to that one as well
