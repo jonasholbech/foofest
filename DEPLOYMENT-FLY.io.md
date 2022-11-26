@@ -34,6 +34,13 @@ Should be used as you develop. It'll be faster and use less resources.
 
 This will give you a server running on http://localhost:8080 try hitting that in your browser and append `/bands` at the end
 
+### I refuse to add my credit card
+
+Fair enough. The work locally and you will not have the option of testing/sharing it online.
+
+1. Make a very clear note in your documentation, stating that we need to run your project locally
+2. If you make changes to the server code (images etc) make sure you've forked the repo and give us a link to that one as well
+
 ### Endpoints
 
 All endpoints are [documented here](https://jonasholbech.github.io/Foofest-Exam-API-Docs/)
