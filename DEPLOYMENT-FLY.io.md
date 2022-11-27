@@ -31,7 +31,8 @@ Should be used as you develop. It'll be faster and use less resources.
 
 1. Clone this repository
 2. `npm install`
-3. `npm run dev`
+3. `npm install --global yarn`
+4. `npm run dev`
 
 This will give you a server running on http://localhost:8080 try hitting that in your browser and append `/bands` at the end
 
