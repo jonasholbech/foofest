@@ -16,8 +16,18 @@ app.use(function (req, res, next) {
 app.use(express.static("public"));
 const { FooFest } = require("./src/foofest");
 const { initialSettings } = require("./src/static/settings");
+app.get("/", function (req, res) {
+  res.json({
+    isMyServerLive: true,
+    suggestions: "Try visiting /bands",
+  });
+});
 app.get("/bands", function (req, res) {
   res.json(FooFest.bands);
+});
+app.get("/bands/:slug", function (req, res) {
+  const slug = req.params.slug;
+  res.json(FooFest.bands.find((band) => band.slug === slug));
 });
 app.get("/schedule", function (req, res) {
   res.json(FooFest.schedule);
