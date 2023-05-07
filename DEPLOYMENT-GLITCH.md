@@ -12,10 +12,10 @@ You only need one server per group, so choose one to do it. We'll be using glitc
 
 (great for the exam / portfolio, should not used during development). Set it up and test your solution against it once in a while.
 
-1. clone this repository
-2. Copy the URL you would use for cloning the repo
+1. fork this repository
+2. Copy the URL you would use for cloning your repo
 3. Sign up for Glitch at https://glitch.com
-4. Click "New Project" and the "Import from GitHub"
+4. Click "New Project" and then "Import from GitHub"
 5. Paste in the URL you copied from you repository
 6. Once it has finished you'll be given a site name, like `free-simple-babcat`
 7. You server is now live at `https://free-simple-babcat.glitch.me` (replace my site name with yours)
@@ -25,7 +25,7 @@ You only need one server per group, so choose one to do it. We'll be using glitc
 
 Should be used as you develop. It'll be faster and use less resources.
 
-1. Clone this repository
+1. Clone your repository
 2. `npm install`
 3. `npm install --global yarn`
 4. `npm run dev`
