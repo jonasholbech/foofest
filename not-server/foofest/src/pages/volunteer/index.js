@@ -1,8 +1,11 @@
+import MainTitle from '@/components/MainTitle'
 import React from 'react'
 
 function Volunteer() {
   return (
-    <div>Volunteer</div>
+    <MainTitle
+    mainTitle="VOLUNTEER"
+    />
   )
 }
 

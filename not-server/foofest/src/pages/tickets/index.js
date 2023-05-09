@@ -1,8 +1,12 @@
 import React from 'react'
+import MainTitle from '@/components/MainTitle'
+
 
 function Tickets() {
   return (
-    <div>Tickets</div>
+    <MainTitle
+    mainTitle="TICKETS"
+    />
   )
 }
 

@@ -3,6 +3,8 @@ import { useState } from 'react'
 import { useEffect } from 'react'
 import Artist from '@/components/Artist'
 import styles from "./Line_up.module.css"
+import MainTitle from '@/components/MainTitle'
+
 
 
 function Line_up() {
@@ -40,6 +42,9 @@ function Line_up() {
 
   return (
     <>
+    <MainTitle
+    mainTitle="LINE UP"
+    />
     <ul className={styles.musical_ul}>
     {artistVariable}
     </ul>
