@@ -4,8 +4,6 @@
 
 ## Deployment git/heroku
 
-## Autumn 2022
-
 ### What is this?
 
 In order to solve the exam assignment, you have to hook up to a server we've built.
