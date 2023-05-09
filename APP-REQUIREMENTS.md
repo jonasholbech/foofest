@@ -1,4 +1,4 @@
-# Front End Design Elective - Spring 2022
+# Front End Design Elective - Autumn 2023
 
 ## System 2, the festival app, requirements
 
