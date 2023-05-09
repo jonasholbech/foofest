@@ -4,8 +4,8 @@ const version = "0.0.1";
 
 const { Schedule } = require("./Schedule.js");
 const { Festival } = require("./Festival.js");
-const { EventLog } = require("./EventLog");
-const { Booking } = require("./Booking");
+const { EventLog } = require("./EventLog.js");
+const { Booking } = require("./Booking.js");
 const Bands = require("./Bands.js");
 
 function createFest(name) {
