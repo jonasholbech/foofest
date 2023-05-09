@@ -6,6 +6,21 @@ import styles from '@/styles/Home.module.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
+
+  const api = `http://fierce-veiled-exception.glitch.me/bands`;
+
+
+  let fetchRes = fetch(api);
+  fetchRes
+    .then((res) => res.json())
+    .then((buyers) => {
+      console.log(buyers);
+    })
+    .catch((err) => {
+      console.error(err);
+    });
+
+
   return (
     <>
       <Head>
