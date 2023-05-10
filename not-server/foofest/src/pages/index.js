@@ -5,6 +5,8 @@ import styles from '@/styles/Home.module.css'
 import { useState } from 'react'
 import { useEffect } from 'react'
 import MainTitle from '@/components/MainTitle'
+import stayOut from "../imgs/stayout.jpg"
+import SecondaryTitle from '@/components/SecondaryTitle'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -18,20 +20,66 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={`${styles.main} ${inter.className}`}>
-      
-      <MainTitle 
-       mainTitle="WELCOME TO SHREK FESTIVAL"
-      />
+      <main className={styles.main}>
 
-        <div className={styles.center}>
-        <ul className={styles.musical_ul}>
+        {/*----------------- HERO SECTION----------------------- */}
+
+        <section className={styles.heroSection}>
+
+          <section>
+                <MainTitle 
+               mainTitle="WELCOME TO SHREK FESTIVAL"
+                />
+
+          </section>
+      
+          <section className={styles.shrekImgSection}>
+              <Image
+              className={styles.shrekImg}
+              src={stayOut}
+              alt='stay out img from Shrek'
+              />
+
+          </section>
+
+        </section>
+
+                {/*----------------- LINE UP SECTION----------------------- */}
+
+
+        <section className={styles.lineup}>
+
+        <SecondaryTitle
+               secondaryTitle="LINE UP"
+                />
+
+      </section>
+
+                      {/*----------------- VOLUNTEERS SECTION----------------------- */}
+
 
        
+      <section className={styles.volunteers}>
 
-        </ul>
-          
-        </div>
+      <SecondaryTitle
+               secondaryTitle="BECOME A VOLUNTEER"
+                />
+
+      </section>
+
+                      {/*----------------- TICKETS SECTION----------------------- */}
+
+
+       
+      <section className={styles.tickets}>
+
+                <SecondaryTitle
+                secondaryTitle="TICKETS"
+                 />
+
+      </section>
+      
+
 
        
       </main>

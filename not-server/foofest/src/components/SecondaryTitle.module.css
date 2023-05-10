@@ -1,0 +1,10 @@
+
+
+.secondaryTitle{
+    font-size: 5rem;
+    color: darkcyan;
+    font-weight: 500;
+    font-family: "Josefin Sans", sans-serif;
+    color: var(--shrek);
+    margin: 5rem auto 0 5rem;
+}
