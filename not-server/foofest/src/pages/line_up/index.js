@@ -4,49 +4,47 @@ import { useEffect } from 'react'
 import Artist from '@/components/Artist'
 import styles from "./Line_up.module.css"
 import MainTitle from '@/components/MainTitle'
+import Stage from '@/components/Stage'
 
 
 
 function Line_up() {
 
-    const [artists, setArtists] = useState([]);
-
-    useEffect(() => {
-      const api = `http://localhost:8080/bands`;
   
-  
-    let fetchRes = fetch(api);
-    fetchRes
-      .then((res) => res.json())
-      .then((data) => {
-       setArtists(data);
-       console.log(data);
-      })
-      .catch((err) => {
-        console.error(err);
-      });
-    }, [])
-  
-    const artistVariable = artists.map((musician) => {
 
-      let isItHttp = false;
+      // DISPLAYING SCHEDULE
 
-      let img = musician.logo
 
-     
-   
+    const [schedule, setSchedule] = useState([]);
 
-      return (
-      <Artist 
-      key={artists.indexOf(musician)}
-        bio={musician.bio}
-        genre={musician.genre}
-        members={musician.members}
-        name={musician.name}
-        logo={img}
-      />
-      )
+  useEffect(() => {
+    const apiStages = `http://localhost:8080/schedule`;
+
+
+  let fetchRes2 = fetch(apiStages);
+  fetchRes2
+    .then((res) => res.json())
+    .then((locations) => {
+
+    setSchedule(locations);
+
     })
+    .catch((err) => {
+      console.error(err);
+    });
+  }, [])
+
+  const bigThreeStages = Object.keys(schedule);
+  
+  const stagesAppearing = bigThreeStages.map((stage) => {
+    return (
+      <Stage 
+      key={bigThreeStages.indexOf(stage)}
+      stageTitle={stage}
+      />
+    )
+  })
+
 
 
   return (
@@ -54,9 +52,14 @@ function Line_up() {
     <MainTitle
     mainTitle="LINE UP"
     />
-    <ul className={styles.musical_ul}>
-    {artistVariable}
-    </ul>
+
+    <section className={styles.stages}>
+      
+      {stagesAppearing}
+
+    </section>
+
+
     </>
   )
 }

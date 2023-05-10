@@ -1,0 +1,9 @@
+.musical_ul{
+    width: 90vw;
+    height: 70vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin: 1rem auto;
+    overflow-y: auto;
+    }

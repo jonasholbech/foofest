@@ -1,9 +1,11 @@
-.musical_ul{
-    width: 90vw;
-    height: 50vh;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
-    margin: 1rem auto;
-    overflow-y: auto;
-    }
+
+
+.stages{
+    width: 100vw;
+    height: 60vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}

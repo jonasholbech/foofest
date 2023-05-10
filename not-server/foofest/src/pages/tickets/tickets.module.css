@@ -1,0 +1,46 @@
+
+.main{
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    font-family: "Josefin Sans";
+}
+
+.form{
+    border: 2px solid white;
+    width: 50rem;
+    height: 50rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.label{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 30%;
+    font-size: 1.5rem;
+}
+
+.label input{
+    padding: 0.8rem 1.5rem;
+    margin-left: 1rem;
+}
+
+.btn{
+    width: 50%;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.5s ease-in;
+}
+
+.btn:hover{
+    background-color: var(--shrek);
+    color: black;
+}

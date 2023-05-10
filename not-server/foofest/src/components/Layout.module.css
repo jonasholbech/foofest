@@ -26,3 +26,8 @@
     list-style-type: none;
     margin: 0 auto;
 }
+
+.navLi:hover{
+    text-decoration: underline 5px;
+
+}

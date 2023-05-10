@@ -3,7 +3,7 @@ const nextConfig = {
   reactStrictMode: true,
   images: {
     domains: [
-      'http://localhost:8080/bands'
+      'https://YOURAPP.heroku.com/logos/'
     ]
   }
 }

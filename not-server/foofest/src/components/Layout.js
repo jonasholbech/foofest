@@ -20,20 +20,24 @@ function Layout({children}) {
         />
         </Link>
         <ul className={law.nav_ul}>
-           <Link href="/line_up">
+           <Link href="/line_up" className={law.navLi}>
             <li>LINE UP</li>
            </Link>
 
-           <Link href="/volunteer">
+           <Link href="/volunteer" className={law.navLi}>
             <li>VOLUNTEER</li>
            </Link>
 
-           <Link href="/tickets">
+           <Link href="/tickets" className={law.navLi}>
             <li>TICKETS</li>
            </Link>
 
-           <Link href="/about">
+           <Link href="/about" className={law.navLi}>
             <li>ABOUT</li>
+           </Link>
+
+           <Link href="/bands" className={law.navLi}>
+            <li>BANDS</li>
            </Link>
         </ul>
     </nav>
