@@ -5,6 +5,7 @@ import Artist from '@/components/Artist'
 import styles from "./Line_up.module.css"
 import MainTitle from '@/components/MainTitle'
 import Stage from '@/components/Stage'
+import Link from 'next/link'
 
 
 
@@ -25,7 +26,7 @@ function Line_up() {
   fetchRes2
     .then((res) => res.json())
     .then((locations) => {
-
+    console.log(locations.Midgard)
     setSchedule(locations);
 
     })
@@ -37,11 +38,21 @@ function Line_up() {
   const bigThreeStages = Object.keys(schedule);
   
   const stagesAppearing = bigThreeStages.map((stage) => {
+
+    let route = "/" + stage.toLocaleLowerCase();
+
     return (
+      <Link
+      key={bigThreeStages.indexOf(stage)}
+
+      href={route} 
+      >
       <Stage 
       key={bigThreeStages.indexOf(stage)}
       stageTitle={stage}
       />
+      </Link>
+      
     )
   })
 
