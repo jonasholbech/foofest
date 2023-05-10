@@ -2,6 +2,7 @@ import React from 'react'
 import law from "./Layout.module.css"
 import Image from 'next/image'
 import Link from 'next/link'
+import messi from "../imgs/messi18.webp"
 
 function Layout({children}) {
   return (
@@ -12,7 +13,9 @@ function Layout({children}) {
         href="/"
         >
         <Image
-        
+        src={messi}
+        width={100}
+        height={100}
         alt='Insert img tak'
         />
         </Link>

@@ -4,6 +4,7 @@ import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
 import { useState } from 'react'
 import { useEffect } from 'react'
+import MainTitle from '@/components/MainTitle'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -19,6 +20,9 @@ export default function Home() {
       </Head>
       <main className={`${styles.main} ${inter.className}`}>
       
+      <MainTitle 
+       mainTitle="WELCOME TO SHREK FESTIVAL"
+      />
 
         <div className={styles.center}>
         <ul className={styles.musical_ul}>

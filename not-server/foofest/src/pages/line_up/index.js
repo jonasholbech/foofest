@@ -28,6 +28,14 @@ function Line_up() {
     }, [])
   
     const artistVariable = artists.map((musician) => {
+
+      let isItHttp = false;
+
+      let img = musician.logo
+
+     
+   
+
       return (
       <Artist 
       key={artists.indexOf(musician)}
@@ -35,6 +43,7 @@ function Line_up() {
         genre={musician.genre}
         members={musician.members}
         name={musician.name}
+        logo={img}
       />
       )
     })
