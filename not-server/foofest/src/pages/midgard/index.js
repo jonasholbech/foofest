@@ -12,10 +12,10 @@ function Midgard() {
  const [calendar, setCalendar] = useState([]);
 
  useEffect(() => {
-   const apiMidgard = `http://localhost:8080/schedule`;
+   const festivalData = `http://localhost:8080/schedule`;
 
 
- let fetchRes = fetch(apiMidgard);
+ let fetchRes = fetch(festivalData);
  fetchRes
    .then((res) => res.json())
    .then((info) => {

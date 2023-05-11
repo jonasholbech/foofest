@@ -5,10 +5,38 @@ import styles from "./Line_up.module.css"
 import MainTitle from '@/components/MainTitle/MainTitle'
 import Stage from '@/components/Stage/Stage'
 import Link from 'next/link'
+import CalendarTable from '@/components/CalendarTable/CalendarTable'
+import LineupNav from '@/components/LineupNav/LineupNav'
 
 
 
 function Line_up() {
+
+  // we should fetch the whole schedule and divide it into 3 initial states, one per stage
+
+  const [midgard, setMidgard] = useState([]);
+  const [vanaheim, setVanaheim] = useState([]);
+  const [jotunheim, setJotunheim] = useState([]);
+
+
+ useEffect(() => {
+   const festivalData = `http://localhost:8080/schedule`;
+
+
+ let fetchRes = fetch(festivalData);
+ fetchRes
+   .then((res) => res.json())
+   .then((info) => {
+    
+   setMidgard(info.Midgard);
+   setVanaheim(info.Vaneheim);
+   setJotunheim(info.Jotunheim);
+
+   })
+   .catch((err) => {
+     console.error(err);
+   });
+ }, [])
 
   
 
@@ -34,27 +62,6 @@ function Line_up() {
     });
   }, [])
 
-  const bigThreeStages = Object.keys(schedule);
-  
-  const stagesAppearing = bigThreeStages.map((stage) => {
-
-    let route = "/" + stage.toLocaleLowerCase();
-
-    return (
-      <Link
-      key={bigThreeStages.indexOf(stage)}
-
-      href={route} 
-      >
-      <Stage 
-      key={bigThreeStages.indexOf(stage)}
-      stageTitle={stage}
-      />
-      </Link>
-      
-    )
-  })
-
 
 
   return (
@@ -64,8 +71,11 @@ function Line_up() {
     />
 
     <section className={styles.stages}>
+
+      <LineupNav />
+
+      <CalendarTable />
       
-      {stagesAppearing}
 
     </section>
 
