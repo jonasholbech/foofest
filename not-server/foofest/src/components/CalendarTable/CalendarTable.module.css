@@ -1,3 +1,9 @@
+
+.sauronSection{
+   width: 100%;
+   height: 100%;
+}
+
 /* NAV */
 
 .nav{
@@ -34,7 +40,7 @@
 
 .tableSection {
     width: 100vw; 
-    height: 80vh;
+    height: 100vh;
     margin: 5rem auto 1rem auto;
     background-color: var(--white);
     border-radius: 10px;
@@ -42,6 +48,14 @@
     flex-direction: row;
     align-items: center;
     font-family: "Josefin Sans", sans-serif;
+ }
+
+ .stagesOutsideTable{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: space-around;
+   height: 80%;
  }
 
  .table{
