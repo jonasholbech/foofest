@@ -28,7 +28,11 @@ export default function Home() {
 
           <section>
                 <MainTitle 
-               mainTitle="WELCOME TO SHREK FESTIVAL"
+               mainTitle="SWAMPFEST 2023"
+                />
+
+                <secondaryTitle 
+                secondaryTitle="It's that swamp of the year"
                 />
 
           </section>
