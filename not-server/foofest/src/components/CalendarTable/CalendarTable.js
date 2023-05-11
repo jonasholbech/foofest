@@ -1,7 +1,7 @@
 import React from 'react'
 import organize from "./CalendarTable.module.css"
 import { useState, useEffect } from 'react'
-import ThirdTitle from './ThirdTitle';
+import ThirdTitle from '../ThirdTitle/ThirdTitle';
 
 function CalendarTable(props) {
 

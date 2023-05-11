@@ -1,7 +1,7 @@
 import React from 'react'
-import MainTitle from '@/components/MainTitle'
+import MainTitle from '@/components/MainTitle/MainTitle'
 import tickets from "./tickets.module.css"
-import SecondaryTitle from '@/components/SecondaryTitle'
+import SecondaryTitle from '@/components/SecondaryTitle/SecondaryTitle'
 import { useState, useEffect } from 'react'
 
 

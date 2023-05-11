@@ -1,10 +1,9 @@
 import React from 'react'
 import { useState } from 'react'
 import { useEffect } from 'react'
-import Artist from '@/components/Artist'
 import styles from "./Line_up.module.css"
-import MainTitle from '@/components/MainTitle'
-import Stage from '@/components/Stage'
+import MainTitle from '@/components/MainTitle/MainTitle'
+import Stage from '@/components/Stage/Stage'
 import Link from 'next/link'
 
 

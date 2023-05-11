@@ -1,4 +1,4 @@
-import MainTitle from '@/components/MainTitle'
+import MainTitle from '@/components/MainTitle/MainTitle'
 import React from 'react'
 
 function Volunteer() {

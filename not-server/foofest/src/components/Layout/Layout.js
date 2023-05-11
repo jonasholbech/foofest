@@ -2,7 +2,7 @@ import React from 'react'
 import law from "./Layout.module.css"
 import Image from 'next/image'
 import Link from 'next/link'
-import messi from "../imgs/messi18.webp"
+import messi from "../../imgs/messi18.webp"
 
 function Layout({children}) {
   return (

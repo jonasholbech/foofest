@@ -1,8 +1,8 @@
-import SecondaryTitle from '@/components/SecondaryTitle'
-import MainTitle from '@/components/MainTitle'
+import SecondaryTitle from '@/components/SecondaryTitle/SecondaryTitle'
+import MainTitle from '@/components/MainTitle/MainTitle'
 import React from 'react'
 import { useEffect, useState } from 'react';
-import CalendarTable from '@/components/CalendarTable';
+import CalendarTable from '@/components/CalendarTable/CalendarTable';
 
 function Midgard() {
 
