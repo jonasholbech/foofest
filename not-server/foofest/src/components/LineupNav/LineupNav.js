@@ -2,11 +2,17 @@ import React from 'react'
 import navigation from "./LineupNav.module.css"
 
 function LineupNav() {
+
+  function letCalendarKnow(st){
+    
+  }
+
+
   return (
     <>
     <nav className={navigation.nav}>
         <ul className={navigation.ul}>
-            <li className={navigation.li}>MON</li>
+            <li onClick={() => letCalendarKnow("MON")} className={navigation.li}>MON</li>
             <li className={navigation.li}>TUE</li>
             <li className={navigation.li}>WED</li>
             <li className={navigation.li}>THU</li>

@@ -1,12 +1,46 @@
+/* NAV */
+
+.nav{
+   width: 90%;
+   height: 10vh;
+   display: flex;
+   align-items: center;
+   justify-content: flex-end;
+   font-family: "Josefin Sans", sans-serif;
+}
+
+.ul{
+   width: 80%;
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: space-around;
+   list-style-type: none;
+}
+
+.li:nth-child(1){
+   font-weight: 800;
+   text-decoration: underline 10px solid var(--shrek);
+
+}
+
+.li:hover{
+   text-decoration: underline 10px solid var(--shrek);
+   cursor: pointer;
+}
+
+
+
+
 .tableSection {
-    width: 90vw; 
-    height: 60vh;
+    width: 100vw; 
+    height: 80vh;
     margin: 5rem auto 1rem auto;
     background-color: var(--white);
     border-radius: 10px;
     display: flex;
     flex-direction: row;
-    align-items: flex-end;
+    align-items: center;
     font-family: "Josefin Sans", sans-serif;
  }
 
@@ -15,7 +49,7 @@
     height: 100%;
     border-radius: 10px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: flex-start;
    font-family: "Josefin Sans", sans-serif;
    border: 2px solid white;
@@ -28,17 +62,160 @@
 
 
  .timeFrames{
-   width: 100%;
+   width: 100vw;
    height: 20%;
    display: flex;
    flex-direction: row;
    align-items: center;
    justify-content: space-around;
-   font-size: 2rem;
+   font-size: 1rem;
    overflow: auto;
    white-space: nowrap;
 }
 
+.specificTimeFrameZero{
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: space-between;
+   width: 10%;
+   opacity: 0.5;
+}
+
+.specificTimeFrame{
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: center;
+   width: 7%;
+   opacity: 0.5;
+
+}
+
+.specificTimeFrameLast{
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: flex-end;
+   width: 7%;
+   opacity: 0.5;
+
+}
+
+.tableBody{
+   width: 100vw;
+   height: 100%;
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+   justify-content: flex-start;
+   overflow: auto;
+}
+
+/* MIDGARD */
+
+.midgardActRow{
+   width: 100vw;
+   border-top: 5px solid white;
+   color: white;
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: space-between;
+   height: 33%;
+   overflow: auto;
+}
+
+.midgardAct{
+   border: 5px solid white;
+   color: white;
+   height: 100%;
+   font-size: 1rem;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: space-around;
+   text-align: center;
+   width: 15%;
+   line-break: strict;
+   transition: all 0.5s ease-in;
+   padding: 0.5rem;
+}
+
+.midgardAct:hover{
+   color: black;
+   background-color: var(--shrek);
+}
+
+
+/* VANAHEIM */
+
+.vanaheimActRow{
+   width: 100vw;
+   border-top: 5px solid white;
+   color: white;
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: flex-start;
+   height: 33%;
+}
+
+.vanaheimAct{
+   border: 5px solid white;
+   color: white;
+   height: 100%;
+   font-size: 1rem;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: space-around;
+   text-align: center;
+   width: 15%;
+   line-break: strict;
+   transition: all 0.5s ease-in;
+   padding: 0.5rem;
+}
+
+.vanaheimAct:hover{
+   color: black;
+   background-color: var(--shrek);
+}
+
+
+/* JOTUNHEIM */
+
+.jotunheimActRow{
+   width: 100vw;
+   border-top: 5px solid white;
+   color: white;
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: flex-start;
+   height: 33%;
+}
+
+.jotunheimAct{
+   border: 5px solid white;
+   color: white;
+   height: 100%;
+   font-size: 1rem;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: space-around;
+   text-align: center;
+   width: 15%;
+   line-break: strict;
+   transition: all 0.5s ease-in;
+   padding: 0.5rem;
+}
+
+.jotunheimAct:hover{
+   color: black;
+   background-color: var(--shrek);
+}
 
 
 

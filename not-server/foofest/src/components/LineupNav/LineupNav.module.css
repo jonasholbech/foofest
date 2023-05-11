@@ -22,5 +22,6 @@
 }
 
 .li:hover{
-
+    text-decoration: underline 10px solid var(--shrek);
+    cursor: pointer;
 }
