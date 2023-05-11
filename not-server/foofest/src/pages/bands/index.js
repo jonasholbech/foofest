@@ -6,11 +6,6 @@ import MainTitle from '@/components/MainTitle/MainTitle';
 
 function Bands() {
 
-  // EXTRA INFO AFTER YOU CLICK THE ARTIST
-
-  const [extraInfo, setExtraInfo] = useState([])
-
-
   // DISPLAYING ARTISTS
 
   const [artists, setArtists] = useState([]);
@@ -36,35 +31,48 @@ function Bands() {
 
     return (
 
-      <Artist 
-      key={artists.indexOf(musician)}
-      name={musician.name}
-      bio={musician.bio}
-      genre={musician.genre}
-      members={musician.members}
-      alt={musician.logoCredits}
-      />
-  //      <article className={bands.artist_card} key={artists.indexOf(musician)}>
-  //        <h3 className={bands.name}>{musician.name}</h3>
-  //        <p>{extraInfo.bio}</p> 
-  //        <span className={bands.genre}>{musician.genre}</span>
-  //        <button className={bands.button} onClick={() => displayModal({musician})}>INFO</button>
-  //      
-  //      </article>
+      <div>
+        <Artist name={musician.name}>
+
+        <article className={bands.artist_card}>
+              
+              <img className={bands.artistImg}></img>
+              
+              
+              <div className={bands.artistData}>
+                  <h3 className={bands.name}>{musician.name}</h3>
+                  <p className={bands.bio}>Biography: {musician.bio}</p> 
+                  <span className={bands.members}>Band Members: {musician.members}</span>
+
+                  <span className={bands.genre}>Genre: {musician.genre}</span>
+              </div>
+
+              
+      
+        </article>
+
+      </Artist>
+
+    </div>
+        
+    )   
+     
+ //     <Artist 
+ //     key={artists.indexOf(musician)}
+ //     name={musician.name}
+ //     bio={musician.bio}
+ //     genre={musician.genre}
+ //     members={musician.members}
+ //     alt={musician.logoCredits}
+ //     />
    
-    )
+  //  )
   })
 
   //
 
 
-  // how can you add a p tag on the article once you click on the btn?
 
-  function displayModal({musician}){
-
-    setExtraInfo(musician);    
-    
-  }
 
   
 
