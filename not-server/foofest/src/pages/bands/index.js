@@ -7,6 +7,7 @@ import Image from 'next/image';
 
 function Bands() {
 
+
   // DISPLAYING ARTISTS
 
   const [artists, setArtists] = useState([]);

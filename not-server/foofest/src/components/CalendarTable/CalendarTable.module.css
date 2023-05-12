@@ -24,13 +24,14 @@
    list-style-type: none;
 }
 
-.li:nth-child(1){
+.underlinedBeauty{
    font-weight: 800;
    text-decoration: underline 10px solid var(--shrek);
+   cursor: pointer;
 
 }
 
-.li:hover{
+.ul li:hover{
    text-decoration: underline 10px solid var(--shrek);
    cursor: pointer;
 }
