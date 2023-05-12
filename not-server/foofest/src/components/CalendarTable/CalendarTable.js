@@ -174,6 +174,7 @@ function CalendarTable() {
               <tr className={organize.midgardActRow}>
 
               {midgard.map(el => {
+
                   return (
                     <div className={organize.midgardAct}>
                     <th key={el.id}>{el.act}</th>

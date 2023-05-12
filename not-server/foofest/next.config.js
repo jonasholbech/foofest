@@ -2,9 +2,16 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: [
-      'https://YOURAPP.heroku.com/logos/'
-    ]
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'placeimg.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'fierce-veiled-exception.glitch.me',
+      },
+    ],
   }
 }
 
