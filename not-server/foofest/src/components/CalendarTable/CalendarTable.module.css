@@ -129,13 +129,13 @@
 /* MIDGARD */
 
 .midgardActRow{
-   width: 100vw;
+   width: 150vw;
    border-top: 5px solid white;
    color: white;
    display: flex;
    flex-direction: row;
    align-items: center;
-   justify-content: space-between;
+   justify-content: space-evenly;
    height: 33%;
    overflow: auto;
 }
@@ -150,7 +150,7 @@
    align-items: center;
    justify-content: space-around;
    text-align: center;
-   width: 15%;
+   width: 12vw;
    line-break: strict;
    transition: all 0.5s ease-in;
    padding: 0.5rem;
@@ -165,13 +165,13 @@
 /* VANAHEIM */
 
 .vanaheimActRow{
-   width: 100vw;
+   width: 150vw;
    border-top: 5px solid white;
    color: white;
    display: flex;
    flex-direction: row;
    align-items: center;
-   justify-content: flex-start;
+   justify-content: space-evenly;
    height: 33%;
 }
 
@@ -185,7 +185,7 @@
    align-items: center;
    justify-content: space-around;
    text-align: center;
-   width: 15%;
+   width: 12vw;
    line-break: strict;
    transition: all 0.5s ease-in;
    padding: 0.5rem;
@@ -200,13 +200,13 @@
 /* JOTUNHEIM */
 
 .jotunheimActRow{
-   width: 100vw;
+   width: 150vw;
    border-top: 5px solid white;
    color: white;
    display: flex;
    flex-direction: row;
    align-items: center;
-   justify-content: flex-start;
+   justify-content: space-evenly;
    height: 33%;
 }
 
@@ -220,7 +220,7 @@
    align-items: center;
    justify-content: space-around;
    text-align: center;
-   width: 15%;
+   width: 12vw;
    line-break: strict;
    transition: all 0.5s ease-in;
    padding: 0.5rem;
