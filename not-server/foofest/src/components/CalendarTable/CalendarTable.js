@@ -26,19 +26,69 @@ function CalendarTable() {
       setMidgard(newData.Midgard.mon);
       setVanaheim(newData.Vanaheim.mon);
       setJotunheim(newData.Jotunheim.mon);
+      setAllSchedule(newData)
      }
    });
    // keep an eye on the schedule stored as state, to see if it changes
-}, [allSchedule]);
-
-  // store each stage as state
-  // and update it based on onClick functions
+}, []);
 
 
   // when the user clicks a day of the nav, the state should change
   // to "stage + day of week: midgard.fri"
 
-  const [dayOfNav, setDayOfNav] = useState("monday")
+  function changeDay(day){
+
+    if (day === "mon"){
+      setMidgard(allSchedule.Midgard.mon);
+      setVanaheim(allSchedule.Vanaheim.mon);
+      setJotunheim(allSchedule.Jotunheim.mon);
+    
+    } else if (day === "tue"){
+      setMidgard(allSchedule.Midgard.tue);
+      setVanaheim(allSchedule.Vanaheim.tue);
+      setJotunheim(allSchedule.Jotunheim.tue);
+    
+    } else if(day === "wed"){
+      setMidgard(allSchedule.Midgard.wed);
+      setVanaheim(allSchedule.Vanaheim.wed);
+      setJotunheim(allSchedule.Jotunheim.wed);
+    
+    } else if (day === "thu"){
+      setMidgard(allSchedule.Midgard.thu);
+      setVanaheim(allSchedule.Vanaheim.thu);
+      setJotunheim(allSchedule.Jotunheim.thu);
+    
+    } else if (day === "fri"){
+      setMidgard(allSchedule.Midgard.fri);
+      setVanaheim(allSchedule.Vanaheim.fri);
+      setJotunheim(allSchedule.Jotunheim.fri);
+    
+    } else if (day === "sat"){
+      setMidgard(allSchedule.Midgard.sat);
+      setVanaheim(allSchedule.Vanaheim.sat);
+      setJotunheim(allSchedule.Jotunheim.sat);
+    
+    } else if (day === "sun"){
+      setMidgard(allSchedule.Midgard.sun);
+      setVanaheim(allSchedule.Vanaheim.sun);
+      setJotunheim(allSchedule.Jotunheim.sun);
+    }
+
+
+    console.log(allSchedule)
+    
+    let dayInput = day;
+
+    // dont use a variable its  not working right now
+
+
+    
+  //
+  
+ // setMidgard(allSchedule.Midgard.dayInput);
+  //  setVanaheim(allSchedule.Vanaheim.day);
+  //  setJotunheim(allSchedule.Jotunheim.day);
+  }
 
 
 
@@ -48,13 +98,13 @@ function CalendarTable() {
 
   <nav className={organize.nav}>
         <ul className={organize.ul}>
-            <li className={organize.li}>MON</li>
-            <li className={organize.li}>TUE</li>
-            <li className={organize.li}>WED</li>
-            <li className={organize.li}>THU</li>
-            <li className={organize.li}>FRI</li>
-            <li className={organize.li}>SAT</li>
-            <li className={organize.li}>SUN</li>
+            <li onClick={() =>changeDay("mon")} className={organize.li}>MON</li>
+            <li onClick={() =>changeDay("tue")} className={organize.li}>TUE</li>
+            <li onClick={() =>changeDay("wed")} className={organize.li}>WED</li>
+            <li onClick={() =>changeDay("thu")} className={organize.li}>THU</li>
+            <li onClick={() =>changeDay("fri")} className={organize.li}>FRI</li>
+            <li onClick={() =>changeDay("sat")} className={organize.li}>SAT</li>
+            <li onClick={() =>changeDay("sun")} className={organize.li}>SUN</li>
         </ul>
     </nav>
     
