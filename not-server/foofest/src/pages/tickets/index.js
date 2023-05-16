@@ -3,6 +3,7 @@ import MainTitle from '@/components/MainTitle/MainTitle'
 import tickets from "./tickets.module.css"
 import SecondaryTitle from '@/components/SecondaryTitle/SecondaryTitle'
 import { useState, useEffect } from 'react'
+import Camp_card from '@/components/Camp_card/Camp_card'
 
 
 function Tickets() {
@@ -23,37 +24,38 @@ function Tickets() {
     mainTitle="TICKETS"
     />
 
-    <form className={tickets.form}>
-      <SecondaryTitle
-      secondaryTitle="Start your journey"
-      />
-     
+    <section className={tickets.campGrid}>
 
-      <label className={tickets.label}>
-            <span>Name</span>
-            <input
-           //   onChange={storeSize}
-              id="name"
-              name="name"
-              placeholder="John Doe"
-              required
-            />
-          </label>
+    <Camp_card
+    title="SVARTHEIM"
+    bio="Unveil the enchanting nights beneath a sky ablaze with stars."
+    />
 
-          <label className={tickets.label}>
-            <span>Email</span>
-            <input
-           //   onChange={storeSize}
-              id="email"
-              name="email"
-              placeholder="john@doe"
-              required
-            />
-          </label>
+    <Camp_card
+    title="NILFHEIM"
+    bio="Enter Nilfheim, where serenity meets excitement."
+    />
 
-          <button className={tickets.btn}>NEXT</button>
+    <Camp_card
+    title="HELHEIM"
+    bio="Immerse yourself in the vibrant spirit of Helheim."
+    />
 
-    </form>
+    <Camp_card
+    title="MUSPELHEIM"
+    bio="Welcome to Muspelheim, where the fire of the festival burns brightest."
+    />
+
+    <Camp_card
+    title="ALFHEIM"
+    bio="Step into Alfheim, a magical enclave filled with whimsical charm."
+    />
+
+
+    
+
+    </section>
+    
 
 
 

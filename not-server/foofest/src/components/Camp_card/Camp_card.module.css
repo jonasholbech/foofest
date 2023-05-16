@@ -1,0 +1,70 @@
+
+.card{
+    border-radius: 5px;
+    border: 1px solid white;
+    width: 25rem;
+    height: 30rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 1rem;
+    font-family: "Josefin Sans", sans-serif;
+}
+
+.swampfest{
+font-size: 1rem;
+}
+
+.title{
+font-size: 3rem;
+}
+
+.bio{
+font-size: 1.2rem;
+text-align: center;
+max-width: 80%;
+}
+
+.info{
+text-decoration: underline;
+cursor: pointer;
+}
+
+.moneyAndFee{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: auto;
+}
+
+.money{
+font-weight: 800;
+font-size: 2.5rem;
+padding-bottom: 1rem;
+}
+
+.kr{
+    font-size: 1rem;
+}
+
+.fee{
+    font-size: 1rem;
+
+}
+
+.button{
+color: black;
+background-color: white;
+border-radius: 30px;
+padding: 1rem 2.5rem;
+transition: all 0.5s ease-in;
+cursor: pointer;
+}
+
+.button:hover{
+    background-color: var(--shrek);
+    border: 2px solid white;
+}
+
