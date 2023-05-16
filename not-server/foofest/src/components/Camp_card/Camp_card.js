@@ -1,8 +1,9 @@
 import styles from "./Camp_card.module.css";
+import Link from "next/link";
 
 import React from 'react'
 
-function Camp_card({title, bio}) {
+function Camp_card({title, bio, href}) {
   return (
     <article className={styles.card}>
         <span className={styles.swampfest}>SWAMPFEST 2023</span>
@@ -13,7 +14,7 @@ function Camp_card({title, bio}) {
          <span className={styles.money}>799 <span className={styles.kr}>KR.</span></span>
          <span className={styles.fee}>+ fee</span>
         </div>
-        <button className={styles.button}>BUY NOW</button>
+        <Link className={styles.button} href={`camping/${title.toLowerCase()}`}>BUY NOW</Link>
     </article>
   )
 }

@@ -9,11 +9,6 @@ import Camp_card from '@/components/Camp_card/Camp_card'
 function Tickets() {
 
 
-
-
-
-
-
   return (
     <>
 
