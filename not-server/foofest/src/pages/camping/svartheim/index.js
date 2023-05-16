@@ -4,7 +4,7 @@ import styles from "./svartheim.module.css"
 import Image from 'next/image';
 import nordicLight from "../../../imgs/nordicLights.jpg"
 import ThirdTitle from '@/components/ThirdTitle/ThirdTitle';
-import Button from '@/components/button/button';
+import Button from '@/components/button/Button';
 
 function svartheim() {
 
