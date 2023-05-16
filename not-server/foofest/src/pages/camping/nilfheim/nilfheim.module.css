@@ -1,0 +1,41 @@
+.main{
+    width: 100vw;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.details{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 5px;
+    border: 1px solid white;
+    width: 80%;
+    height: 50%;
+    font-family: "Josefin Sans", sans-serif;
+}
+
+.title{
+font-size: 2rem;
+}
+
+.overallSpots{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.spots{
+    font-size: 1.5rem;
+}
+
+.availableSpots{
+    font-size: 1.5rem;
+}
