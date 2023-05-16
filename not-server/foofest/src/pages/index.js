@@ -31,7 +31,7 @@ export default function Home() {
                mainTitle="SWAMPFEST 2023"
                 />
 
-                <secondaryTitle 
+                <SecondaryTitle 
                 secondaryTitle="It's that swamp of the year"
                 />
 

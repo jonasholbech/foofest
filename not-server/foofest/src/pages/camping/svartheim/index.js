@@ -1,7 +1,10 @@
-import SecondaryTitle from '@/components/SecondaryTitle/SecondaryTitle';
 import React from 'react'
 import { useEffect, useState } from 'react';
 import styles from "./svartheim.module.css"
+import Image from 'next/image';
+import nordicLight from "../../../imgs/nordicLights.jpg"
+import ThirdTitle from '@/components/ThirdTitle/ThirdTitle';
+import Button from '@/components/button/button';
 
 function svartheim() {
 
@@ -25,21 +28,114 @@ function svartheim() {
    });
  }, [])
 
+ 
+ /*
+ <div className={styles.overallSpots}>
+ <span className={styles.spots}>Number of spots: {availableSpots.spots}</span>
+ <span className={styles.availableSpots}>Available spots: {availableSpots.available}</span>
+ </div>
+
+ */
+
 
 
   return (
     <>
     <main className={styles.main}>
-      <SecondaryTitle
-      secondaryTitle="SVARTHEIM"
-      />
 
       <section className={styles.details} >
-        <h3 className={styles.title}>Details</h3>
-        <div className={styles.overallSpots}>
-        <span className={styles.spots}>Number of spots: {availableSpots.spots}</span>
-        <span className={styles.availableSpots}>Available spots: {availableSpots.available}</span>
+
+        <div className={styles.nordicLights}>
+
         </div>
+        
+        
+        <article className={styles.orderSummary}>
+          <span className={styles.orderTitle}>Order Summary</span>
+          <div className={styles.orderTotalDiv}>
+            <span>Total</span>
+            <span>Number</span>
+          </div>
+
+          <div className={styles.orderTaxesDiv}>
+            <span>Taxes</span>
+            <span>Number</span>
+          </div>
+        </article>
+        
+        <div className={styles.allText}>
+            <ThirdTitle
+            
+              thirdTitle="SVARTHEIM"
+            />
+
+            <p className={styles.description}>Esse minim dolor nostrud Lorem proident cupidatat aliqua proident sunt minim ut amet aliquip ex. 
+              Minim deserunt nisi cillum fugiat sint non fugiat elit est velit id reprehenderit do id. 
+              Laborum dolor irure labore Lorem do proident cillum sunt ut proident excepteur nisi. 
+              Tempor deserunt anim quis amet. </p>
+
+        </div>
+
+        <div className={styles.selectTickets}>
+
+          <span className={styles.selectTitle}><strong>Select your tickets</strong></span>
+
+          <div className={styles.selectRegular}>
+                
+                <div className={styles.selectRegularDiv}>
+                  <span><strong>Regular</strong></span>
+                  <span>799 kr. pr ticket</span>
+                </div>
+
+                <div className={styles.selectRegularAmount}>
+                  <span className={styles.selectIcons}>-</span>
+                  <span>4</span>
+                  <span className={styles.selectIcons}>+</span>
+                </div>
+
+          </div>
+
+          <div className={styles.selectVip}>
+                
+                <div className={styles.selectVipDiv}>
+                  <span><strong>VIP</strong></span>
+                  <span>1299.00 kr. pr ticket</span>
+                </div>
+
+                <div className={styles.selectVipAmount}>
+                  <span className={styles.selectIcons}>-</span>
+                  <span>0</span>
+                  <span className={styles.selectIcons}>+</span>
+                </div>
+
+          </div>
+
+        
+        </div>
+
+        <div className={styles.darkBtns}>
+          <div className={styles.innerDivBtns}>
+
+          <Button 
+          title="BACK"
+          />
+          <Button
+          className={styles.reset}
+          title="RESET STEP"
+          />
+
+          </div>
+         
+
+        </div>
+
+        <div className={styles.nextStep}>
+          <Button 
+          title="NEXT STEP"
+          />
+        </div>
+       
+       
 
       </section>
     </main>

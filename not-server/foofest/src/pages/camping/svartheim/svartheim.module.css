@@ -7,35 +7,221 @@
     justify-content: space-around;
 }
 
+/* WHOLE GRID */
+
 .details{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(9, 1fr);
+    grid-template-areas: 
+    "img img order"
+    "img img order"
+    "img img order"
+    "txt txt order"
+    "select select order"
+    "select select nextStep"
+    "select select nextStep"
+    "select select nextStep"
+    "btn btn nextStep";
+    border-radius: 5px;
+    width: 90%;
+    height: 90%;
+    font-family: "Josefin Sans", sans-serif;
+    gap: 1rem;
+    
+}
+
+/* IMAGE */
+
+
+.nordicLights{
+grid-area: img;
+background-image: url("../../../imgs/nordicLights.jpg");
+background-position: center;
+background-size: cover;
+background-repeat: no-repeat;
+border-radius: 5px;
+}
+
+/* ORDER SUMMARY (RIGHT) */
+
+
+.orderSummary{
+    grid-area: order;
+    background-color: blanchedalmond;
+    color: black;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-around;
     border-radius: 5px;
-    border: 1px solid white;
+
+}
+
+/* ORDER SUMMARY - TITLE */
+
+
+.orderTitle{
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding-left: 3rem;
+}
+
+/* ORDER SUMMARY - TOTAL DIV */
+
+.orderTotalDiv{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
     width: 80%;
-    height: 50%;
-    font-family: "Josefin Sans", sans-serif;
+    margin: 0 auto;
 }
 
-.title{
-font-size: 2rem;
+/* ORDER SUMMARY - TAXES DIV */
+
+.orderTaxesDiv{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 auto;
 }
 
-.overallSpots{
+/* TITLE OF CAMP + DESCRIPTION */
+
+.allText{
+    grid-area: txt;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+    border-radius: 5px;
+
+}
+
+
+/* DESCRIPTION */
+
+.description{
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-top: 1rem;
+
+}
+
+/* SELECT YOUR TICKETS */
+
+.selectTickets{
+    grid-area: select;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+    background-color: blanchedalmond;
+    color: black;
+    line-height: 1.5;
+    border-radius: 5px;
+    gap: 1rem;
+}
+
+.selectTitle{
+    font-size: 1.3rem;
+}
+
+/* REGULAR TICKETS */
+
+.selectRegular{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.selectRegularDiv{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+    width: 50%;
+}
+
+.selectRegularAmount{
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
+    width: 30%;
+    font-size: 2rem;
+}
+
+/* VIP TICKETS */
+
+.selectVip{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.selectVipDiv{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
     width: 50%;
-    margin: 0 auto;
 }
 
-.spots{
-    font-size: 1.5rem;
+.selectVipAmount{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 30%;
+    font-size: 2rem;
 }
 
-.availableSpots{
-    font-size: 1.5rem;
+
+.selectIcons{
+    background-color: darkslategrey;
+    border-radius: 50%;
+    padding: 1rem;
+    color: white;
+    font-size: 1rem;
+}
+
+/* DARK BUTTONS (LEFT) */
+
+.darkBtns{
+    grid-area: btn;
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: flex-start;
+   
+}
+
+/* DARK BUTTONS - INNER DIV */
+
+.innerDivBtns{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 30%;
+}
+
+/* NEXT STEP BUTTON */
+
+
+.nextStep{
+    grid-area: nextStep;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
