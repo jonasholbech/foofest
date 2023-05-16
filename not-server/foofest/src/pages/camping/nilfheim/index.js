@@ -18,7 +18,6 @@ let fetchRes = fetch(api);
 fetchRes
   .then((res) => res.json())
   .then((spots) => {
-    console.log(spots)
    setAvailableSpots(spots[1]);
    
   })
