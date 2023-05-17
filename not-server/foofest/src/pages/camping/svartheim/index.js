@@ -36,8 +36,6 @@ function svartheim() {
 
  const [regularTickets, setRegularTickets] = useState(0);
 
- const [vipTickets, setVipTickets] = useState(0);
-
   // onClick functions for increasing and reducing the num of tickets, max 4
 
   function addRegTicket(){
@@ -51,6 +49,38 @@ function svartheim() {
     setRegularTickets(old => old-1);
   }
   }
+
+    // store num of VIP tickets as state 
+
+
+ const [vipTickets, setVipTickets] = useState(0);
+
+  // onClick functions for increasing and reducing the num of VIP tickets, max 4
+
+  function addVipTicket(){
+    if(vipTickets < 4){
+    setVipTickets(old => old+1);
+  }
+  }
+
+  function subtractVipTicket(){
+    if(vipTickets > 0){
+    setVipTickets(old => old-1);
+  }
+  }
+
+  // store cost of ticket total
+
+  const [totalCost, setTotalCost] = useState(0);
+
+  useEffect(() => {
+
+    setTotalCost((799 * regularTickets) + (1299 * vipTickets))
+
+  }, [regularTickets, vipTickets])
+
+
+
 
 
  // multiply each num vs the cost of the ticket
@@ -82,7 +112,7 @@ function svartheim() {
           <span className={styles.orderTitle}>Order Summary</span>
           <div className={styles.orderTotalDiv}>
             <span>Total</span>
-            <span>Number</span>
+            <span>{totalCost}</span>
           </div>
 
           <div className={styles.orderTaxesDiv}>
@@ -131,9 +161,9 @@ function svartheim() {
                 </div>
 
                 <div className={styles.selectVipAmount}>
-                  <span className={styles.selectIcons}>-</span>
+                  <span onClick={subtractVipTicket} className={styles.selectIcons}>-</span>
                   <span>{vipTickets}</span>
-                  <span className={styles.selectIcons}>+</span>
+                  <span onClick={addVipTicket} className={styles.selectIcons}>+</span>
                 </div>
 
           </div>
