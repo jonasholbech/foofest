@@ -218,7 +218,8 @@ function svartheim() {
         <div className={styles.nextStep}>
 
           <Link href="/buyingStage/campingAddOns"
-          onClick={() => alterTheCost(totalCost)}>
+        //  onClick={() => alterTheCost(totalCost)}
+          >
           <Button 
           title="NEXT STEP"
           />

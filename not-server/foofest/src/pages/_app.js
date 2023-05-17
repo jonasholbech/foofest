@@ -4,7 +4,7 @@ import { TicketsContext } from '@/context/ticketsContext'
 import { useState } from 'react'
 
 export default function App({ Component, pageProps }) {
-  const [costOfTickets, setCostOfTickets] = useState("default")
+  const [costOfTickets, setCostOfTickets] = useState(0)
 
   return ( 
     <>
