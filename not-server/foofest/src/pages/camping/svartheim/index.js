@@ -5,6 +5,7 @@ import Image from 'next/image';
 import nordicLight from "../../../imgs/nordicLights.jpg"
 import ThirdTitle from '@/components/ThirdTitle/ThirdTitle';
 import Button from '@/components/button/Button';
+import Link from 'next/link';
 
 function svartheim() {
 
@@ -27,6 +28,33 @@ function svartheim() {
      console.error(err);
    });
  }, [])
+
+
+ //
+
+  // store num of tickets as state 
+
+ const [regularTickets, setRegularTickets] = useState(0);
+
+ const [vipTickets, setVipTickets] = useState(0);
+
+  // onClick functions for increasing and reducing the num of tickets, max 4
+
+  function addRegTicket(){
+    if(regularTickets < 4){
+    setRegularTickets(old => old+1);
+  }
+  }
+
+  function subtractRegTicket(){
+    if(regularTickets > 0){
+    setRegularTickets(old => old-1);
+  }
+  }
+
+
+ // multiply each num vs the cost of the ticket
+ // pass that result to the order summary
 
  
  /*
@@ -88,9 +116,9 @@ function svartheim() {
                 </div>
 
                 <div className={styles.selectRegularAmount}>
-                  <span className={styles.selectIcons}>-</span>
-                  <span>4</span>
-                  <span className={styles.selectIcons}>+</span>
+                  <span onClick={subtractRegTicket} className={styles.selectIcons}>-</span>
+                  <span>{regularTickets}</span>
+                  <span onClick={addRegTicket} className={styles.selectIcons}>+</span>
                 </div>
 
           </div>
@@ -104,7 +132,7 @@ function svartheim() {
 
                 <div className={styles.selectVipAmount}>
                   <span className={styles.selectIcons}>-</span>
-                  <span>0</span>
+                  <span>{vipTickets}</span>
                   <span className={styles.selectIcons}>+</span>
                 </div>
 
@@ -116,9 +144,12 @@ function svartheim() {
         <div className={styles.darkBtns}>
           <div className={styles.innerDivBtns}>
 
+          <Link href="/tickets">
           <Button 
           title="BACK"
           />
+          </Link>
+
           <Button
           className={styles.reset}
           title="RESET STEP"
