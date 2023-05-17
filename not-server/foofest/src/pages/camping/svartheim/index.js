@@ -1,13 +1,23 @@
 import React from 'react'
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useContext } from 'react';
 import styles from "./svartheim.module.css"
-import Image from 'next/image';
-import nordicLight from "../../../imgs/nordicLights.jpg"
 import ThirdTitle from '@/components/ThirdTitle/ThirdTitle';
 import Button from '@/components/button/Button';
 import Link from 'next/link';
+import TicketsContext from '@/context/ticketsContext';
+
 
 function svartheim() {
+
+  // bring context to this page
+
+  const globalMoneyContext = useContext(TicketsContext);
+
+  function modifyGlobalMoneyContext(){
+    globalMoneyContext.setCostOfTickets(totalCost);
+  }
+
+
 
  // STORE AVAILABLE SPOTS
 
@@ -71,13 +81,22 @@ function svartheim() {
 
   // store cost of ticket total
 
+  const [ticketCost, setTicketCost] = useState(0);
+
+  const [vat, setVat] = useState(0);
+
   const [totalCost, setTotalCost] = useState(0);
 
   useEffect(() => {
 
-    setTotalCost((799 * regularTickets) + (1299 * vipTickets))
+    setTicketCost((799 * regularTickets) + (1299 * vipTickets));
+    setVat(Math.floor(totalCost / 25));
+    setTotalCost(ticketCost + vat);
 
-  }, [regularTickets, vipTickets])
+    modifyGlobalMoneyContext();
+
+  }, [regularTickets, vipTickets, totalCost, ticketCost, vat])
+
 
 
 
@@ -111,13 +130,18 @@ function svartheim() {
         <article className={styles.orderSummary}>
           <span className={styles.orderTitle}>Order Summary</span>
           <div className={styles.orderTotalDiv}>
-            <span>Total</span>
-            <span>{totalCost}</span>
+            <span>Ticket cost</span>
+            <span className={styles.orderTicketCost}>{ticketCost} kr.</span>
           </div>
 
           <div className={styles.orderTaxesDiv}>
-            <span>Taxes</span>
-            <span>Number</span>
+            <span>VAT</span>
+            <span className={styles.orderTaxesNum}>{vat} kr.</span>
+          </div>
+
+          <div className={styles.orderTotalDiv}>
+            <span>Total</span>
+            <span className={styles.orderTotalNum}>{totalCost} kr.</span>
           </div>
         </article>
         
@@ -142,12 +166,12 @@ function svartheim() {
                 
                 <div className={styles.selectRegularDiv}>
                   <span><strong>Regular</strong></span>
-                  <span>799 kr. pr ticket</span>
+                  <span className={styles.ticketSpecs}>799 kr. pr ticket</span>
                 </div>
 
                 <div className={styles.selectRegularAmount}>
                   <span onClick={subtractRegTicket} className={styles.selectIcons}>-</span>
-                  <span>{regularTickets}</span>
+                  <span className={styles.numOfTickets}>{regularTickets}</span>
                   <span onClick={addRegTicket} className={styles.selectIcons}>+</span>
                 </div>
 
@@ -157,12 +181,12 @@ function svartheim() {
                 
                 <div className={styles.selectVipDiv}>
                   <span><strong>VIP</strong></span>
-                  <span>1299.00 kr. pr ticket</span>
+                  <span className={styles.ticketSpecs}>1299.00 kr. pr ticket</span>
                 </div>
 
                 <div className={styles.selectVipAmount}>
                   <span onClick={subtractVipTicket} className={styles.selectIcons}>-</span>
-                  <span>{vipTickets}</span>
+                  <span className={styles.numOfTickets}>{vipTickets}</span>
                   <span onClick={addVipTicket} className={styles.selectIcons}>+</span>
                 </div>
 
@@ -174,15 +198,16 @@ function svartheim() {
         <div className={styles.darkBtns}>
           <div className={styles.innerDivBtns}>
 
-          <Link href="/tickets">
-          <Button 
-          title="BACK"
+          <Link
+          className={styles.backLink} 
+          href="/tickets">
+
+          <Button title="BACK" 
           />
+          
           </Link>
 
-          <Button
-          className={styles.reset}
-          title="RESET STEP"
+          <Button title="RESET STEP"
           />
 
           </div>
@@ -191,9 +216,13 @@ function svartheim() {
         </div>
 
         <div className={styles.nextStep}>
+
+          <Link href="/buyingStage/campingAddOns"
+          onClick={() => alterTheCost(totalCost)}>
           <Button 
           title="NEXT STEP"
           />
+          </Link>
         </div>
        
        

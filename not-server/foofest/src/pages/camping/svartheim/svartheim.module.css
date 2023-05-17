@@ -24,7 +24,7 @@
     "select select nextStep"
     "btn btn nextStep";
     border-radius: 5px;
-    width: 90%;
+    width: 60%;
     height: 90%;
     font-family: "Josefin Sans", sans-serif;
     gap: 1rem;
@@ -87,6 +87,20 @@ border-radius: 5px;
     justify-content: space-between;
     width: 80%;
     margin: 0 auto;
+}
+
+/* ORDER SUMMARY - NUMBERS */
+
+.orderTicketCost{
+    font-weight: 800;
+}
+
+.orderTaxesNum{
+    font-weight: 800;
+}
+
+.orderTotalNum{
+    font-size: 1.5rem;
 }
 
 /* TITLE OF CAMP + DESCRIPTION */
@@ -186,12 +200,22 @@ border-radius: 5px;
     font-size: 2rem;
 }
 
+/* ITEMS RELATED TO BOTH TYPES OF TICKETS */
+
+.ticketSpecs{
+    font-weight: 200;
+}
 
 .selectIcons{
     background-color: darkslategrey;
     border-radius: 50%;
     padding: 1rem;
     color: white;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.numOfTickets{
     font-size: 1rem;
 }
 
@@ -203,7 +227,10 @@ border-radius: 5px;
    flex-direction: row;
    align-items: center;
    justify-content: flex-start;
-   
+}
+
+.backLink{
+    cursor: pointer;
 }
 
 /* DARK BUTTONS - INNER DIV */
@@ -223,5 +250,6 @@ border-radius: 5px;
     grid-area: nextStep;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
 }
+
