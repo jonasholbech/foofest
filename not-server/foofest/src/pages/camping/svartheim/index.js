@@ -95,6 +95,8 @@ function svartheim() {
 
     modifyGlobalMoneyContext();
 
+    globalMoneyContext.setHowManyTickets(regularTickets + vipTickets);
+
   }, [regularTickets, vipTickets, totalCost, ticketCost, vat])
 
 

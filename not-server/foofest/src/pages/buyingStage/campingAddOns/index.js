@@ -142,8 +142,14 @@ return (
       
       <article className={styles.orderSummary}>
         <span className={styles.orderTitle}>Order Summary</span>
+
         <div className={styles.orderTotalDiv}>
-          <span>Ticket cost</span>
+          <span>Tickets:</span>
+          <span className={styles.orderTicketCost}>{globalMoneyContext.howManyTickets}</span>
+        </div>
+
+        <div className={styles.orderTotalDiv}>
+          <span>Tickets cost</span>
           <span className={styles.orderTicketCost}>{theTicketsCost} kr.</span>
         </div>
 
