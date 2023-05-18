@@ -276,8 +276,7 @@ return (
 
       <div className={styles.nextStep}>
 
-        <Link href="/buyingStage/campingAddOns"
-      //  onClick={() => alterTheCost(totalCost)}
+        <Link href="/buyingStage/ticketHolderInfo"
         >
         <Button 
         title="NEXT STEP"

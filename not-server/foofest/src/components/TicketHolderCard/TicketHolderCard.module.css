@@ -1,0 +1,38 @@
+.form{
+    border-radius: 5px;
+    border: 1px solid white;
+    width: 30rem;
+    height: 20rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 1rem;
+    font-family: "Josefin Sans", sans-serif;
+}
+
+
+.innerAlign{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.radioAlign{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    justify-content: space-around;
+    width: 80%;
+}
+
+.emailLabel{
+    margin-bottom: 0.5rem;
+}
+
+.fullNameLabel{
+    margin-bottom: 0.5rem;
+}

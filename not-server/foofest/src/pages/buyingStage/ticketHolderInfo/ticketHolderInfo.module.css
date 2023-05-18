@@ -1,0 +1,8 @@
+.cardsGrid{
+    width: 80vw;
+    height: 50vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
