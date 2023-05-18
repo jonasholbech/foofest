@@ -124,6 +124,7 @@ useEffect(() => {
   setCamping((swampLuxForThree * 399) + (swampLuxForTwo * 299) + (ecoSwampTents * 249))
   setVat(Math.floor(camping / 25));
   globalMoneyContext.setTicketsPlusTents(campingAllInclusive);
+  globalMoneyContext.setTotalCampingCost(camping);
 
 }, [vat, camping, swampLuxForThree, swampLuxForTwo, ecoSwampTents])
 

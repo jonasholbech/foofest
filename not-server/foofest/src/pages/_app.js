@@ -15,10 +15,13 @@ export default function App({ Component, pageProps }) {
     // how much do the tickets + the tents cost?
   const [ticketsPlusTents, setTicketsPlusTents] = useState(0);
 
+  // how much does the camping cost?
+  const [totalCampingCost, setTotalCampingCost] = useState(0);
+
 
   return ( 
     <>
-      <TicketsContext.Provider value={{howManyTickets, setHowManyTickets, costOfTickets, setCostOfTickets, ticketsPlusTents, setTicketsPlusTents}}>
+      <TicketsContext.Provider value={{howManyTickets, setHowManyTickets, costOfTickets, setCostOfTickets, ticketsPlusTents, setTicketsPlusTents, totalCampingCost, setTotalCampingCost}}>
              <Layout>
             <Component {...pageProps} />
             </Layout>
