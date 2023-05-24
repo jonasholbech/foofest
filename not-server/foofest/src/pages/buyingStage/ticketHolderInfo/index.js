@@ -12,8 +12,8 @@ function ticketHolderInfo() {
 
   // grab local info of ticket holders
 
-  const [formName, setFormName] = useState("")
-  const [formEmail, setFormEmail] = useState("")
+  const [formName, setFormName] = useState([])
+  const [formEmail, setFormEmail] = useState([])
 
     // grab global number of tickets
 
@@ -41,15 +41,20 @@ function ticketHolderInfo() {
 
     // function to get the info of the holder from the form
 
-    function retrieveHolderInfoName(name){
+    function retrieveHolderInfoName(num, name){
 
-      setFormName(name)
+      setFormName([...formName, {"id": num, "name": name}])
     }
 
     function retrieveHolderInfoEmail(num, email){
 
-      setFormEmail([...formEmail, email])
+      setFormEmail([...formEmail, {"id": num, "email": email}])
     }
+
+    useEffect(() => {
+      globalTicketInfo.setGlobalFormName(formName);
+      globalTicketInfo.setGlobalFormEmail(formEmail);
+    }, [formEmail, formName])
 
    
     
@@ -64,7 +69,7 @@ function ticketHolderInfo() {
 <section className={styles.details} >
   
   <article className={styles.orderSummary}>
-    <span className={styles.orderTitle}>Order Summary: {formEmail} </span>
+    <span className={styles.orderTitle}>Order Summary:</span>
 
     <div className={styles.orderTotalDiv}>
       <span>Tickets:</span>

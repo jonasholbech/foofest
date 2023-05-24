@@ -11,6 +11,8 @@ function checkThisBox(num){
 }
 
 const emailInput = useRef();
+const nameInput = useRef();
+
 
 
   return (
@@ -20,11 +22,12 @@ const emailInput = useRef();
         <div className={styles.innerAlign}>
         <label  className={styles.fullNameLabel}>Full name</label>
             <input
+            ref={nameInput}
             id="fullname"
             className={styles.fullName}
             placeholder='Miss Fiona Charming'
             required
-            onChange={getName}
+            onBlur={() => getName(num, nameInput.current.value)}
             />
         </div>
 
@@ -37,7 +40,7 @@ const emailInput = useRef();
             className={styles.email}
             placeholder='fiona@charming.com'
             required
-            onBlur={() => getEmail(emailInput.current.value)}
+            onBlur={() => getEmail(num, emailInput.current.value)}
             />
         </div>
 
