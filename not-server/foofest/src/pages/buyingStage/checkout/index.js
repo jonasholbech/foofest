@@ -5,128 +5,20 @@ import styles from "./checkout.module.css"
 import ThirdTitle from '@/components/ThirdTitle/ThirdTitle'
 import Link from 'next/link'
 import Button from '@/components/button/Button'
-
-
+import Checkout_collapse from '@/components/Checkout_collapse/Checkout_collapse'
 
 function checkout() {
+
+  const [isChecked, setIsChecked] = useState(0)
 
 
 // bring context to this page
 
 const globalMoneyContext = useContext(TicketsContext);
 
-
-// this is the cost of tickets from the previous page
-
-const theTicketsCost = globalMoneyContext.costOfTickets;
-
-// this is the cost of camping
-
-const [camping, setCamping] = useState(0);
-
-// this is the cost of tickets plus tents 
-
-function addTentCostToTickets(){
-  globalMoneyContext.setTicketsPlusTents(theTicketsCost => theTicketsCost + camping + vat );
+function checkMe(id){
+setIsChecked(id);
 }
-
-
-// store num of personal tents as state 
-
-const [personalTents, setPersonalTents] = useState(0);
-
-// onClick functions for increasing and reducing the num of personal tents, max 4
-
-function addPersonalTent(){
-  if(personalTents < 4){
-  setPersonalTents(old => old+1);
-}
-}
-
-function subtractPersonalTent(){
-  if(personalTents > 0){
-  setPersonalTents(old => old-1);
-}
-}
-
-  // store num of EcoSwamp tents as state 
-
-
-const [ecoSwampTents, setEcoSwampTents] = useState(0);
-
-// onClick functions for increasing and reducing the num of EcoSwamp tents, max 4
-
-function addEcoSwamp(){
-  if(ecoSwampTents < 4){
-  setEcoSwampTents(old => old+1);
-}
-}
-
-function subtractEcoSwamp(){
-  if(ecoSwampTents > 0){
-  setEcoSwampTents(old => old-1);
-}
-}
-
- // store num of SwampLux for 2 people as state 
-
-
- const [swampLuxForTwo, setSwampLuxForTwo] = useState(0);
-
- // onClick functions for increasing and reducing the num of EcoSwamp tents, max 4
- 
- function addSwampLuxForTwo(){
-   if(swampLuxForTwo < 4){
-   setSwampLuxForTwo(old => old+1);
- }
- }
- 
- function subtractSwampLuxForTwo(){
-   if(swampLuxForTwo > 0){
-   setSwampLuxForTwo(old => old-1);
- }
- }
-
- // store num of SwampLux for 3 people as state 
-
-
- const [swampLuxForThree, setSwampLuxForThree] = useState(0);
-
- // onClick functions for increasing and reducing the num of EcoSwamp tents, max 4
- 
- function addSwampLuxForThree(){
-   if(swampLuxForThree < 4){
-   setSwampLuxForThree(old => old+1);
- }
- }
- 
- function subtractSwampLuxForThree(){
-   if(swampLuxForThree > 0){
-   setSwampLuxForThree(old => old-1);
- }
- }
-
-
-
-
-// store cost of tent vat
-
-const [vat, setVat] = useState(0);
-
-// store total in this page, to later add it as a global value
-
-const [campingAllInclusive, setCampingAllInclusive] = useState(0)
-
-
-useEffect(() => {
-
-  setCampingAllInclusive(camping + vat + theTicketsCost)
-  setCamping((swampLuxForThree * 399) + (swampLuxForTwo * 299) + (ecoSwampTents * 249))
-  setVat(Math.floor(camping / 25));
-  globalMoneyContext.setTicketsPlusTents(campingAllInclusive);
-  globalMoneyContext.setTotalCampingCost(camping);
-
-}, [vat, camping, swampLuxForThree, swampLuxForTwo, ecoSwampTents])
 
 
 
@@ -136,32 +28,23 @@ return (
 
     <section className={styles.details} >
 
-      <div className={styles.nordicLights}>
-
-      </div>
-      
       
       <article className={styles.orderSummary}>
         <span className={styles.orderTitle}>Order Summary</span>
 
-        <div className={styles.orderTotalDiv}>
+        <div className={styles.orderTicketsDiv}>
           <span>Tickets:</span>
-          <span className={styles.orderTicketCost}>{globalMoneyContext.howManyTickets}</span>
+          <span className={styles.orderNumOfTickets}>{globalMoneyContext.howManyTickets}</span>
         </div>
 
         <div className={styles.orderTotalDiv}>
           <span>Tickets cost</span>
-          <span className={styles.orderTicketCost}>{theTicketsCost} kr.</span>
+          <span className={styles.orderTicketCost}>{globalMoneyContext.costOfTickets} kr.</span>
         </div>
 
-        <div className={styles.orderTaxesDiv}>
+        <div className={styles.orderCampingDiv}>
           <span>Camping cost</span>
-          <span className={styles.orderTaxesNum}>{camping} kr.</span>
-        </div>
-
-        <div className={styles.orderTaxesDiv}>
-          <span>VAT</span>
-          <span className={styles.orderTaxesNum}>{vat} kr.</span>
+          <span className={styles.orderCampingNum}>{globalMoneyContext.totalCampingCost} kr.</span>
         </div>
 
         <div className={styles.orderTotalDiv}>
@@ -181,78 +64,159 @@ return (
 
       </div>
 
-      <div className={styles.selectTickets}>
+      <div className={styles.deliveryDiv}>
 
-        <span className={styles.selectTitle}><strong>Delivery options</strong></span>
+        <span className={styles.deliveryTitle}><strong>Delivery</strong></span>
 
-        <div className={styles.selectRegular}>
+        <div className={styles.deliverySetType}>
 
-              <div className={styles.selectRegularDiv}>
-                <span><strong>Use your own tent</strong></span>
-                <span className={styles.ticketSpecs}>Free</span>
-              </div>
+          <Checkout_collapse name="Home">
 
-              <div className={styles.selectRegularAmount}>
-                <span onClick={subtractPersonalTent}  className={styles.selectIcons}>-</span>
-                <span className={styles.numOfTickets}>{personalTents}</span>
-                <span onClick={addPersonalTent} className={styles.selectIcons}>+</span>
-              </div>
-
-        </div>
-        {/*------------------*/}
-
-        <div className={styles.selectVip}>
+            <form className={styles.sendTicketsToMyHome}>
               
-              <div className={styles.selectVipDiv}>
-                <span><strong>EcoSwamp Camping</strong></span>
-                <span className={styles.ticketSpecs}>+249.00 kr. pr tent</span>
+                <div className={styles.sendTicketsToMyHomeFullName}>
+
+                  <label>Full Name</label>
+                  <input
+                  placeholder='Fiona Charming'
+                  />
+
+                </div>
+
+                <div className={styles.sendTicketsToMyHomeStreet}>
+
+                  <label>Street & Number</label>
+                  <input
+                  placeholder='Ingerslevsgade 146'
+                  />
+
+                </div>
+
+                <div className={styles.sendTicketsToMyHomeZipCode}>
+
+                  <label>Zip code</label>
+                  <input
+                  placeholder='1705'
+                  />
+
+                </div>
+
+                <div className={styles.sendTicketsToMyHomeCity}>
+
+                  <label>Town/City</label>
+                  <input
+                  placeholder='Copenhagen'
+                  />
+
+                </div>
+
+                <div className={styles.sendTicketsToMyHomeCountry}>
+
+                  <label>Country/Region</label>
+                  <input
+                  placeholder='Denmark'
+                  disabled
+                  />
+
+                </div>
+
+                <div className={styles.sendTicketsToMyHomeEmailAndNumber}>
+
+                    <div className={styles.sendTicketsToMyHomeEmail}>
+
+                      <label>Email</label>
+                      <input
+                      placeholder='fiona@charming'
+                      />
+
+                    </div>
+
+                    <div className={styles.sendTicketsToMyHomeNumber}>
+
+                      <label>Phone Number</label>
+                      <input
+                      placeholder='52221989'
+                      />
+
+                    </div>
+
+                </div>
+             
+            </form>
+
+          </Checkout_collapse>
+
+          <Checkout_collapse name="Online">
+
+          <form className={styles.sendTicketsOnline}>
+              
+              <div className={styles.sendTicketsOnlineFullName}>
+
+                <label>Full Name</label>
+                <input
+                placeholder='Fiona Charming'
+                />
+
               </div>
 
-              <div className={styles.selectVipAmount}>
-                <span onClick={subtractEcoSwamp}  className={styles.selectIcons}>-</span>
-                <span className={styles.numOfTickets}>{ecoSwampTents}</span>
-                <span onClick={addEcoSwamp} className={styles.selectIcons}>+</span>
+              <div className={styles.sendTicketsOnlineEmail}>
+
+                <label>Email</label>
+                <input
+                placeholder='fiona@charming'
+                />
+
               </div>
+
+          </form>
+
+
+
+          </Checkout_collapse>
 
         </div>
 
-          {/*------------------*/}
+        <div className={styles.paymentsDiv}>
 
-        <div className={styles.selectRegular}>
+          <span className={styles.paymentTitle}><strong>Payment</strong></span>
 
-              <div className={styles.selectRegularDiv}>
-                <span><strong>SwampLux for 2 people</strong></span>
-                <span className={styles.ticketSpecs}>+299.00 kr. per tent</span>
+
+          <form>
+
+              <span className={styles.selectPaymentMethodSpan}>Select payment method</span>
+
+              <div className={styles.paymentMethodDiv}>
+                
+                <label className={isChecked == 1 ? styles.payWithThis : styles.notPayingWithThis} onClick={() => checkMe(1)}>Credit/Debit card</label>
+              
+
+              
+               
+                <label className={isChecked == 2 ? styles.payWithThis : styles.notPayingWithThis} onClick={() => checkMe(2)}>Paypal</label>
+              
+
+              
+               
+                <label className={isChecked == 3 ? styles.payWithThis : styles.notPayingWithThis} onClick={() => checkMe(3)}>Mobile Pay</label>
+              
+
+              
+                <label className={isChecked == 4 ? styles.payWithThis : styles.notPayingWithThis} onClick={() => checkMe(4)}>Klarna</label>
               </div>
 
-              <div className={styles.selectRegularAmount}>
-                <span onClick={subtractSwampLuxForTwo}  className={styles.selectIcons}>-</span>
-                <span className={styles.numOfTickets}>{swampLuxForTwo}</span>
-                <span onClick={addSwampLuxForTwo}  className={styles.selectIcons}>+</span>
-              </div>
+              
+
+
+
+          </form>
+
+          
 
         </div>
-        {/*------------------*/}
 
-        <div className={styles.selectRegular}>
-
-              <div className={styles.selectRegularDiv}>
-                <span><strong>SwampLux for 3 people</strong></span>
-                <span className={styles.ticketSpecs}>+399.00 kr. per tent</span>
-              </div>
-
-              <div className={styles.selectRegularAmount}>
-                <span onClick={subtractSwampLuxForThree}  className={styles.selectIcons}>-</span>
-                <span className={styles.numOfTickets}>{swampLuxForThree}</span>
-                <span onClick={addSwampLuxForThree}  className={styles.selectIcons}>+</span>
-              </div>
-
-        </div>
-        {/*------------------*/}
+        
 
 
-
-      
       </div>
 
       <div className={styles.darkBtns}>
@@ -280,7 +244,7 @@ return (
         <Link href="/buyingStage/review"
         >
         <Button 
-        title="NEXT STEP"
+        title="GO TO REVIEW"
         />
         </Link>
       </div>

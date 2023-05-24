@@ -147,7 +147,7 @@ function ticketHolderInfo() {
     <Link href="/buyingStage/checkout"
     >
     <Button 
-    title="NEXT STEP"
+    title="GO TO CHECKOUT"
     />
     </Link>
   </div>

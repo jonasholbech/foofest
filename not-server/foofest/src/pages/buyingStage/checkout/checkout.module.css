@@ -15,7 +15,7 @@
     grid-template-rows: repeat(9, 1fr);
     grid-template-areas: 
     "txt txt order"
-    "txt txt order"
+    "select select order"
     "select select order"
     "select select order"
     "select select order"
@@ -31,17 +31,6 @@
     
 }
 
-/* IMAGE */
-
-
-.nordicLights{
-grid-area: img;
-background-image: url("../../../imgs/tents.jpg");
-background-position: center;
-background-size: cover;
-background-repeat: no-repeat;
-border-radius: 5px;
-}
 
 /* ORDER SUMMARY (RIGHT) */
 
@@ -58,6 +47,7 @@ border-radius: 5px;
 
 }
 
+
 /* ORDER SUMMARY - TITLE */
 
 
@@ -65,6 +55,17 @@ border-radius: 5px;
     font-size: 1.5rem;
     font-weight: 600;
     padding-left: 3rem;
+}
+
+/* ORDER SUMMARY - TICKETS DIV */
+
+.orderTicketsDiv{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 auto;
 }
 
 /* ORDER SUMMARY - TOTAL DIV */
@@ -78,9 +79,9 @@ border-radius: 5px;
     margin: 0 auto;
 }
 
-/* ORDER SUMMARY - TAXES DIV */
+/* ORDER SUMMARY - CAMPING DIV */
 
-.orderTaxesDiv{
+.orderCampingDiv{
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -95,7 +96,11 @@ border-radius: 5px;
     font-weight: 800;
 }
 
-.orderTaxesNum{
+.orderCampingNum{
+    font-weight: 800;
+}
+
+.orderNumOfTickets{
     font-weight: 800;
 }
 
@@ -128,96 +133,223 @@ border-radius: 5px;
 
 /* SELECT YOUR TICKETS */
 
-.selectTickets{
+.deliveryDiv{
     grid-area: select;
     padding: 1.5rem;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    justify-content: space-around;
+    justify-content: flex-start;
     background-color: blanchedalmond;
     color: black;
     line-height: 1.5;
     border-radius: 5px;
     gap: 1rem;
+    overflow-y: auto;
 }
 
-.selectTitle{
+.deliveryTitle{
     font-size: 1.3rem;
+    width: 100%;
+    border-bottom: 1px solid black;
 }
 
-/* REGULAR TICKETS */
+/* TYPE OF DELIVERY */
 
-.selectRegular{
+.deliverySetType{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
+    gap: 1rem;
     width: 100%;
 }
 
-.selectRegularDiv{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-around;
-    width: 50%;
-}
+/* DELIVERY DIV - TYPES OF DELIVERY */
 
-.selectRegularAmount{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-    width: 30%;
-    font-size: 2rem;
-}
-
-/* VIP TICKETS */
-
-.selectVip{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
+.sendTicketsToMyHome{
     width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 1rem;
+    grid-template-areas:
+    "name name name"
+    "street street street"
+    "zip city country"
+    "emailNumber emailNumber emailNumber";
 }
 
-.selectVipDiv{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-around;
-    width: 50%;
+
+/* GRID AREAS */
+
+/* name */
+
+.sendTicketsToMyHomeFullName{
+    margin-top: 1rem;
+    grid-area: name;
 }
 
-.selectVipAmount{
+.sendTicketsToMyHomeFullName > input{
+    width: 95%;
+    padding: 0.5rem;
+}
+
+/* street */
+
+.sendTicketsToMyHomeStreet{
+    grid-area: street;
+}
+
+.sendTicketsToMyHomeStreet > input{
+    width: 95%;
+    padding: 0.5rem;
+}
+
+/* zip code */
+
+.sendTicketsToMyHomeZipCode{
+    grid-area: zip;
+}
+
+.sendTicketsToMyHomeZipCode > input{
+    padding: 0.5rem;
+}
+
+/* city */
+
+.sendTicketsToMyHomeCity{
+    grid-area: city;
+}
+
+.sendTicketsToMyHomeCity > input{
+    padding: 0.5rem;
+}
+
+/* country */
+
+.sendTicketsToMyHomeCountry{
+    grid-area: country;
+}
+
+.sendTicketsToMyHomeCountry > input{
+    padding: 0.5rem;
+}
+
+/* email and number */ 
+
+.sendTicketsToMyHomeEmailAndNumber{
+    grid-area: emailNumber;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
-    width: 30%;
-    font-size: 2rem;
 }
 
-/* ITEMS RELATED TO BOTH TYPES OF TICKETS */
+/* email */
 
-.ticketSpecs{
-    font-weight: 200;
+.sendTicketsToMyHomeEmail{
+    width: 50%;
+    
 }
 
-.selectIcons{
-    background-color: darkslategrey;
-    border-radius: 50%;
-    padding: 1rem;
-    color: white;
-    font-size: 1rem;
+.sendTicketsToMyHomeEmail > input{
+    width: 90%;
+    padding: 0.5rem;
+}
+
+/* number */
+
+
+.sendTicketsToMyHomeNumber{
+    width: 50%;
+   
+
+}
+
+.sendTicketsToMyHomeNumber > input{
+    width: 90%;
+    padding: 0.5rem;
+}
+
+/* SEND TICKETS ONLINE */
+
+.sendTicketsOnline{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.sendTicketsOnlineFullName{
+    margin-top: 1rem;
+    width: 95%;
+}
+
+.sendTicketsOnlineFullName > input{
+    padding: 0.5rem;
+    width: 95%;
+}
+
+.sendTicketsOnlineEmail{
+    margin-top: 1rem;
+    width: 95%;
+}
+
+.sendTicketsOnlineEmail > input{
+    padding: 0.5rem;
+    width: 95%;
+}
+
+
+/* payments div */
+
+.paymentsDiv{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 1rem;
+    width: 100%;
+    padding-top: 2rem;
+}
+
+.paymentTitle{
+    font-size: 1.3rem;
+    width: 100%;
+    border-bottom: 1px solid black;
+    text-decoration: none;
+}
+
+.selectPaymentMethodSpan{
+    font-weight: 100;
+}
+
+.paymentMethodDiv{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.payWithThis{
+    text-decoration: underline 5px solid yellow;
+}
+
+.notPayingWithThis{
     cursor: pointer;
 }
 
-.numOfTickets{
-    font-size: 1rem;
-}
+
+
+
+
+
+
+
+
 
 /* DARK BUTTONS (LEFT) */
 
