@@ -10,6 +10,11 @@ import Button from '@/components/button/Button';
 
 function ticketHolderInfo() {
 
+  // store name and email from form
+
+  const [formName, setFormName] = useState({})
+  const [formEmail, setFormEmail] = useState({})
+
 
     // grab global number of tickets, check it works
 
@@ -34,10 +39,6 @@ function ticketHolderInfo() {
 
     }, [])
 
-
-    
-
-    // use it to create the exact num of cards
 
 
     
@@ -95,6 +96,7 @@ function ticketHolderInfo() {
                 <article key={cardStorage.indexOf(el) + 1}>
                     <TicketHolderCard 
                     num={cardStorage.indexOf(el) + 1}
+                  
                     />
         
                 </article>
@@ -126,7 +128,7 @@ function ticketHolderInfo() {
 
   <div className={styles.nextStep}>
 
-    <Link href="/buyingStage/ticketHolderInfo"
+    <Link href="/buyingStage/checkout"
     >
     <Button 
     title="NEXT STEP"

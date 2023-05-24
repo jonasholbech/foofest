@@ -1,7 +1,18 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import styles from "./TicketHolderCard.module.css"
+import { useState, useRef } from 'react';
 
-function TicketHolderCard({num}) {
+function TicketHolderCard({num, ticketHolderEmailInfo, ticketHolderNameInfo}) {
+
+const [isClicked, setIsClicked] = useState("");
+
+function checkThisBox(num){
+  setIsClicked(num);
+}
+
+const emailInput = useRef();
+
+
   return (
     <form className={styles.form}>
         <h3 className={styles.h3}>Ticket no. {num}</h3>
@@ -20,6 +31,7 @@ function TicketHolderCard({num}) {
 
         <label className={styles.emailLabel}>Email</label>
             <input
+            ref={emailInput}
             id="email"
             className={styles.email}
             placeholder='fiona@charming.com'
@@ -30,12 +42,13 @@ function TicketHolderCard({num}) {
         <div className={styles.radioAlign}>
             
             <input
-            type="radio"
-            id="radio"
+            type="checkbox"
+            id={num}
             className={styles.radio}
+
             />
             
-            <label  className={styles.emailLabel}>Use this information for checkout</label>
+            <label  className={styles.emailLabel}>I'm the one paying</label>
 
 
         </div>
