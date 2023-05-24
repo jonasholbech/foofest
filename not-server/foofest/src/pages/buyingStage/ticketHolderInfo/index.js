@@ -10,13 +10,12 @@ import Button from '@/components/button/Button';
 
 function ticketHolderInfo() {
 
-  // store name and email from form
+  // grab local info of ticket holders
 
-  const [formName, setFormName] = useState({})
-  const [formEmail, setFormEmail] = useState({})
+  const [formName, setFormName] = useState("")
+  const [formEmail, setFormEmail] = useState("")
 
-
-    // grab global number of tickets, check it works
+    // grab global number of tickets
 
     const globalTicketInfo = useContext(TicketsContext);
 
@@ -40,9 +39,19 @@ function ticketHolderInfo() {
     }, [])
 
 
+    // function to get the info of the holder from the form
 
-    
+    function retrieveHolderInfoName(name){
 
+      setFormName(name)
+    }
+
+    function retrieveHolderInfoEmail(num, email){
+
+      setFormEmail([...formEmail, email])
+    }
+
+   
     
 
     // cry
@@ -55,7 +64,7 @@ function ticketHolderInfo() {
 <section className={styles.details} >
   
   <article className={styles.orderSummary}>
-    <span className={styles.orderTitle}>Order Summary</span>
+    <span className={styles.orderTitle}>Order Summary: {formEmail} </span>
 
     <div className={styles.orderTotalDiv}>
       <span>Tickets:</span>
@@ -96,7 +105,9 @@ function ticketHolderInfo() {
                 <article key={cardStorage.indexOf(el) + 1}>
                     <TicketHolderCard 
                     num={cardStorage.indexOf(el) + 1}
-                  
+                    getName={retrieveHolderInfoName}
+                    getEmail={retrieveHolderInfoEmail}
+
                     />
         
                 </article>

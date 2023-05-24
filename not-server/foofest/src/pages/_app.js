@@ -18,10 +18,15 @@ export default function App({ Component, pageProps }) {
   // how much does the camping cost?
   const [totalCampingCost, setTotalCampingCost] = useState(0);
 
+  // make ticket holders' info available globaly
+  const [globalFormName, setGlobalFormName] = useState([])
+  const [globalFormEmail, setGlobalFormEmail] = useState([])
+
 
   return ( 
     <>
-      <TicketsContext.Provider value={{howManyTickets, setHowManyTickets, costOfTickets, setCostOfTickets, ticketsPlusTents, setTicketsPlusTents, totalCampingCost, setTotalCampingCost}}>
+      <TicketsContext.Provider value={{howManyTickets, setHowManyTickets, costOfTickets, setCostOfTickets, ticketsPlusTents, setTicketsPlusTents, totalCampingCost, setTotalCampingCost,
+      globalFormName, setGlobalFormName, globalFormEmail, setGlobalFormEmail}}>
              <Layout>
             <Component {...pageProps} />
             </Layout>

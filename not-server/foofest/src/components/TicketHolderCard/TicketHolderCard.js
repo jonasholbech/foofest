@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import styles from "./TicketHolderCard.module.css"
 import { useState, useRef } from 'react';
 
-function TicketHolderCard({num, ticketHolderEmailInfo, ticketHolderNameInfo}) {
+function TicketHolderCard({num, getName, getEmail}) {
 
 const [isClicked, setIsClicked] = useState("");
 
@@ -24,6 +24,7 @@ const emailInput = useRef();
             className={styles.fullName}
             placeholder='Miss Fiona Charming'
             required
+            onChange={getName}
             />
         </div>
 
@@ -36,6 +37,7 @@ const emailInput = useRef();
             className={styles.email}
             placeholder='fiona@charming.com'
             required
+            onBlur={() => getEmail(emailInput.current.value)}
             />
         </div>
 
