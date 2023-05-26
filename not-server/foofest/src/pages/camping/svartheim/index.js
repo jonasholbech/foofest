@@ -1,5 +1,5 @@
 import React from 'react'
-import { useEffect, useState, useContext } from 'react';
+import { useEffect, useState, useContext, useRef } from 'react';
 import styles from "./svartheim.module.css"
 import ThirdTitle from '@/components/ThirdTitle/ThirdTitle';
 import Button from '@/components/button/Button';
@@ -8,6 +8,10 @@ import TicketsContext from '@/context/ticketsContext';
 
 
 function svartheim() {
+
+  // ref for the "next step" btn
+
+  const nextStepBtn = useRef();
 
   // bring context to this page
 
@@ -99,6 +103,7 @@ function svartheim() {
 
     globalMoneyContext.setGlobalVat(oldVat => oldVat + vat);
 
+
   }, [regularTickets, vipTickets, totalCost, ticketCost, vat])
 
 
@@ -117,6 +122,8 @@ function svartheim() {
  </div>
 
  */
+
+ 
 
 
 
@@ -155,10 +162,9 @@ function svartheim() {
               thirdTitle="SVARTHEIM"
             />
 
-            <p className={styles.description}>Esse minim dolor nostrud Lorem proident cupidatat aliqua proident sunt minim ut amet aliquip ex. 
-              Minim deserunt nisi cillum fugiat sint non fugiat elit est velit id reprehenderit do id. 
-              Laborum dolor irure labore Lorem do proident cillum sunt ut proident excepteur nisi. 
-              Tempor deserunt anim quis amet. </p>
+            <p className={styles.description}>Unveil the enchanting nights beneath a sky ablaze with stars. 
+            Svartheim offers a secluded sanctuary in the heart of the festival, inviting you to unwind and connect 
+            with your fellow festival-goers amidst a tranquil woodland backdrop. </p>
 
         </div>
 
@@ -222,7 +228,6 @@ function svartheim() {
         <div className={styles.nextStep}>
 
           <Link href="/buyingStage/campingAddOns"
-        //  onClick={() => alterTheCost(totalCost)}
           >
           <Button 
           title="NEXT STEP"
