@@ -1,29 +1,29 @@
 .musical_ul{
-    width: 90vw;
+    width: 50vw;
     height: 70vh;
     display: grid;
     grid-template-columns: 1fr;
     gap: 1rem;
     margin: 0rem auto;
     overflow: auto;
+     
 }
 
 /* */
 
 .artist_card{
-    border: 5px dashed white;
     font-size: 1.5rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 5rem;
     padding: 1rem;
     margin: 1rem auto 5rem auto;
-    width: 80%;
+    width: 100%;
     height: 50vh;
     gap: 2rem;
     transition: all 0.5s ease-in;
     border-radius: 5px;
-    overflow: hidden;
+    overflow: auto;
 
 }
 
@@ -34,13 +34,12 @@
 
 .imageAndSpan{
     width: 100%;
-    height: 50%;
+    max-height: 50%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
     overflow: hidden;
-    border: 2px solid yellow;
     padding: 1rem;
 }
 
@@ -64,7 +63,7 @@
 .name{
     font-size: 1.8rem;
     font-weight: 800;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 }
 
 .bio{

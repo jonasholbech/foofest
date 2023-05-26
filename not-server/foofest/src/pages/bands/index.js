@@ -91,24 +91,8 @@ function Bands() {
         
     )   
      
- //     <Artist 
- //     key={artists.indexOf(musician)}
- //     name={musician.name}
- //     bio={musician.bio}
- //     genre={musician.genre}
- //     members={musician.members}
- //     alt={musician.logoCredits}
- //     />
-   
-  //  )
-  })
 
-  //
-
-
-
-
-  
+  })  
 
   return (
     <>
