@@ -1,33 +1,18 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
-import styles from '@/styles/Home.module.css'
-import { useState } from 'react'
-import { useEffect } from 'react'
-import MainTitle from '@/components/MainTitle/MainTitle'
-import stayOut from "../imgs/stayout.jpg"
-import SecondaryTitle from '@/components/SecondaryTitle/SecondaryTitle'
-import Link from 'next/link'
-import supabase from '@/utils/supabaseClient'
+import Head from "next/head";
+import Image from "next/image";
+import { Inter } from "next/font/google";
+import styles from "@/styles/Home.module.css";
+import { useState } from "react";
+import { useEffect } from "react";
+import MainTitle from "@/components/MainTitle/MainTitle";
+import stayOut from "../public/imgs/stayout.jpg";
+import SecondaryTitle from "@/components/SecondaryTitle/SecondaryTitle";
+import Link from "next/link";
+import supabase from "@/utils/supabaseClient";
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
-
-
-
-    const submitted = async (e) => {
-      e.preventDefault();
-      const { data, error } = await supabase.from("swampfest").insert({
-        id: 1,
-        amount: 3,
-        people: "hi",
-      });
-      if (error) throw error;
-   //   router.push("/thanks");
-    };
-
-
   return (
     <>
       <Head>
@@ -37,79 +22,42 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-
         {/*----------------- HERO SECTION----------------------- */}
 
         <section className={styles.heroSection}>
-
           <section>
-                <MainTitle 
-               mainTitle="SWAMPFEST 2023"
-                />
+            <MainTitle mainTitle="SWAMPFEST 2023" />
 
-                <SecondaryTitle 
-                secondaryTitle="It's that swamp of the year"
-                />
-
-                
-                <button
-                onClick={submitted}
-                >
-                  Send fake data to database
-                </button>
-
+            <SecondaryTitle secondaryTitle="It's that swamp of the year" />
           </section>
-      
+
           <section className={styles.shrekImgSection}>
-              <Image
+            <Image
               className={styles.shrekImg}
               src={stayOut}
-              alt='stay out img from Shrek'
-              />
-
+              alt="stay out img from Shrek"
+            />
           </section>
-
         </section>
 
-                {/*----------------- LINE UP SECTION----------------------- */}
-
+        {/*----------------- LINE UP SECTION----------------------- */}
 
         <section className={styles.lineup}>
+          <SecondaryTitle secondaryTitle="LINE UP" />
+        </section>
 
-        <SecondaryTitle
-               secondaryTitle="LINE UP"
-                />
+        {/*----------------- VOLUNTEERS SECTION----------------------- */}
 
-      </section>
+        <section className={styles.volunteers}>
+          <SecondaryTitle secondaryTitle="BECOME A VOLUNTEER" />
+        </section>
 
-                      {/*----------------- VOLUNTEERS SECTION----------------------- */}
+        {/*----------------- TICKETS SECTION----------------------- */}
 
-
-       
-      <section className={styles.volunteers}>
-
-      <SecondaryTitle
-               secondaryTitle="BECOME A VOLUNTEER"
-                />
-
-      </section>
-
-                      {/*----------------- TICKETS SECTION----------------------- */}
-
-
-       
-      <section className={styles.tickets}>
-
-                <SecondaryTitle
-                secondaryTitle="TICKETS"
-                 />
-
-      </section>
-      
-
-
-       
+        <section className={styles.tickets}>
+          <SecondaryTitle secondaryTitle="TICKETS" />
+        </section>
       </main>
     </>
-  )
+  );
 }
