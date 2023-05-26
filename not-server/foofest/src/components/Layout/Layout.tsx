@@ -1,4 +1,7 @@
-import React from "react";
+import React, { useContext } from "react";
+import TicketsContext from "@/context/ticketsContext";
+import Timer from "../Timer/Timer";
+
 import law from "./Layout.module.css";
 import Image from "next/image";
 import Link from "next/link";
@@ -10,6 +13,9 @@ import { DiMozilla } from "react-icons/di";
 import styles from "./Layout.module.css";
 
 const Layout = ({ children }) => {
+  const globalValues = useContext(TicketsContext);
+  // create a setTimeout that counts to 5 min
+
   return (
     <div>
       <header className="">
@@ -35,6 +41,9 @@ const Layout = ({ children }) => {
             <Link href="/bands" className={law.navLi}>
               <li>BANDS</li>
             </Link>
+            {/* THE TIMER ONLY SHOWS UP AFTER YOU HAVE PICKED AT LEAST 1 TICKET */}
+
+            {globalValues.howManyTickets === 0 ? "" : <Timer />}
           </ul>
         </nav>
       </header>
