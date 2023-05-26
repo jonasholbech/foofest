@@ -7,6 +7,7 @@ import { FaFacebookF, FaInstagram, FaSpotify, FaTiktok } from "react-icons/fa";
 import { RiInstagramFill } from "react-icons/ri";
 
 import { DiMozilla } from "react-icons/di";
+import styles from "./Layout.module.css";
 
 const Layout = ({ children }) => {
   return (
@@ -38,11 +39,14 @@ const Layout = ({ children }) => {
         </nav>
       </header>
       <main>{children}</main>
-      <footer className="">
-        <h1 className="">SwampFest</h1>
-        <div className="">
+      <footer className={styles.footContainer}>
+        <div className={styles.bottomNav}>
+          <div className={styles.logoAndSoMe}>
+            <h1 className={styles.logoTxt}>SwampFest</h1>
+          </div>
+
           {/* bottom nav container */}
-          <ul>
+          <ul className={styles.bottomNavUl}>
             <li>
               <a href="">Contact</a>
             </li>
@@ -56,29 +60,33 @@ const Layout = ({ children }) => {
               <a href="">Data policy</a>
             </li>
           </ul>
-        </div>
-        <div className="">
-          {/* SoMe icon container */}
-          <a href="#_">
-            <FaFacebookF />
-          </a>
 
-          <a href="">
-            <RiInstagramFill />
-          </a>
-          <a href="#_">
-            <FaSpotify />
-          </a>
-          <a href="#_">
-            <FaTiktok />
-          </a>
+          <div className={styles.SoMeBottomNav}>
+            {/* SoMe icon container */}
+            <a href="#_">
+              <FaFacebookF size={24} />
+            </a>
+
+            <a href="">
+              <RiInstagramFill size={26} />
+            </a>
+            <a href="#_">
+              <FaSpotify size={24} />
+            </a>
+            <a href="#_">
+              <FaTiktok size={24} />
+            </a>
+          </div>
+          <div className={styles.sponsorsContainer}>
+            <p>SwampFest is sponsoret by</p>
+            <DiMozilla size={60} />
+            <DiMozilla size={60} />
+            <DiMozilla size={60} />
+          </div>
         </div>
-        <div className="">
-          <p>SwampFest is sponsoret by</p>
-          <DiMozilla />
-        </div>
-        <p className="exam-project">
-          SwampFest is a 3rd semester exam project on MMD KEA
+
+        <p className={styles.examProject}>
+          SwampFest is an exam project for 3rd semester on MMD KEA
         </p>
       </footer>
     </div>

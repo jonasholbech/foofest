@@ -1,33 +1,142 @@
-
-.navigation{
-    width: 100vw;
-    height: 20vh;
-    background-color: transparent;
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    align-items: center;
-    font-family: "Josefin Sans", sans-serif;
-    color: var(--shrek)
+@font-face {
+  font-family: "shrekFont";
+  src: url(../../public/fonts/shrek-font.TTF) format("truetype");
 }
 
-.festival_logo{
-    width: 20%;
-    height: 100%;
-    margin: 2rem auto 0 auto;
+.navigation {
+  width: 100vw;
+  height: 20vh;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  font-family: "Josefin Sans", sans-serif;
+  color: var(--shrek);
 }
 
-.nav_ul{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-    width: 50%;
-    list-style-type: none;
-    margin: 0 auto;
+.logoTxt {
+  font-family: "shrekFont", serif;
 }
 
-.navLi:hover{
-    text-decoration: underline 5px;
+.festival_logo {
+  width: 20%;
+  height: 100%;
+  margin: 2rem auto 0 auto;
+}
 
+.nav_ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  width: 50%;
+  list-style-type: none;
+  margin: 0 auto;
+}
+
+.navLi:hover {
+  text-decoration: underline 5px;
+}
+
+footer.footContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bottomNav {
+  height: fit-content;
+  text-align: center;
+  padding: 6rem 4rem 1rem 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.logoAndSoMe,
+.SoMeBottomNav,
+.bottomNavUl {
+  margin-bottom: 2.5rem;
+}
+
+.logoAndSoMe h1 {
+  padding-bottom: 1.5rem;
+}
+
+.bottomNav ul {
+  list-style-type: none;
+}
+
+.bottomNavUl > li:not(:last-child) {
+  padding-bottom: 0.5rem;
+}
+
+.SoMeBottomNav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.SoMeBottomNav > *:not(:last-child) {
+  padding-right: 2rem;
+}
+
+.examProject {
+  font-size: 0.5rem;
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .bottomNav {
+    display: grid;
+    grid-template-columns: 4fr 4fr 4fr;
+    grid-template-rows: 1fr 4fr 1fr;
+    padding: 4rem 4rem 2rem 4rem;
+    width: 100%;
+  }
+
+  .bottomNavUl {
+    text-align: left;
+    grid-column: 1;
+    grid-row: 2;
+    margin-bottom: 0;
+  }
+
+  .logoAndSoMe h1 {
+    padding-bottom: 0;
+  }
+
+  .logoAndSoMe {
+    /* justify-self: stretch; */
+    grid-column: 2;
+    grid-row: 1;
+    align-self: stretch;
+    margin-bottom: 0;
+  }
+
+  .sponsorsContainer {
+    text-align: end;
+    grid-column: 3;
+    grid-row: 2;
+  }
+
+  .SoMeBottomNav {
+    grid-column: 2;
+    grid-row: 3;
+    align-self: start;
+    margin-bottom: 0;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .bottomNav {
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .bottomNav {
+  }
 }
