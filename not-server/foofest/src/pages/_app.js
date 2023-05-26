@@ -22,11 +22,13 @@ export default function App({ Component, pageProps }) {
   const [globalFormName, setGlobalFormName] = useState([])
   const [globalFormEmail, setGlobalFormEmail] = useState([])
 
+  const [globalVat, setGlobalVat] = useState(0);
+
 
   return ( 
     <>
       <TicketsContext.Provider value={{howManyTickets, setHowManyTickets, costOfTickets, setCostOfTickets, ticketsPlusTents, setTicketsPlusTents, totalCampingCost, setTotalCampingCost,
-      globalFormName, setGlobalFormName, globalFormEmail, setGlobalFormEmail}}>
+      globalFormName, setGlobalFormName, globalFormEmail, setGlobalFormEmail, globalVat, setGlobalVat}}>
              <Layout>
             <Component {...pageProps} />
             </Layout>
