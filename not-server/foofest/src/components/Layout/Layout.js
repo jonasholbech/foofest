@@ -1,10 +1,19 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import law from "./Layout.module.css"
 import Image from 'next/image'
 import Link from 'next/link'
 import messi from "../../imgs/messi18.webp"
+import TicketsContext from '@/context/ticketsContext'
+import Timer from '../Timer/Timer'
 
 function Layout({children}) {
+
+  const globalValues = useContext(TicketsContext)
+
+
+  // create a setTimeout that counts to 5 min
+
+
   return (
     <>
     <nav className={law.navigation}>
@@ -39,6 +48,12 @@ function Layout({children}) {
            <Link href="/bands" className={law.navLi}>
             <li>BANDS</li>
            </Link>
+
+          {
+            globalValues.howManyTickets === 0 ? "" : <Timer />
+          }
+
+
         </ul>
     </nav>
     <main>
