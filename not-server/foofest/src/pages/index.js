@@ -7,10 +7,26 @@ import { useEffect } from 'react'
 import MainTitle from '@/components/MainTitle/MainTitle'
 import stayOut from "../imgs/stayout.jpg"
 import SecondaryTitle from '@/components/SecondaryTitle/SecondaryTitle'
+import Link from 'next/link'
+import supabase from '@/utils/supabaseClient'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
+
+
+
+    const submitted = async (e) => {
+      e.preventDefault();
+      const { data, error } = await supabase.from("swampfest").insert({
+        id: 1,
+        amount: 3,
+        people: "hi",
+      });
+      if (error) throw error;
+   //   router.push("/thanks");
+    };
+
 
   return (
     <>
@@ -34,6 +50,13 @@ export default function Home() {
                 <SecondaryTitle 
                 secondaryTitle="It's that swamp of the year"
                 />
+
+                
+                <button
+                onClick={submitted}
+                >
+                  Send fake data to database
+                </button>
 
           </section>
       
