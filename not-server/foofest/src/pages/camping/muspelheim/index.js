@@ -108,6 +108,8 @@ function muspelheim() {
 // CHECK IF AMOUNT OF TICKETS IS BIGGER THAN TICKETS AVAILABLE
 
 function checkAvailability(event){
+  globalMoneyContext.setSelectedCamp("muspelheim")
+
   if (regularTickets + vipTickets > availableSpots.available){
     alert(`There are not enough tickets available. Available tickets: ${availableSpots.available} `)
     event.preventDefault();
@@ -219,9 +221,11 @@ function checkAvailability(event){
           <Link href="/buyingStage/campingAddOns"
           onClick={checkAvailability}
           >
-          <Button 
-          title="NEXT STEP"
-          />
+           <button className={styles.nextStepBtn}
+          disabled={globalMoneyContext.howManyTickets == 0 ? true : false}
+          >
+            NEXT STEP
+          </button>
           </Link>
 
           <div className={styles.overallSpots}>

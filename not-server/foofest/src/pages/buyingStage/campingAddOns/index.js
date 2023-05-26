@@ -11,9 +11,13 @@ import Button from '@/components/button/Button'
 function campingAddOns() {
 
 
+
 // bring context to this page
 
 const globalMoneyContext = useContext(TicketsContext);
+
+  // store href for "back" btn at the end
+  const goBackBtnHref = "../../camping/" + globalMoneyContext.selectedCamp;
 
 
 // this is the cost of tickets from the previous page
@@ -261,7 +265,7 @@ return (
 
         <Link
         className={styles.backLink} 
-        href="/tickets">
+        href={goBackBtnHref}>
 
         <Button title="BACK" 
         />

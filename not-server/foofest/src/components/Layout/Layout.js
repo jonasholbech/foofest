@@ -49,6 +49,8 @@ function Layout({children}) {
             <li>BANDS</li>
            </Link>
 
+           {/* THE TIMER ONLY SHOWS UP AFTER YOU HAVE PICKED AT LEAST 1 TICKET */}
+
           {
             globalValues.howManyTickets === 0 ? "" : <Timer />
           }

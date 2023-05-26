@@ -5,6 +5,9 @@ import { useState } from 'react'
 
 export default function App({ Component, pageProps }) {
 
+  // which camp did you click on?
+  const [selectedCamp, setSelectedCamp] = useState("")
+
   // how many tickets were purchased?
   const [howManyTickets, setHowManyTickets] = useState(0);
   
@@ -28,7 +31,7 @@ export default function App({ Component, pageProps }) {
   return ( 
     <>
       <TicketsContext.Provider value={{howManyTickets, setHowManyTickets, costOfTickets, setCostOfTickets, ticketsPlusTents, setTicketsPlusTents, totalCampingCost, setTotalCampingCost,
-      globalFormName, setGlobalFormName, globalFormEmail, setGlobalFormEmail, globalVat, setGlobalVat}}>
+      globalFormName, setGlobalFormName, globalFormEmail, setGlobalFormEmail, globalVat, setGlobalVat, selectedCamp, setSelectedCamp}}>
              <Layout>
             <Component {...pageProps} />
             </Layout>

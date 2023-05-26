@@ -108,6 +108,7 @@ function svartheim() {
 // CHECK IF AMOUNT OF TICKETS IS BIGGER THAN TICKETS AVAILABLE
 
 function checkAvailability(){
+  globalMoneyContext.setSelectedCamp("svartheim")
   if (regularTickets + vipTickets > availableSpots.available){
     console.log(`There are not enough tickets available. Available tickets: ${availableSpots.available} `)
   }
@@ -220,10 +221,12 @@ function checkAvailability(){
           <Link href="/buyingStage/campingAddOns"
           onClick={checkAvailability}
           >
-          <Button 
-          title="NEXT STEP"
+          <button className={styles.nextStepBtn}
+          disabled={globalMoneyContext.howManyTickets == 0 ? true : false}
+          >
+            NEXT STEP
+          </button>
           
-          />
           </Link>
 
           <div className={styles.overallSpots}>
