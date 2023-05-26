@@ -31,7 +31,9 @@ function helheim() {
  fetchRes
    .then((res) => res.json())
    .then((spots) => {
-    setAvailableSpots(spots[0]);
+
+
+    setAvailableSpots(spots[2]);
     
    })
    .catch((err) => {
@@ -103,20 +105,14 @@ function helheim() {
 
 
 
+// CHECK IF AMOUNT OF TICKETS IS BIGGER THAN TICKETS AVAILABLE
 
-
-
- // multiply each num vs the cost of the ticket
- // pass that result to the order summary
-
- 
- /*
- <div className={styles.overallSpots}>
- <span className={styles.spots}>Number of spots: {availableSpots.spots}</span>
- <span className={styles.availableSpots}>Available spots: {availableSpots.available}</span>
- </div>
-
- */
+  function checkAvailability(event){
+    if (regularTickets + vipTickets > availableSpots.available){
+      alert(`There are not enough tickets available. Available tickets: ${availableSpots.available} `)
+      event.preventDefault();
+    }
+  }
 
 
 
@@ -222,12 +218,18 @@ function helheim() {
         <div className={styles.nextStep}>
 
           <Link href="/buyingStage/campingAddOns"
-       
+          onClick={checkAvailability}
           >
           <Button 
           title="NEXT STEP"
           />
           </Link>
+
+          <div className={styles.overallSpots}>
+              <span className={styles.spots}>Number of spots: {availableSpots.spots}</span>
+              <span className={styles.availableSpots}>Available spots: {availableSpots.available}</span>
+          </div>
+          
         </div>
        
        
