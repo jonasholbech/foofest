@@ -1,5 +1,5 @@
 import React from 'react'
-import { useEffect, useState, useContext, useRef } from 'react';
+import { useEffect, useState, useContext } from 'react';
 import styles from "./svartheim.module.css"
 import ThirdTitle from '@/components/ThirdTitle/ThirdTitle';
 import Button from '@/components/button/Button';
@@ -9,9 +9,6 @@ import TicketsContext from '@/context/ticketsContext';
 
 function svartheim() {
 
-  // ref for the "next step" btn
-
-  const nextStepBtn = useRef();
 
   // bring context to this page
 
@@ -108,20 +105,14 @@ function svartheim() {
 
 
 
+// CHECK IF AMOUNT OF TICKETS IS BIGGER THAN TICKETS AVAILABLE
 
-
-
- // multiply each num vs the cost of the ticket
- // pass that result to the order summary
-
- 
- /*
- <div className={styles.overallSpots}>
- <span className={styles.spots}>Number of spots: {availableSpots.spots}</span>
- <span className={styles.availableSpots}>Available spots: {availableSpots.available}</span>
- </div>
-
- */
+function checkAvailability(){
+  globalMoneyContext.setSelectedCamp("svartheim")
+  if (regularTickets + vipTickets > availableSpots.available){
+    console.log(`There are not enough tickets available. Available tickets: ${availableSpots.available} `)
+  }
+}
 
  
 
@@ -228,11 +219,22 @@ function svartheim() {
         <div className={styles.nextStep}>
 
           <Link href="/buyingStage/campingAddOns"
+          onClick={checkAvailability}
           >
-          <Button 
-          title="NEXT STEP"
-          />
+          <button className={styles.nextStepBtn}
+          disabled={globalMoneyContext.howManyTickets == 0 ? true : false}
+          >
+            NEXT STEP
+          </button>
+          
           </Link>
+
+          <div className={styles.overallSpots}>
+              <span className={styles.spots}>Number of spots: {availableSpots.spots}</span>
+              <span className={styles.availableSpots}>Available spots: {availableSpots.available}</span>
+          </div>
+
+
         </div>
        
        

@@ -11,9 +11,13 @@ import Button from '@/components/button/Button'
 function campingAddOns() {
 
 
+
 // bring context to this page
 
 const globalMoneyContext = useContext(TicketsContext);
+
+  // store href for "back" btn at the end
+  const goBackBtnHref = "../../camping/" + globalMoneyContext.selectedCamp;
 
 
 // this is the cost of tickets from the previous page
@@ -40,12 +44,16 @@ const [personalTents, setPersonalTents] = useState(0);
 function addPersonalTent(){
   if(personalTents < 4){
   setPersonalTents(old => old+1);
+  setNumOfTents(old => old+1)
+
 }
 }
 
 function subtractPersonalTent(){
   if(personalTents > 0){
   setPersonalTents(old => old-1);
+  setNumOfTents(old => old-1)
+
 }
 }
 
@@ -59,12 +67,16 @@ const [ecoSwampTents, setEcoSwampTents] = useState(0);
 function addEcoSwamp(){
   if(ecoSwampTents < 4){
   setEcoSwampTents(old => old+1);
+  setNumOfTents(old => old+1)
+
 }
 }
 
 function subtractEcoSwamp(){
   if(ecoSwampTents > 0){
   setEcoSwampTents(old => old-1);
+  setNumOfTents(old => old-1)
+
 }
 }
 
@@ -78,12 +90,16 @@ function subtractEcoSwamp(){
  function addSwampLuxForTwo(){
    if(swampLuxForTwo < 4){
    setSwampLuxForTwo(old => old+1);
+   setNumOfTents(old => old+1)
+
  }
  }
  
  function subtractSwampLuxForTwo(){
    if(swampLuxForTwo > 0){
    setSwampLuxForTwo(old => old-1);
+   setNumOfTents(old => old-1)
+
  }
  }
 
@@ -97,14 +113,21 @@ function subtractEcoSwamp(){
  function addSwampLuxForThree(){
    if(swampLuxForThree < 4){
    setSwampLuxForThree(old => old+1);
+   setNumOfTents(old => old+1)
  }
  }
  
  function subtractSwampLuxForThree(){
    if(swampLuxForThree > 0){
    setSwampLuxForThree(old => old-1);
+   setNumOfTents(old => old-1)
+
  }
  }
+
+ // store num of tents selected, despite which ones 
+
+ const [numOfTents, setNumOfTents] = useState(0);
 
 
 
@@ -261,7 +284,7 @@ return (
 
         <Link
         className={styles.backLink} 
-        href="/tickets">
+        href={goBackBtnHref}>
 
         <Button title="BACK" 
         />
@@ -280,9 +303,11 @@ return (
 
         <Link href="/buyingStage/ticketHolderInfo"
         >
-        <Button 
-        title="NEXT STEP"
-        />
+         <button className={styles.nextStepBtn}
+          disabled={numOfTents == 0 ? true : false}
+          >
+            NEXT STEP
+          </button>
         </Link>
       </div>
      

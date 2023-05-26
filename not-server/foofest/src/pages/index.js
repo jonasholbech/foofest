@@ -7,6 +7,8 @@ import { useEffect } from "react";
 import MainTitle from "@/components/MainTitle/MainTitle";
 import stayOut from "../public/imgs/stayout.jpg";
 import SecondaryTitle from "@/components/SecondaryTitle/SecondaryTitle";
+import Link from "next/link";
+import supabase from "@/utils/supabaseClient";
 
 const inter = Inter({ subsets: ["latin"] });
 

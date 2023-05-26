@@ -252,3 +252,23 @@ border-radius: 5px;
     align-items: center;
     justify-content: flex-end;
 }
+
+.nextStepBtn{
+    color: black;
+    background-color: white;
+    border-radius: 30px;
+    padding: 0.5rem 1rem;
+    transition: all 0.5s ease-in;
+    cursor: pointer;
+    }
+    
+    .nextStepBtn:hover{
+        background-color: var(--shrek);
+        border: 2px solid white;
+    }
+
+    .nextStepBtn:disabled{
+        background-color: gray;
+        border: 2px solid white;
+        cursor: none;
+    }
