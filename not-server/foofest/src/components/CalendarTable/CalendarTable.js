@@ -169,6 +169,10 @@ function CalendarTable() {
                 <th>14:00</th>
               </tr>  
 
+              <tr className={organize.specificTimeFrame}>
+                <th>16:00</th>
+              </tr>  
+
               <tr  className={organize.specificTimeFrame}>
                 <th>18:00</th>
               </tr>

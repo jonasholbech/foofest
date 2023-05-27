@@ -23,7 +23,11 @@ export default function App({ Component, pageProps }) {
   const [globalFormName, setGlobalFormName] = useState([]);
   const [globalFormEmail, setGlobalFormEmail] = useState([]);
 
+  // what's the overall VAT?
   const [globalVat, setGlobalVat] = useState(0);
+
+  // global delivery object
+  const [deliveryObject, setDeliveryObject] = useState(null)
 
   return (
     <>
@@ -45,6 +49,8 @@ export default function App({ Component, pageProps }) {
           setGlobalVat,
           selectedCamp,
           setSelectedCamp,
+          deliveryObject, 
+          setDeliveryObject
         }}
       >
         <Layout>

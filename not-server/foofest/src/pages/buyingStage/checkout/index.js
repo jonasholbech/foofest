@@ -5,20 +5,78 @@ import styles from "./checkout.module.css"
 import ThirdTitle from '@/components/ThirdTitle/ThirdTitle'
 import Link from 'next/link'
 import Button from '@/components/button/Button'
-import Checkout_collapse from '@/components/Checkout_collapse/Checkout_collapse'
 
 function checkout() {
 
+  // bring context to this page
+
+  const globalMoneyContext = useContext(TicketsContext);
+
+  // build an object that will store the delivery details
+
+  const [user, setUser] = useState({
+    name: "",
+    address: "",
+    zipCode: "",
+    city: "",
+    country: "",
+    email: "",
+    phone: ""
+
+  })
+
+  function handleInputs(event){
+    setUser({
+      ...user,
+      [event.target.name]: event.target.value
+    });
+
+    console.log(user)
+
+  }
+
+  useEffect(() => {
+
+    globalMoneyContext.setDeliveryObject(user);
+
+  })
+
+
+  
+
+  // CREATE COLLAPSIBLE
+
+//  const Collapsible = ({ title, children }) => {
+//    const [isCollapsed, setIsCollapsed] = useState(true);
+  
+//    const toggleCollapse = () => {
+//      // toggle collapse
+ //     setIsCollapsed(!isCollapsed);
+
+//    };
+  
+//    return (
+//      <div className={styles.collapseDiv}>
+//        <button className={styles.collapseDivBtn} onClick={toggleCollapse}>
+//          {isCollapsed ? title + " +" : title + " -"}
+//        </button>
+//        {!isCollapsed && !fillingForm && <div>{children}</div>}
+//      </div>
+//    );
+//  };
+
+
+  // check which payment method has been chosen
+
   const [isChecked, setIsChecked] = useState(0)
 
+  function checkMe(id){
+    setIsChecked(id);
+    }
 
-// bring context to this page
 
-const globalMoneyContext = useContext(TicketsContext);
 
-function checkMe(id){
-setIsChecked(id);
-}
+
 
 
 
@@ -59,7 +117,7 @@ return (
             thirdTitle="Checkout"
           />
 
-          <p className={styles.description}>Esse minim dolor nostrud Lorem proident cupidatat aliqua proident sunt minim ut amet aliquip ex. 
+          <p className={styles.description}>Choose delivery and payment options.
              </p>
 
       </div>
@@ -70,85 +128,126 @@ return (
 
         <div className={styles.deliverySetType}>
 
-          <Checkout_collapse name="Home">
 
-            <form className={styles.sendTicketsToMyHome}>
+        <div className={styles.collapseDiv}>
+
+        {/*   
+       
+        <Collapsible title="HOME" typeOfDelivery="home"> */}
+
+        <form className={styles.sendTicketsToMyHome}>
               
-                <div className={styles.sendTicketsToMyHomeFullName}>
+              <div className={styles.sendTicketsToMyHomeFullName}>
 
-                  <label>Full Name</label>
-                  <input
-                  placeholder='Fiona Charming'
-                  />
+                <label>Full Name</label>
+                <input
+                type="text"
+                name="name"
+                value={user.name}
+                onChange={handleInputs}
+                placeholder='Fiona Charming'
+                required
+                />
 
-                </div>
+              </div>
 
-                <div className={styles.sendTicketsToMyHomeStreet}>
+              <div className={styles.sendTicketsToMyHomeStreet}>
 
-                  <label>Street & Number</label>
-                  <input
-                  placeholder='Ingerslevsgade 146'
-                  />
+                <label>Street & Number</label>
+                <input
+                type="text"
+                name="address"
+                value={user.address}
+                onChange={handleInputs}
+                placeholder='Ingerslevsgade 146'
+                required
+                />
 
-                </div>
+              </div>
 
-                <div className={styles.sendTicketsToMyHomeZipCode}>
+              <div className={styles.sendTicketsToMyHomeZipCode}>
 
-                  <label>Zip code</label>
-                  <input
-                  placeholder='1705'
-                  />
+                <label>Zip code</label>
+                <input
+                type="number"
+                name="zipCode"
+                value={user.zipCode}
+                onChange={handleInputs}
+                placeholder='1705'
+                required
+                />
 
-                </div>
+              </div>
 
-                <div className={styles.sendTicketsToMyHomeCity}>
+              <div className={styles.sendTicketsToMyHomeCity}>
 
-                  <label>Town/City</label>
-                  <input
-                  placeholder='Copenhagen'
-                  />
+                <label>Town/City</label>
+                <input
+                type="text"
+                name="city"
+                value={user.city}
+                onChange={handleInputs}
+                placeholder='Copenhagen'
+                required
+                />
 
-                </div>
+              </div>
 
-                <div className={styles.sendTicketsToMyHomeCountry}>
+              <div className={styles.sendTicketsToMyHomeCountry}>
 
-                  <label>Country/Region</label>
-                  <input
-                  placeholder='Denmark'
-                  disabled
-                  />
+                <label>Country/Region</label>
+                <input
+                type="text"
+                name="country"
+                value={user.country}
+                onChange={handleInputs}
+                placeholder='Denmark'
+                required
+                
+                />
 
-                </div>
+              </div>
 
-                <div className={styles.sendTicketsToMyHomeEmailAndNumber}>
+              <div className={styles.sendTicketsToMyHomeEmailAndNumber}>
 
-                    <div className={styles.sendTicketsToMyHomeEmail}>
+                  <div className={styles.sendTicketsToMyHomeEmail}>
 
-                      <label>Email</label>
-                      <input
-                      placeholder='fiona@charming'
-                      />
+                    <label>Email</label>
+                    <input
+                    type="text"
+                    name="email"
+                    value={user.email}
+                    onChange={handleInputs}
+                    placeholder='fiona@charming'
+                    required
+                    />
 
-                    </div>
+                  </div>
 
-                    <div className={styles.sendTicketsToMyHomeNumber}>
+                  <div className={styles.sendTicketsToMyHomeNumber}>
 
-                      <label>Phone Number</label>
-                      <input
-                      placeholder='52221989'
-                      />
+                    <label>Phone Number</label>
+                    <input
+                    type="number"
+                    name="phone"
+                    value={user.phone}
+                    onChange={handleInputs}
+                    placeholder='52221989'
+                    required
+                    />
 
-                    </div>
+                  </div>
 
-                </div>
-             
-            </form>
+              </div>
+           
+          </form>
 
-          </Checkout_collapse>
+          
+      {/*   </Collapsible> 
 
-          <Checkout_collapse name="Online">
+        <Collapsible title="ONLINE" typeOfDelivery="online"> 
 
-          <form className={styles.sendTicketsOnline}>
+        <form className={styles.sendTicketsOnline}>
               
               <div className={styles.sendTicketsOnlineFullName}>
 
@@ -171,8 +270,10 @@ return (
           </form>
 
 
+      </Collapsible> */}
 
-          </Checkout_collapse>
+
+      </div>
 
         </div>
 
@@ -224,7 +325,7 @@ return (
 
         <Link
         className={styles.backLink} 
-        href="/tickets">
+        href="/buyingStage/ticketHolderInfo">
 
         <Button title="BACK" 
         />
@@ -243,11 +344,15 @@ return (
 
         <Link href="/buyingStage/review"
         >
-        <Button 
-        title="GO TO REVIEW"
-        />
+        <button className={styles.nextStepBtn}
+          disabled={user.name == "" || user.address == "" || user.zipCode == "" || user.city == "" || user.country == "" 
+          || user.email == "" || user.phone == "" ? true : false}
+          >
+            REVIEW ORDER
+          </button>
         </Link>
       </div>
+
      
      
 

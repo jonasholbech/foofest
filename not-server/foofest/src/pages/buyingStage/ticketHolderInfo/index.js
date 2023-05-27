@@ -44,11 +44,14 @@ function ticketHolderInfo() {
     function retrieveHolderInfoName(num, name){
 
       setFormName([...formName, {"id": num, "name": name}])
+      console.log(formName);
     }
 
     function retrieveHolderInfoEmail(num, email){
 
       setFormEmail([...formEmail, {"id": num, "email": email}])
+      console.log(formEmail);
+
     }
 
     useEffect(() => {
@@ -98,7 +101,7 @@ function ticketHolderInfo() {
         thirdTitle="TICKET HOLDER INFO"
       />
 
-      <p className={styles.description}>Esse minim dolor nostrud Lorem proident cupidatat aliqua proident sunt minim ut amet aliquip ex. 
+      <p className={styles.description}>Fill in your information to receive your tickets.
          </p>
 
   </div>
@@ -127,7 +130,7 @@ function ticketHolderInfo() {
 
     <Link
     className={styles.backLink} 
-    href="/tickets">
+    href="/buyingStage/campingAddOns">
 
     <Button title="BACK" 
     />
@@ -146,11 +149,14 @@ function ticketHolderInfo() {
 
     <Link href="/buyingStage/checkout"
     >
-    <Button 
-    title="GO TO CHECKOUT"
-    />
+    <button className={styles.nextStepBtn}
+          disabled={formEmail.length === 0 || formName.length === 0 ? true : false}
+          >
+            GOT TO CHECKOUT
+          </button>
     </Link>
   </div>
+
  
  
 

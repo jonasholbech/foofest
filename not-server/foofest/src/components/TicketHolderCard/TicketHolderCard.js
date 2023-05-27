@@ -44,19 +44,6 @@ const nameInput = useRef();
             />
         </div>
 
-        <div className={styles.radioAlign}>
-            
-            <input
-            type="checkbox"
-            id={num}
-            className={styles.radio}
-
-            />
-            
-            <label  className={styles.emailLabel}>I'm the one paying</label>
-
-
-        </div>
         
 
     </form>

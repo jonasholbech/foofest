@@ -13,7 +13,7 @@ function About() {
         <section className={styles.sectionGrid}>
           <div className={styles.imgAndCredit}>
             <div className={styles.imageContainer}>
-              <Image className={styles.imgStyle} src={aboutImage} alt="/" />
+              <Image className={styles.imgStyle} src={aboutImage} alt="about img"/>
             </div>
             <span className={styles.photoCredit}>
               Photo by{" "}
