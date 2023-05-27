@@ -91,7 +91,7 @@ function About() {
             <p>
               <strong>For general enquiries:</strong>
               <br />
-              Telephone: (+54) 1234-5678
+              Telephone: (+02) 1234-5678
               <br />
               <a href="mailto:contact@swampfest.org">contact@swampfest.org</a>
             </p>
