@@ -1,6 +1,11 @@
 .nav {
   position: fixed;
   z-index: 2;
+  height: 100%;
+}
+@font-face {
+  font-family: "shrekFont";
+  src: url(../../public/fonts/shrek-font.TTF) format("truetype");
 }
 
 .navbar {
@@ -11,22 +16,27 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2em;
+  background-color: black;
+  color: white;
+  padding: 1.5rem 2rem;
 }
 
-.logo {
-  text-decoration: none;
-  color: aliceblue;
-  /* all the logo text styling */
+.logoTxt {
+  font-family: "shrekFont", serif;
+  color: var(--shrek);
 }
 
 .menuToggle {
   cursor: pointer;
 }
 
+.menuToggle * {
+  align-self: center;
+}
+
 .navOverlay {
   position: fixed;
-  background: green;
+  background: black;
   z-index: -2;
   top: -100%;
   left: 0;
@@ -110,12 +120,18 @@ ul.navLinks li {
 
 ul.navLinks li a {
   text-decoration: none;
-  color: aquamarine;
+  /* color: var(--shrek); */
+  color: white;
   font-size: 6em;
   position: relative;
   top: 0;
   transition: all 2s cubic-bezier(0.16, 1, 0.3, 1);
 }
+
+/* .menuItem:hover { */
+/* color: blueviolet; */
+/* transition: all 0s; */
+/* } */
 
 .navItemWrapper {
   content: "";
@@ -124,7 +140,7 @@ ul.navLinks li a {
   left: -10%;
   width: 120%;
   height: 100%;
-  background: green;
+  background: black;
   margin: 0 auto;
 }
 
