@@ -36,7 +36,7 @@
 
 .nordicLights{
 grid-area: img;
-background-image: url("../../../imgs/campImgs/nilfheim.jpg");
+background-image: url("../../../public/imgs/campImgs/nilfheim.jpg");
 background-position: center;
 background-size: cover;
 background-repeat: no-repeat;
