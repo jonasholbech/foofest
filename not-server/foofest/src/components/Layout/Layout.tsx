@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import TicketsContext from "@/context/ticketsContext";
+import TicketsContext from "../../context/ticketsContext";
 import Timer from "../Timer/Timer";
 
 import law from "./Layout.module.css";

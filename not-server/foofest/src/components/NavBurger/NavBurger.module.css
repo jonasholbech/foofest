@@ -180,6 +180,10 @@ ul.navLinks li a {
 }
 
 @media only screen and (max-width: 767px) {
+  .navbar {
+    padding: 1.5rem 1.5rem;
+  }
+
   .logoTxt h1 {
     font-size: 1.5rem;
   }
@@ -202,6 +206,10 @@ ul.navLinks li a {
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
+  .navbar {
+    padding: 1.5rem 2rem;
+  }
+
   .logoTxt h1 {
     font-size: 1.75rem;
   }
@@ -224,6 +232,10 @@ ul.navLinks li a {
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
+  .navbar {
+    padding: 2rem 3rem;
+  }
+
   .logoTxt h1 {
     font-size: 2rem;
   }
