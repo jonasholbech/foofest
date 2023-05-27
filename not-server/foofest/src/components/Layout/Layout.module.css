@@ -3,40 +3,13 @@
   src: url(../../public/fonts/shrek-font.TTF) format("truetype");
 }
 
-.navigation {
-  width: 100vw;
-  height: 20vh;
-  background-color: transparent;
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
-  align-items: center;
-  font-family: "Josefin Sans", sans-serif;
-  color: var(--shrek);
+.headerBox {
+  height: 8em;
 }
 
 .logoTxt {
   font-family: "shrekFont", serif;
-}
-
-.festival_logo {
-  width: 20%;
-  height: 100%;
-  margin: 2rem auto 0 auto;
-}
-
-.nav_ul {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-around;
-  width: 50%;
-  list-style-type: none;
-  margin: 0 auto;
-}
-
-.navLi:hover {
-  text-decoration: underline 5px;
+  color: var(--shrek);
 }
 
 footer.footContainer {

@@ -1,0 +1,244 @@
+.nav {
+  position: fixed;
+  z-index: 2;
+  height: 100%;
+}
+@font-face {
+  font-family: "shrekFont";
+  src: url(../../public/fonts/shrek-font.TTF) format("truetype");
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+  color: white;
+  padding: 3rem 4rem;
+}
+
+.logoTxt {
+  font-family: "shrekFont", serif;
+  color: var(--shrek);
+}
+
+.menuToggle {
+  cursor: pointer;
+}
+
+.menuToggle * {
+  align-self: center;
+}
+
+.navOverlay {
+  position: fixed;
+  background: black;
+  z-index: -2;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  padding: 4em;
+  transition: all 2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hamBox {
+  position: relative;
+  width: 44px;
+  height: 44px;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: 0.3s ease;
+  padding: 2.4em;
+}
+
+.hamBox:hover {
+  background: orange;
+}
+
+.hamBoxOpen {
+  background: yellowgreen;
+}
+
+.lineTop,
+.lineBottom {
+  margin: 0 auto;
+  position: absolute;
+  display: block;
+  width: 24px;
+  height: 2px;
+  border-radius: 10px;
+  background: blue;
+  left: 0;
+  right: 0;
+  transform: rotate(0deg);
+  transition: all 0.4s;
+}
+
+.lineTop {
+  top: 2.2em;
+}
+
+.lineBottom {
+  bottom: 2.2em;
+}
+
+.lineTop.spin {
+  top: 2.35em;
+  transform: rotate(135deg);
+  background: blue;
+}
+
+.lineBottom.spin {
+  bottom: 2.35em;
+  transform: rotate(225deg);
+  background: blue;
+}
+
+ul.navLinks {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+ul.navLinks li {
+  list-style: none;
+  position: relative;
+}
+
+ul.navLinks li a {
+  text-decoration: none;
+  /* color: var(--shrek); */
+  color: white;
+  font-size: 6em;
+  position: relative;
+  top: 0;
+  transition: all 2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* .menuItem:hover { */
+/* color: blueviolet; */
+/* transition: all 0s; */
+/* } */
+
+.navItemWrapper {
+  content: "";
+  position: absolute;
+  top: 120px;
+  left: -10%;
+  width: 120%;
+  height: 100%;
+  background: black;
+  margin: 0 auto;
+}
+
+.navBarFooter {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  padding: 2em;
+  display: flex;
+  justify-content: space-between;
+}
+
+.navBarSoMe ul {
+  display: flex;
+}
+
+.navBarSoMe ul li {
+  list-style: none;
+}
+
+.navBarSoMe ul li a {
+  position: relative;
+  bottom: -20px;
+  text-decoration: none;
+  color: orchid;
+  padding-left: 2em;
+  opacity: 10;
+  transition: all 2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.swampLocation {
+  position: relative;
+  bottom: -20px;
+  opacity: 10;
+  transition: all 2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@media only screen and (max-width: 767px) {
+  .logoTxt h1 {
+    font-size: 1.5rem;
+  }
+
+  ul.navLinks li a {
+    font-size: 3em;
+  }
+
+  .swampLocation {
+    display: none;
+  }
+
+  .navBarFooter {
+    justify-content: space-around;
+  }
+
+  .navBarSoMe ul li a {
+    padding: 0 1em;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .logoTxt h1 {
+    font-size: 1.75rem;
+  }
+
+  ul.navLinks li a {
+    font-size: 4em;
+  }
+
+  .swampLocation {
+    display: none;
+  }
+
+  .navBarFooter {
+    justify-content: space-around;
+  }
+
+  .navBarSoMe ul li a {
+    padding: 0 1em;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .logoTxt h1 {
+    font-size: 2rem;
+  }
+
+  ul.navLinks li a {
+    font-size: 5em;
+  }
+}
+
+/* @media only screen and (min-width: 1200px) {
+  .logoTxt h1 {
+    font-size: 2rem;
+  }
+
+  ul.navLinks li a {
+    font-size: 6em;
+  }
+} */
