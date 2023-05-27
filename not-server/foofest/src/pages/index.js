@@ -2,13 +2,9 @@ import Head from "next/head";
 import Image from "next/image";
 import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.css";
-import { useState } from "react";
-import { useEffect } from "react";
 import MainTitle from "@/components/MainTitle/MainTitle";
 import stayOut from "../public/imgs/stayout.jpg";
 import SecondaryTitle from "@/components/SecondaryTitle/SecondaryTitle";
-import Link from "next/link";
-import supabase from "@/utils/supabaseClient";
 
 const inter = Inter({ subsets: ["latin"] });
 
