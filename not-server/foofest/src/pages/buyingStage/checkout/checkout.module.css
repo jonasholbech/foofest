@@ -31,6 +31,33 @@
     
 }
 
+/* COLLAPSIBLE */
+
+.collapseDiv{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+    gap: 1rem;
+}
+
+.collapseDivBtn{
+    width: 95%;
+    height: auto;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 1rem;
+    transition: all 0.5s ease-in;
+}
+
+.collapseDivBtn:hover{
+    color: black;
+    background-color: white;
+}
+
 
 /* ORDER SUMMARY (RIGHT) */
 
@@ -384,3 +411,23 @@
     align-items: center;
     justify-content: flex-end;
 }
+
+.nextStepBtn {
+    color: black;
+    background-color: white;
+    border-radius: 30px;
+    padding: 0.5rem 1rem;
+    transition: all 0.5s ease-in;
+    cursor: pointer;
+  }
+  
+  .nextStepBtn:hover {
+    background-color: var(--shrek);
+    border: 2px solid white;
+  }
+  
+  .nextStepBtn:disabled {
+    background-color: gray;
+    border: 2px solid white;
+    cursor: none;
+  }

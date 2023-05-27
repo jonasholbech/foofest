@@ -150,7 +150,7 @@ function ticketHolderInfo() {
     <Link href="/buyingStage/checkout"
     >
     <button className={styles.nextStepBtn}
-          disabled={formEmail.length === 0 && formName.length === 0 ? true : false}
+          disabled={formEmail.length === 0 || formName.length === 0 ? true : false}
           >
             GOT TO CHECKOUT
           </button>

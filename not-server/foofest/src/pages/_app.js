@@ -25,13 +25,18 @@ export default function App({ Component, pageProps }) {
   const [globalFormName, setGlobalFormName] = useState([])
   const [globalFormEmail, setGlobalFormEmail] = useState([])
 
+  // what's the overall VAT?
   const [globalVat, setGlobalVat] = useState(0);
 
+
+  // Store global object with the user's delivery info
+  const [deliveryObject, setDeliveryObject] = useState(null)
 
   return ( 
     <>
       <TicketsContext.Provider value={{howManyTickets, setHowManyTickets, costOfTickets, setCostOfTickets, ticketsPlusTents, setTicketsPlusTents, totalCampingCost, setTotalCampingCost,
-      globalFormName, setGlobalFormName, globalFormEmail, setGlobalFormEmail, globalVat, setGlobalVat, selectedCamp, setSelectedCamp}}>
+      globalFormName, setGlobalFormName, globalFormEmail, setGlobalFormEmail, globalVat, setGlobalVat, selectedCamp, setSelectedCamp, 
+      deliveryObject, setDeliveryObject}}>
              <Layout>
             <Component {...pageProps} />
             </Layout>
