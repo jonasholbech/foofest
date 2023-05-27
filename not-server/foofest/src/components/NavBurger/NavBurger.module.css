@@ -1,0 +1,182 @@
+.nav {
+  position: fixed;
+  z-index: 2;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2em;
+}
+
+.logo {
+  text-decoration: none;
+  color: aliceblue;
+  /* all the logo text styling */
+}
+
+.menuToggle {
+  cursor: pointer;
+}
+
+.navOverlay {
+  position: fixed;
+  background: green;
+  z-index: -2;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  padding: 4em;
+  transition: all 2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hamBox {
+  position: relative;
+  width: 44px;
+  height: 44px;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: 0.3s ease;
+  padding: 2.4em;
+}
+
+.hamBox:hover {
+  background: orange;
+}
+
+.hamBoxOpen {
+  background: yellowgreen;
+}
+
+.lineTop,
+.lineBottom {
+  margin: 0 auto;
+  position: absolute;
+  display: block;
+  width: 24px;
+  height: 2px;
+  border-radius: 10px;
+  background: blue;
+  left: 0;
+  right: 0;
+  transform: rotate(0deg);
+  transition: all 0.4s;
+}
+
+.lineTop {
+  top: 2.2em;
+}
+
+.lineBottom {
+  bottom: 2.2em;
+}
+
+.lineTop.spin {
+  top: 2.35em;
+  transform: rotate(135deg);
+  background: blue;
+}
+
+.lineBottom.spin {
+  bottom: 2.35em;
+  transform: rotate(225deg);
+  background: blue;
+}
+
+ul.navLinks {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+ul.navLinks li {
+  list-style: none;
+  position: relative;
+}
+
+ul.navLinks li a {
+  text-decoration: none;
+  color: aquamarine;
+  font-size: 6em;
+  position: relative;
+  top: 0;
+  transition: all 2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.navItemWrapper {
+  content: "";
+  position: absolute;
+  top: 120px;
+  left: -10%;
+  width: 120%;
+  height: 100%;
+  background: green;
+  margin: 0 auto;
+}
+
+.navBarFooter {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  padding: 2em;
+  display: flex;
+  justify-content: space-between;
+}
+
+.navBarSoMe ul {
+  display: flex;
+}
+
+.navBarSoMe ul li {
+  list-style: none;
+}
+
+.navBarSoMe ul li a {
+  position: relative;
+  bottom: -20px;
+  text-decoration: none;
+  color: orchid;
+  padding-left: 2em;
+  opacity: 10;
+  transition: all 2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.swampLocation {
+  position: relative;
+  bottom: -20px;
+  opacity: 10;
+  transition: all 2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@media only screen and (max-width: 992px) {
+  ul.navLinks li a {
+    font-size: 5em;
+  }
+
+  .swampLocation {
+    display: none;
+  }
+
+  .navBarFooter {
+    justify-content: space-around;
+  }
+
+  .navBarSoMe ul li a {
+    padding: 0 1em;
+  }
+}

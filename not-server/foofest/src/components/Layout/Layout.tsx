@@ -3,44 +3,60 @@ import TicketsContext from "@/context/ticketsContext";
 import Timer from "../Timer/Timer";
 
 import law from "./Layout.module.css";
-import Image from "next/image";
 import Link from "next/link";
-import { FaFacebookF, FaInstagram, FaSpotify, FaTiktok } from "react-icons/fa";
 
+import { FaFacebookF, FaSpotify, FaTiktok } from "react-icons/fa";
 import { RiInstagramFill } from "react-icons/ri";
-
 import { DiMozilla } from "react-icons/di";
+
 import styles from "./Layout.module.css";
 
+import NavBurger from "../NavBurger/NavBurger";
 const Layout = ({ children }) => {
   const globalValues = useContext(TicketsContext);
   // create a setTimeout that counts to 5 min
 
   return (
     <div>
-      <header className="">
-        <nav className={law.navigation}>
-          <Link className={law.festival_logo} href="/"></Link>
+      <header className={law.headerBox}>
+        <NavBurger />
+        <nav className={law.navBar}>
+          <div className={law.festival_logo}>
+            <Link className={styles.logoTxt} href="/">
+              <h1>SwampFest</h1>
+            </Link>
+          </div>
+
           <ul className={law.nav_ul}>
-            <Link href="/line_up" className={law.navLi}>
-              <li>LINE UP</li>
-            </Link>
+            <li>
+              <Link href="/line_up" className={law.navLi}>
+                LINE UP
+              </Link>
+            </li>
 
-            <Link href="/volunteer" className={law.navLi}>
-              <li>VOLUNTEER</li>
-            </Link>
+            <li>
+              <Link href="/volunteer" className={law.navLi}>
+                VOLUNTEER
+              </Link>
+            </li>
 
-            <Link href="/tickets" className={law.navLi}>
-              <li>TICKETS</li>
-            </Link>
+            <li>
+              <Link href="/tickets" className={law.navLi}>
+                TICKETS
+              </Link>
+            </li>
 
-            <Link href="/about" className={law.navLi}>
-              <li>ABOUT</li>
-            </Link>
+            <li>
+              <Link href="/about" className={law.navLi}>
+                ABOUT
+              </Link>
+            </li>
 
-            <Link href="/bands" className={law.navLi}>
-              <li>BANDS</li>
-            </Link>
+            <li>
+              <Link href="/bands" className={law.navLi}>
+                BANDS
+              </Link>
+            </li>
             {/* THE TIMER ONLY SHOWS UP AFTER YOU HAVE PICKED AT LEAST 1 TICKET */}
 
             {globalValues.howManyTickets === 0 ? "" : <Timer />}
