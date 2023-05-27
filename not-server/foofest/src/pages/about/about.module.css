@@ -1,6 +1,5 @@
 .aboutBox {
-  font-size: 1.2rem;
-
+  font-size: 1.125rem;
   line-height: 1.5;
   margin-bottom: 2rem;
   padding: 0 0.5rem;
@@ -52,28 +51,63 @@ div.imageContainer {
   font-size: 1.5rem;
 }
 
-.sectionTxt {
-  font-size: 1.125rem;
-}
-
-@media only screen and (max-width: 767px) {
-}
-
 @media (min-width: 768px) and (max-width: 991px) {
+  .aboutBox {
+    font-size: 1.125rem;
+    margin: 0 auto 3rem auto;
+    padding: 0 0.5rem;
+    width: 80%;
+    display: grid;
+    grid-template-rows: auto;
+    row-gap: 5rem;
+  }
+
+  .sectionTxt {
+    row-gap: 1.125rem;
+  }
+
+  .sectionTxt h1 {
+    font-size: 1.75rem;
+  }
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
+  .aboutBox {
+    font-size: 1.125rem;
+    margin: 0 auto 5rem auto;
+    padding: 0 0.5rem;
+    width: 60%;
+    display: grid;
+    grid-template-rows: auto;
+    row-gap: 4rem;
+  }
+
+  .sectionTxt {
+    row-gap: 1.25rem;
+  }
+
+  .sectionTxt h1 {
+    font-size: 1.875rem;
+  }
 }
 
 @media only screen and (min-width: 1200px) {
   .aboutBox {
-    font-size: 1.2rem;
-
-    line-height: 1.5;
-    margin: 0 auto 2rem auto;
-    padding: 1rem;
+    font-size: 1.25rem;
+    margin: 0 auto 10rem auto;
+    padding: 0 0.5rem;
     width: 60%;
+    max-width: 800px;
     display: grid;
     grid-template-rows: auto;
+    row-gap: 6rem;
+  }
+
+  .sectionTxt {
+    row-gap: 1.25rem;
+  }
+
+  .sectionTxt h1 {
+    font-size: 1.875rem;
   }
 }

@@ -112,7 +112,7 @@ function About() {
           <div className={styles.sectionTxt}>
             <h1>Want to work for us?</h1>
             <p>
-              Send your application to us by carrier pidgeon{" "}
+              Send your application to us by carrier pidgeon <br />
               <span>(Disclaimer: bird might get eaten by Dragon)</span>
             </p>
           </div>
