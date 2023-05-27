@@ -1,5 +1,5 @@
 import React from 'react'
-import { useContext, useState, useEffect } from 'react'
+import { useContext, useState, useEffect, useRef } from 'react'
 import TicketsContext from '@/context/ticketsContext'
 import styles from "./review.module.css"
 import ThirdTitle from '@/components/ThirdTitle/ThirdTitle'
@@ -8,6 +8,17 @@ import Button from '@/components/button/Button'
 import Checkout_collapse from '@/components/Checkout_collapse/Checkout_collapse'
 
 function index() {
+
+ // use a ref for the checkbox
+ 
+ const agreeCheckbox = useRef()
+
+ const [isCheckboxChecked, setIsCheckboxChecked] = useState(false);
+
+
+ function toggleCheckbox(){
+  setIsCheckboxChecked(!isCheckboxChecked)
+ }
 
 // bring context to this page
 
@@ -28,7 +39,9 @@ const globalMoneyContext = useContext(TicketsContext);
               thirdTitle="ORDER REVIEW"
             />
   
-            <p className={styles.description}>Esse minim dolor nostrud Lorem proident cupidatat aliqua proident sunt minim ut amet aliquip ex. 
+            <p className={styles.description}>
+              Review your purchase before approving it.
+
                </p>
   
         </div>
@@ -91,7 +104,7 @@ const globalMoneyContext = useContext(TicketsContext);
 
         <div className={styles.checkboxDiv}>
 
-        <input type='checkbox' />
+        <input ref={agreeCheckbox} checked={isCheckboxChecked} type='checkbox' onClick={toggleCheckbox} />
 
         <label>
           I've read and accepted the terms of sales and delivery.
@@ -104,7 +117,7 @@ const globalMoneyContext = useContext(TicketsContext);
   
           <Link
           className={styles.backLink} 
-          href="/tickets">
+          href="/buyingStage/checkout">
   
           <Button title="BACK" 
           />
@@ -123,9 +136,11 @@ const globalMoneyContext = useContext(TicketsContext);
   
           <Link href="/buyingStage/success"
           >
-          <Button 
-          title="APPROVE ORDER"
-          />
+           <button className={styles.nextStepBtn}
+          disabled={isCheckboxChecked ? false : true}
+          >
+            APPROVE PURCHASE
+          </button>
           </Link>
         </div>
        
