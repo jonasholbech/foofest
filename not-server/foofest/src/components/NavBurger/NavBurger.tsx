@@ -3,7 +3,12 @@ import law from "./NavBurger.module.css";
 import { useState } from "react";
 import Link from "next/link";
 import { FaFacebookF, FaSpotify, FaTiktok } from "react-icons/fa";
-import { RiInstagramFill } from "react-icons/ri";
+import { RiInstagramFill, RiMenuFill } from "react-icons/ri";
+
+import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
+import { FaBars } from "react-icons/fa";
+
+import { GrClose, GrMenu } from "react-icons/gr";
 
 const NavBurger = () => {
   const [navOpen, setNavOpen] = useState(false);
@@ -11,22 +16,17 @@ const NavBurger = () => {
     <div className={law.nav}>
       <div className={law.navContainer}>
         <div className={law.navbar}>
-          <div className={law.logo}>SwampFest 2.0</div>
+          <div className={law.logo}>
+            <Link className={law.logoTxt} href="/">
+              <h1>SwampFest</h1>
+            </Link>
+          </div>
           <div className={law.menuToggle} onClick={() => setNavOpen(!navOpen)}>
-            <div
-              className={
-                navOpen ? `${law.hamBox} ${law.hamBoxOpen}` : law.hamBox
-              }
-            >
-              <span
-                className={navOpen ? `${law.lineTop} ${law.spin}` : law.lineTop}
-              ></span>
-              <span
-                className={
-                  navOpen ? `${law.lineBottom} ${law.spin}` : law.lineBottom
-                }
-              ></span>
-            </div>
+            {navOpen ? (
+              <AiOutlineClose size={40} />
+            ) : (
+              <AiOutlineMenu size={40} />
+            )}
           </div>
         </div>
         <div
@@ -39,66 +39,71 @@ const NavBurger = () => {
           <ul className={law.navLinks}>
             <li className={law.navItem}>
               <Link
-                href="/"
+                className={law.menuItem}
+                href="/line_up"
                 onClick={() => setNavOpen(!navOpen)}
                 style={{
                   top: navOpen ? "0" : "120px",
                   transitionDelay: navOpen ? "0.8s" : "0s",
                 }}
               >
-                Home
+                LINE UP
               </Link>
               <div className={law.navItemWrapper}></div>
             </li>
             <li className={law.navItem}>
               <Link
-                href="/"
+                className={law.menuItem}
+                href="/volunteer"
+                onClick={() => setNavOpen(!navOpen)}
+                style={{
+                  top: navOpen ? "0" : "120px",
+                  transitionDelay: navOpen ? "0.9s" : "0s",
+                }}
+              >
+                VOLUNTEER
+              </Link>
+              <div className={law.navItemWrapper}></div>
+            </li>
+            <li className={law.navItem}>
+              <Link
+                className={law.menuItem}
+                href="/tickets"
                 onClick={() => setNavOpen(!navOpen)}
                 style={{
                   top: navOpen ? "0" : "120px",
                   transitionDelay: navOpen ? "1s" : "0s",
                 }}
               >
-                Projects
+                TICKETS
               </Link>
               <div className={law.navItemWrapper}></div>
             </li>
             <li className={law.navItem}>
               <Link
-                href="/"
+                className={law.menuItem}
+                href="/about"
                 onClick={() => setNavOpen(!navOpen)}
                 style={{
                   top: navOpen ? "0" : "120px",
                   transitionDelay: navOpen ? "1.1s" : "0s",
                 }}
               >
-                About
+                ABOUT
               </Link>
               <div className={law.navItemWrapper}></div>
             </li>
             <li className={law.navItem}>
               <Link
-                href="/"
+                className={law.menuItem}
+                href="/bands"
                 onClick={() => setNavOpen(!navOpen)}
                 style={{
                   top: navOpen ? "0" : "120px",
-                  transitionDelay: navOpen ? "1.1s" : "0s",
+                  transitionDelay: navOpen ? "1.2s" : "0s",
                 }}
               >
-                Contact
-              </Link>
-              <div className={law.navItemWrapper}></div>
-            </li>
-            <li className={law.navItem}>
-              <Link
-                href="/"
-                onClick={() => setNavOpen(!navOpen)}
-                style={{
-                  top: navOpen ? "0" : "120px",
-                  transitionDelay: navOpen ? "0.8s" : "0s",
-                }}
-              >
-                link
+                BANDS
               </Link>
               <div className={law.navItemWrapper}></div>
             </li>
