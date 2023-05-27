@@ -23,9 +23,9 @@ const NavBurger = () => {
           </div>
           <div className={law.menuToggle} onClick={() => setNavOpen(!navOpen)}>
             {navOpen ? (
-              <AiOutlineClose size={40} />
+              <AiOutlineClose size={30} />
             ) : (
-              <AiOutlineMenu size={40} />
+              <AiOutlineMenu size={30} />
             )}
           </div>
         </div>
