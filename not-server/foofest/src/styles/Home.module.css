@@ -1,11 +1,13 @@
+@import url("https://use.typekit.net/ssg8azx.css");
+
 .main {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
 }
-
-.heroSection{
+/* rethink this v */
+.heroSection {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
@@ -15,28 +17,273 @@
   width: 100vw;
 }
 
-.shrekImgSection{
+/* new code */
+section.descriptionSection {
+  display: block;
+}
+
+.descriptionContainer {
+  margin: 0 auto;
+  padding: 4rem 0.5rem 3rem;
+  width: 100%;
+  font-size: 1.5rem;
+  text-align: center;
+  max-width: 1200px;
+}
+
+.descriptionNumbers {
+  display: flex;
+  justify-content: center;
+  gap: 1.875rem;
+  font-size: 1.25rem;
+  padding: 7.5rem 0.5rem 0;
+}
+
+section.gallerySection {
+  display: flex;
+  flex-direction: column;
   width: 100%;
 }
 
-.shrekImg{
+.imageContainer {
+  width: 100%;
+}
+
+div.imageContainer {
+  flex: 1 0 0;
+}
+
+.imgStyle {
+  object-fit: cover;
+  width: 100% !important;
+  display: block;
+  aspect-ratio: auto;
+  height: auto;
+}
+
+.marqueeSection {
+  padding: 3.125rem 0 6.25rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.marqueeSection span {
+  font-size: 4rem;
+}
+
+.topText {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding-right: 0.75rem;
+
+  font-family: swear-display-cilati, sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.middleText {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+
+  padding-right: 0.75rem;
+  font-weight: 900;
+  font-style: normal;
+
+  line-height: 1.2;
+}
+
+.bottomText {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding-right: 0.75rem;
+
+  font-family: quiverleaf-cf, sans-serif;
+  font-weight: 600;
+  font-style: italic;
+}
+
+section.ctaSection {
+  display: flex;
+  flex-direction: column;
+}
+
+.ctaImage {
+  flex: 1 0 50%;
+  display: flex;
+}
+
+.ctaImage .imgStyle {
+  object-fit: cover;
+  min-width: 100%;
+}
+
+.ctaContent {
+  flex: 1 0 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 1.75rem 0.5rem 3.625rem;
+  background-color: white;
+  color: black;
+}
+
+.ctaText {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.ctaText h2 {
+  font-size: 2.4rem;
+}
+
+.ctaText p {
+  font-size: 1.125rem;
+}
+
+.ctaButton {
+  font-size: 1.25rem;
+  border: 1px;
+  border-style: solid;
+  border-color: var(--shrek);
+  padding: 0.5rem 1.5rem;
+  margin-top: 2rem;
+  text-transform: uppercase;
+}
+
+@media (min-width: 421px) and (max-width: 768px) {
+  section.gallerySection {
+    flex-direction: row;
+  }
+
+  .ctaContent {
+    padding: 1.75rem 1.5rem 3.625rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .descriptionContainer {
+    padding: 4rem 1rem 3rem;
+    font-size: 1.75rem;
+  }
+
+  .descriptionNumbers {
+    font-size: 1.5rem;
+  }
+
+  section.gallerySection {
+    flex-direction: row;
+  }
+
+  .marqueeSection {
+    padding: 3vw 0 10vw;
+  }
+
+  .marqueeSection span {
+    font-size: 6rem;
+  }
+
+  section.ctaSection {
+    padding: 1.25rem 0;
+    flex-direction: row;
+  }
+
+  .ctaContent {
+    padding: 1.75rem 2rem 3.625rem;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .descriptionContainer {
+    padding: 4rem 1.25rem 3rem;
+    font-size: 2rem;
+  }
+
+  .descriptionNumbers {
+    font-size: 1.75rem;
+  }
+
+  section.gallerySection {
+    flex-direction: row;
+  }
+
+  .marqueeSection {
+    padding: 3vw 0 10vw;
+  }
+
+  .marqueeSection span {
+    font-size: 7rem;
+  }
+
+  section.ctaSection {
+    padding: 1.25rem 0;
+    flex-direction: row;
+  }
+
+  .ctaContent {
+    padding: 1.75rem 2.5rem 3.625rem;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .descriptionContainer {
+    padding: 8.5rem 1.5rem;
+    font-size: 2.25rem;
+  }
+
+  .descriptionNumbers {
+    font-size: 2rem;
+  }
+
+  section.gallerySection {
+    flex-direction: row;
+  }
+
+  .marqueeSection {
+    padding: 100px 0;
+  }
+
+  .marqueeSection span {
+    font-size: 8rem;
+  }
+
+  section.ctaSection {
+    padding: 3.125rem 0;
+    flex-direction: row;
+  }
+
+  .ctaContent {
+    padding: 1.75rem 3rem 3.625rem;
+  }
+}
+
+/* old code */
+.shrekImgSection {
+  width: 100%;
+}
+
+.shrekImg {
   width: 100%;
   align-self: center;
 }
 
-.lineup{
+.lineup {
   width: 100%;
   background-color: yellow;
   height: 50vh;
 }
 
-.volunteers{
+.volunteers {
   width: 100%;
   background-color: red;
   height: 50vh;
 }
 
-.tickets{
+.tickets {
   width: 100%;
   background-color: green;
   height: 50vh;
@@ -132,7 +379,7 @@
 
 .center::before,
 .center::after {
-  content: '';
+  content: "";
   left: 50%;
   position: absolute;
   filter: blur(45px);
@@ -142,6 +389,7 @@
 .logo {
   position: relative;
 }
+
 /* Enable hover only on non-touch devices */
 @media (hover: hover) and (pointer: fine) {
   .card:hover {
