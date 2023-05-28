@@ -1,5 +1,7 @@
-/* import fancy fonts for marquee */
+/* import fancy fonts */
 @import url("https://use.typekit.net/ssg8azx.css");
+
+/* hero styling */
 
 section.heroSection {
   background-image: url("../public/imgs/gallery/gallery2.jpg");
@@ -30,6 +32,8 @@ section.heroSection h1 em {
   color: var(--shrek);
 }
 
+/* description styling */
+
 section.descriptionSection {
   display: block;
 }
@@ -50,6 +54,37 @@ section.descriptionSection {
   font-size: 1.25rem;
   padding: 7.5rem 0.5rem 0;
 }
+
+/* lineup poster styling */
+
+.musical_ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  padding: 0;
+
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+
+  font-family: swear-display, serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.75rem;
+  line-height: 0.8;
+}
+
+.artistName {
+  /* flex-basis: 50%; */
+  padding: 10px;
+  text-align: center;
+}
+
+.artistNameSpecial {
+  color: red;
+  font-family: "Times New Roman", Times, serif;
+}
+
+/* gallery styling */
 
 section.gallerySection {
   display: flex;
@@ -150,12 +185,6 @@ section.ctaSection {
 }
 
 .ctaText h2 {
-  /* font-family: swear-text, serif;
-  font-weight: 700;
-  font-style: normal; */
-  /* font-family: swear-display, serif;
-  font-weight: 700;
-  font-style: normal; */
   font-size: 2.4rem;
 }
 

@@ -1,15 +1,14 @@
 import Image from "next/image";
 import { Inter } from "next/font/google";
 import styles from "../styles/Home.module.css";
+import Marquee from "react-fast-marquee";
+import Link from "next/link";
+import { useEffect, useState, useRef } from "react";
 
 import galleryImage1 from "../public/imgs/gallery/gallery1sm.png";
 import galleryImage2 from "../public/imgs/gallery/gallery2sm.png";
 import galleryImage4 from "../public/imgs/gallery/gallery4sm.png";
 import galleryImage3 from "../public/imgs/gallery/gallery3sm.png";
-
-import Marquee from "react-fast-marquee";
-
-import Link from "next/link";
 
 import { RxDotFilled, RxDot, RxBorderSolid } from "react-icons/rx";
 import { AiFillStar, AiOutlineStar } from "react-icons/ai";
@@ -17,6 +16,36 @@ import { AiFillStar, AiOutlineStar } from "react-icons/ai";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
+  // DISPLAYING ARTISTS
+  const [artists, setArtists] = useState([]);
+
+  useEffect(() => {
+    const api = "http://localhost:8080/bands";
+
+    fetch(api)
+      .then((res) => res.json())
+      .then((data) => {
+        setArtists(data);
+      })
+      .catch((err) => {
+        console.error(err);
+      });
+  }, []);
+
+  const randomIndex = Math.floor(Math.random() * artists.length); // Get a random index
+  const artistNames = artists.map((musician, index) => {
+    const isRandomName = index === randomIndex;
+    const className = isRandomName
+      ? styles.artistNameSpecial
+      : styles.artistName;
+
+    return (
+      <li key={musician.name} className={className}>
+        {musician.name}
+      </li>
+    );
+  });
+
   return (
     <div>
       <div className={styles.main}>
@@ -47,8 +76,8 @@ export default function Home() {
         </section>
 
         <div className={styles.posterSection}>
-          <h1>Poster section below this</h1>
-          <p>use fetch code from bands page</p>
+          <h1 className={styles.sectionTitle}>LINEUP</h1>
+          <ul className={styles.musical_ul}>{artistNames}</ul>
         </div>
 
         <section className={styles.gallerySection}>
