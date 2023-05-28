@@ -35,9 +35,12 @@ export default function Home() {
   const randomIndex = Math.floor(Math.random() * artists.length); // Get a random index
   const artistNames = artists.map((musician, index) => {
     const isRandomName = index === randomIndex;
-    const className = isRandomName
-      ? styles.artistNameSpecial
-      : styles.artistName;
+    const className =
+      index % 3 === 2
+        ? styles.artistNameSpecial // Apply special styling for the third element
+        : isRandomName
+        ? styles.artistNameSpecial
+        : styles.artistName;
 
     return (
       <li key={musician.name} className={className}>
@@ -75,10 +78,15 @@ export default function Home() {
           </div>
         </section>
 
-        <div className={styles.posterSection}>
-          <h1 className={styles.sectionTitle}>LINEUP</h1>
+        <section className={styles.posterSection}>
+          <Marquee autoFill={true} speed={60}>
+            <h1 className={styles.sectionTitle}>
+              LINEUP <RxDotFilled size={22} />
+            </h1>
+          </Marquee>
+
           <ul className={styles.musical_ul}>{artistNames}</ul>
-        </div>
+        </section>
 
         <section className={styles.gallerySection}>
           <div className={styles.imageContainer}>
