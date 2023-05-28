@@ -5,7 +5,6 @@ import MainTitle from "../components/MainTitle/MainTitle";
 import stayOut from "../public/imgs/stayout.jpg";
 import SecondaryTitle from "../components/SecondaryTitle/SecondaryTitle";
 
-import heroImage from "../public/imgs/nordicLights.jpg";
 import galleryImage1 from "../public/imgs/gallery/gallery1sm.png";
 import galleryImage2 from "../public/imgs/gallery/gallery2sm.png";
 import galleryImage4 from "../public/imgs/gallery/gallery4sm.png";
@@ -15,7 +14,7 @@ import Marquee from "react-fast-marquee";
 
 import Link from "next/link";
 
-import { RxDotFilled, RxDot } from "react-icons/rx";
+import { RxDotFilled, RxDot, RxBorderSolid } from "react-icons/rx";
 import { AiFillStar, AiOutlineStar } from "react-icons/ai";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -24,14 +23,14 @@ export default function Home() {
   return (
     <div>
       <div className={styles.main}>
-        <div className="heroSection">
-          <div className="imageContainer">
+        <section className={styles.heroSection}>
+          {/* <div className="imageContainer">
             <Image className={styles.heroImg} src={heroImage} alt="/" />
-          </div>
+          </div> */}
           <h1>
-            All <br /> day - every <br /> day
+            Hear <em>all</em> <br /> day - Here <br /> <em>every</em> day
           </h1>
-        </div>
+        </section>
 
         <section className={styles.descriptionSection}>
           <div className={styles.descriptionContainer}>
@@ -52,6 +51,7 @@ export default function Home() {
 
         <div className={styles.posterSection}>
           <h1>Poster section below this</h1>
+          <p>use fetch code from bands page</p>
         </div>
 
         <section className={styles.gallerySection}>
