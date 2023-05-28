@@ -23,6 +23,9 @@ export default function App({ Component, pageProps }) {
   const [globalFormName, setGlobalFormName] = useState([]);
   const [globalFormEmail, setGlobalFormEmail] = useState([]);
 
+  // ticket holders' info combined
+  const [globalNameAndEmail, setGlobalNameAndEmail] = useState([])
+
   // what's the overall VAT?
   const [globalVat, setGlobalVat] = useState(0);
 
@@ -55,7 +58,7 @@ export default function App({ Component, pageProps }) {
           deliveryObject, 
           setDeliveryObject,
           globalReservationId,
-          setGlobalReservationId
+          setGlobalReservationId,
         }}
       >
         <Layout>

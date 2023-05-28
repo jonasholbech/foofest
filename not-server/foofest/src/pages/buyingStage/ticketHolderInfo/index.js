@@ -10,6 +10,10 @@ import Button from '@/components/button/Button';
 
 function ticketHolderInfo() {
 
+
+
+
+
   // grab local info of ticket holders
 
   const [formName, setFormName] = useState([])
@@ -43,13 +47,13 @@ function ticketHolderInfo() {
 
     function retrieveHolderInfoName(num, name){
 
-      setFormName([...formName, {"id": num, "name": name}])
+      setFormName([...formName, {"Person": num, "name": name}])
       console.log(formName);
     }
 
     function retrieveHolderInfoEmail(num, email){
 
-      setFormEmail([...formEmail, {"id": num, "email": email}])
+      setFormEmail([...formEmail, {"Person": num, "email": email}])
       console.log(formEmail);
 
     }
@@ -148,6 +152,7 @@ function ticketHolderInfo() {
   <div className={styles.nextStep}>
 
     <Link href="/buyingStage/checkout"
+    
     >
     <button className={styles.nextStepBtn}
           disabled={formEmail.length === 0 || formName.length === 0 ? true : false}
