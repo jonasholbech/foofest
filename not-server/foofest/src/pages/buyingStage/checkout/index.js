@@ -39,7 +39,7 @@ function checkout() {
 
     globalMoneyContext.setDeliveryObject(user);
 
-  })
+  }, [user])
 
 
   

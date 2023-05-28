@@ -27,7 +27,10 @@ export default function App({ Component, pageProps }) {
   const [globalVat, setGlobalVat] = useState(0);
 
   // global delivery object
-  const [deliveryObject, setDeliveryObject] = useState(null)
+  const [deliveryObject, setDeliveryObject] = useState()
+
+  // Save reservation ID globally
+  const [globalReservationId, setGlobalReservationId] = useState(null)
 
   return (
     <>
@@ -50,7 +53,9 @@ export default function App({ Component, pageProps }) {
           selectedCamp,
           setSelectedCamp,
           deliveryObject, 
-          setDeliveryObject
+          setDeliveryObject,
+          globalReservationId,
+          setGlobalReservationId
         }}
       >
         <Layout>
