@@ -1,9 +1,6 @@
 import Image from "next/image";
 import { Inter } from "next/font/google";
 import styles from "../styles/Home.module.css";
-import MainTitle from "../components/MainTitle/MainTitle";
-import stayOut from "../public/imgs/stayout.jpg";
-import SecondaryTitle from "../components/SecondaryTitle/SecondaryTitle";
 
 import galleryImage1 from "../public/imgs/gallery/gallery1sm.png";
 import galleryImage2 from "../public/imgs/gallery/gallery2sm.png";
