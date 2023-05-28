@@ -1,3 +1,4 @@
 .headerBox {
-  height: 8em;
+  display: block;
+  height: auto;
 }
