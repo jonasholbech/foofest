@@ -23,7 +23,7 @@ const inter = Inter({ subsets: ["latin"] });
 export default function Home() {
   return (
     <div>
-      <main className={styles.main}>
+      <div className={styles.main}>
         <div className="heroSection">
           <div className="imageContainer">
             <Image className={styles.heroImg} src={heroImage} alt="/" />
@@ -121,7 +121,7 @@ export default function Home() {
         {/* <div className={styles.partnersSection}>
           <h1>Partners section</h1>
         </div> */}
-      </main>
+      </div>
     </div>
   );
 }
