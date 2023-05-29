@@ -23,11 +23,17 @@ export default function App({ Component, pageProps }) {
   const [globalFormName, setGlobalFormName] = useState([]);
   const [globalFormEmail, setGlobalFormEmail] = useState([]);
 
+  // ticket holders' info combined
+  const [globalNameAndEmail, setGlobalNameAndEmail] = useState([])
+
   // what's the overall VAT?
   const [globalVat, setGlobalVat] = useState(0);
 
   // global delivery object
-  const [deliveryObject, setDeliveryObject] = useState(null)
+  const [deliveryObject, setDeliveryObject] = useState()
+
+  // Save reservation ID globally
+  const [globalReservationId, setGlobalReservationId] = useState(null)
 
   return (
     <>
@@ -50,7 +56,9 @@ export default function App({ Component, pageProps }) {
           selectedCamp,
           setSelectedCamp,
           deliveryObject, 
-          setDeliveryObject
+          setDeliveryObject,
+          globalReservationId,
+          setGlobalReservationId,
         }}
       >
         <Layout>

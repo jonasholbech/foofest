@@ -4,7 +4,9 @@ import TicketsContext from "../../../context/ticketsContext"
 import styles from "./review.module.css"
 import ThirdTitle from "../../../components/ThirdTitle/ThirdTitle"
 import Link from 'next/link'
-import Button from "../../../components/button/Button"
+import Button from '@/components/button/Button'
+import Checkout_collapse from '@/components/Checkout_collapse/Checkout_collapse'
+import supabase from "../../../utils/supabaseClient"
 
 function index() {
 
@@ -22,6 +24,73 @@ function index() {
 // bring context to this page
 
 const globalMoneyContext = useContext(TicketsContext);
+
+
+// SEND INFO TO DATABASE 
+
+// send confirmation ID to endpoint "/fullfill-reservation" through a POST REQUEST WITH
+// PAYLOAD OF 
+
+// {
+//	"id":"sktwi6kwl1d9e787"
+// }
+
+// 
+
+
+  async function sendInformationToDatabase(){
+
+  const payload = {
+    "id": `${globalMoneyContext.globalReservationId}`
+  };
+
+  const url = "http://localhost:8080/fullfill-reservation"
+
+
+  fetch(url, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      "Accept": "text/plain"
+    },
+    body: JSON.stringify(payload)
+  })
+    .then(response => {
+      if (response.ok) {
+        return response.json();
+      } else {
+        throw new Error("Error: " + response.status);
+      }
+    })
+    .then(response => {
+      console.log(response);
+    })
+    .catch(error => {
+      console.error("Error:", error);
+    });
+
+
+    // insert information about the ticket holders and delivery info to our own database
+
+  
+      
+      const { data , error } = await supabase.from("swampfest").insert({
+        reservation_id: globalMoneyContext.globalReservationId,
+        number_of_tickets: globalMoneyContext.howManyTickets,
+        people: globalMoneyContext.globalFormName,
+        email: globalMoneyContext.globalFormEmail,
+        delivery: globalMoneyContext.deliveryObject,
+        camp: globalMoneyContext.selectedCamp,
+      });
+      if (error) throw error;
+    //  router.push("/success");
+    };
+
+  
+
+
+
+
 
 
   return (
@@ -134,6 +203,7 @@ const globalMoneyContext = useContext(TicketsContext);
         <div className={styles.nextStep}>
   
           <Link href="/buyingStage/success"
+          onClick={sendInformationToDatabase}
           >
            <button className={styles.nextStepBtn}
           disabled={isCheckboxChecked ? false : true}
