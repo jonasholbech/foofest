@@ -1,5 +1,7 @@
-/* import fancy fonts for marquee */
+/* import fancy fonts */
 @import url("https://use.typekit.net/ssg8azx.css");
+
+/* hero styling */
 
 section.heroSection {
   background-image: url("../public/imgs/gallery/gallery2.jpg");
@@ -30,6 +32,8 @@ section.heroSection h1 em {
   color: var(--shrek);
 }
 
+/* description styling */
+
 section.descriptionSection {
   display: block;
 }
@@ -48,8 +52,63 @@ section.descriptionSection {
   justify-content: center;
   gap: 1.875rem;
   font-size: 1.25rem;
-  padding: 7.5rem 0.5rem 0;
+  padding: 5rem 0.5rem 0;
 }
+
+/* lineup poster styling */
+
+section.posterSection {
+  padding: 5rem 0 4rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.sectionTitle {
+  background-color: var(--shrek);
+  color: black;
+  font-family: swear-display, serif;
+  font-weight: 800;
+  font-style: normal;
+  font-size: 2.125rem;
+  margin-bottom: 0.5rem;
+
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding-right: 0.25rem;
+}
+
+.musical_ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  padding: 0;
+
+  justify-content: center;
+  align-items: center;
+
+  font-size: 1.5rem;
+  line-height: 1.25;
+}
+
+.musical_ul li {
+  padding: 0 10px 0 0;
+}
+
+.artistName {
+  font-family: swear-display, serif;
+  font-weight: 400;
+  font-style: normal;
+  padding: 10px;
+  text-align: center;
+}
+
+.artistNameSpecial {
+  font-weight: 700;
+  font-style: italic;
+}
+
+/* gallery styling */
 
 section.gallerySection {
   display: flex;
@@ -150,12 +209,6 @@ section.ctaSection {
 }
 
 .ctaText h2 {
-  /* font-family: swear-text, serif;
-  font-weight: 700;
-  font-style: normal; */
-  /* font-family: swear-display, serif;
-  font-weight: 700;
-  font-style: normal; */
   font-size: 2.4rem;
 }
 
@@ -189,6 +242,10 @@ section.ctaSection {
   .ctaContent {
     padding: 1.75rem 1.5rem 3.625rem;
   }
+
+  .musical_ul {
+    padding: 0 0.5rem;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
@@ -207,6 +264,22 @@ section.ctaSection {
 
   .descriptionNumbers {
     font-size: 1.5rem;
+  }
+
+  section.posterSection {
+    padding: 5rem 0 6rem;
+  }
+
+  .sectionTitle {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    gap: 0.5rem;
+    padding-right: 0.5rem;
+  }
+
+  .musical_ul {
+    padding: 0.5rem 0.5rem;
+    font-size: 1.75rem;
   }
 
   section.gallerySection {
@@ -253,6 +326,22 @@ section.ctaSection {
     font-size: 1.75rem;
   }
 
+  section.posterSection {
+    padding: 5rem 0 6rem;
+  }
+
+  .sectionTitle {
+    font-size: 2.75rem;
+    margin-bottom: 0.5rem;
+    gap: 0.5rem;
+    padding-right: 0.5rem;
+  }
+
+  .musical_ul {
+    padding: 0.5rem 0.75rem;
+    font-size: 1.75rem;
+  }
+
   section.gallerySection {
     flex-direction: row;
   }
@@ -295,6 +384,25 @@ section.ctaSection {
 
   .descriptionNumbers {
     font-size: 2rem;
+  }
+
+  section.posterSection {
+    padding: 5rem 0 6rem;
+    justify-content: center;
+  }
+
+  .sectionTitle {
+    font-size: 2.75rem;
+    margin-bottom: 0.5rem;
+    gap: 0.5rem;
+    padding-right: 0.5rem;
+  }
+
+  .musical_ul {
+    padding: 0.5rem 2rem;
+    margin: 0 auto;
+    font-size: 1.875rem;
+    max-width: 1200px;
   }
 
   section.gallerySection {
