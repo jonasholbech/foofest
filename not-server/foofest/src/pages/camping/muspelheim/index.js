@@ -13,6 +13,28 @@ function muspelheim() {
 
   const globalMoneyContext = useContext(TicketsContext);
 
+
+// THIS IS TO GET THE ID FROM THE ENDPOINT, BRING LOWER LATER
+
+  // when the user clicks on one of the cards, we have to send a get request
+  // and fetch an ID that we'll store in our database at the end of the 
+  // buying process
+
+  // onClick event triggers a get request to "/reserve-spot" (this is inside of the checkavailability function)
+
+  // we store the id as global context
+
+  const [storeReservationId, setStoreReservationId] = useState(null);
+
+  // in the last approval of the purchase we send a POST request to the endpoint "/fullfill-reservation"
+
+
+
+
+
+
+
+
   function modifyGlobalMoneyContext(){
     globalMoneyContext.setCostOfTickets(totalCost);
   }
@@ -113,7 +135,45 @@ function checkAvailability(event){
   if (regularTickets + vipTickets > availableSpots.available){
     alert(`There are not enough tickets available. Available tickets: ${availableSpots.available} `)
     event.preventDefault();
-  }
+  } else {
+
+
+    // GET RESERVATION ID FROM ENDPOINT "/reserve-spot" WITH A PUT REQUEST
+
+    const payload = {
+      "area": "Muspelheim",
+      "amount": globalMoneyContext.howManyTickets
+    };
+  
+    const url = "http://localhost:8080/reserve-spot"
+
+
+    fetch(url, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+        "Accept": "text/plain"
+      },
+      body: JSON.stringify(payload)
+    })
+      .then(response => {
+        if (response.ok) {
+          return response.json();
+        } else {
+          throw new Error("Error: " + response.status);
+        }
+      })
+      .then(response => {
+        console.log(response, globalMoneyContext.howManyTickets, storeReservationId, response.id);
+        globalMoneyContext.setGlobalReservationId(response.id);
+      })
+      .catch(error => {
+        console.error("Error:", error);
+      });
+
+      
+  
+    }   
 }
 
 
