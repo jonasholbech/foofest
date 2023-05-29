@@ -1,97 +1,257 @@
-.musical_ul{
-    width: 50vw;
-    height: 70vh;
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1rem;
-    margin: 0rem auto;
-    overflow: auto;
-     
+.bandsContainer {
+  margin: 0 1rem;
+  display: flex;
+  flex-direction: column;
 }
 
 /* */
 
-.artist_card{
-    font-size: 1.5rem;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 5rem;
-    padding: 1rem;
-    margin: 1rem auto 5rem auto;
-    width: 100%;
-    height: 50vh;
-    gap: 2rem;
-    transition: all 0.5s ease-in;
-    border-radius: 5px;
-    overflow: auto;
-
+.artist_card {
+  font-size: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  margin: 1rem auto 2rem auto;
+  width: 100%;
+  gap: 1.5rem;
+  transition: all 0.5s ease-in;
 }
 
-.artistImg{
-    width: 100%;
-    height: 70%;
+.bandImage {
+  flex: 1 0;
+  display: flex;
+  width: 100%;
 }
 
-.imageAndSpan{
-    width: 100%;
-    max-height: 50%;
+.bandImage .imgStyle {
+  object-fit: cover;
+  width: 100% !important;
+  aspect-ratio: auto;
+  display: block;
+  height: auto;
+}
+
+.imageAndSpan {
+  width: 100%;
+  /* max-height: 50%; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 0 0 0.5rem;
+}
+
+.creditSpan {
+  opacity: 50%;
+  font-size: 0.875rem;
+  align-self: flex-end;
+  text-align: right;
+}
+
+.artistData {
+  max-width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  font-weight: 300;
+  font-size: 1.25rem;
+}
+
+.artistInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding-bottom: 1rem;
+}
+
+.artistInfo p {
+  font-size: 1.25rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.whenTitle,
+.locationTitle,
+.genreTitle,
+.membersTitle {
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.whenData,
+.locationData,
+.genreData,
+.membersData {
+  font-weight: 300;
+  font-style: italic;
+  max-width: 60ch;
+  text-align: left;
+  /* border-top: 1px solid white; */
+}
+
+.bio {
+  padding: 1rem 0;
+  font-size: 1.25rem;
+
+  /* max-width: 60ch; */
+  text-align: left;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.members {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.button {
+  padding: 0.5rem 1.5rem;
+  cursor: pointer;
+}
+
+@media (min-width: 421px) and (max-width: 768px) {
+  .bandsContainer {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .bandsContainer {
+    margin: 0 2.5rem;
+  }
+
+  .artist_card {
+    padding: 0;
+    margin-bottom: 2rem;
+    gap: 0rem;
+    max-width: 700px;
+  }
+
+  .imageAndInfo {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .imageAndSpan {
+    flex: 1 0 50%;
+    display: flex;
+    padding: 0 0.25rem 0 0;
+  }
+
+  .artistInfo {
+    flex: 1 0 50%;
+    padding: 0 0 0 0.25rem;
+  }
+
+  .creditSpan {
+    opacity: 50%;
+    font-size: 0.75rem;
+    align-self: flex-end;
+    text-align: right;
+  }
+
+  .artistData {
+    padding-top: 1.5rem;
+    font-size: 1.25rem;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .bandsContainer {
+    margin: 0 2.5rem;
+  }
+
+  .artist_card {
+    padding: 0;
+    margin-bottom: 2rem;
+    gap: 0rem;
+    max-width: 900px;
+  }
+
+  .imageAndInfo {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .imageAndSpan {
+    flex: 1 0 50%;
+    display: flex;
+    padding: 0 0.25rem 0 0;
+  }
+
+  .artistInfo {
+    flex: 1 0 50%;
+    padding: 0 0 0 0.25rem;
+  }
+
+  .creditSpan {
+    opacity: 50%;
+    font-size: 0.75rem;
+    align-self: flex-end;
+    text-align: right;
+  }
+
+  .artistData {
+    padding-top: 1.5rem;
+    font-size: 1.25rem;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .bandsContainer {
+    margin: 0 auto;
+    max-width: 1200px;
+  }
+
+  .artist_card {
+    padding: 0;
+    margin-bottom: 2rem;
+    gap: 0rem;
+    flex-direction: row;
+  }
+
+  .imageAndInfo {
+    flex: 1 0 40%;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    overflow: hidden;
-    padding: 1rem;
-}
+    padding: 1.5rem 0.5rem 0 0.25rem;
+  }
 
-.creditSpan{
-    color: white;
-    font-size: 1rem;
-}
-
-
-
-.artistData{
-    max-width: 100%;
-    height: 100%;
+  .imageAndSpan {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-around;
+    padding: 0 0.25rem 0 0;
+    align-self: flex-start;
+    justify-content: center;
+  }
+
+  .bandImage {
+    display: flex;
+    width: 100%;
+  }
+
+  .creditSpan {
+    opacity: 50%;
+    font-size: 0.875rem;
+    align-self: flex-end;
+    text-align: right;
+  }
+
+  .artistData {
+    flex: 1 0 60%;
+    padding: 1.5rem 0.25rem 0 0.5rem;
+    font-size: 1.25rem;
+    border-top: 0;
+  }
+
+  .bio {
+    border-top: 0;
+    padding: 0 0 2rem;
+  }
 }
-
-
-.name{
-    font-size: 1.8rem;
-    font-weight: 800;
-    margin-bottom: 1rem;
-}
-
-.bio{
-    font-style: italic;
-    max-width: 60ch;
-    text-align: left;
-    padding: 0.5rem;
-    overflow: auto;
-    height: 30%;
-    border-top: 1px solid white;
-}
-
-.members{
-    border-top: 1px solid white;
-    font-weight: 200;
-    margin: 1rem auto;
-}
-
-.genre{
-    font-style: italic;
-    max-width: 60ch;
-    text-align: left;
-    border-top: 1px solid white;
-
-}
-
-.button{
-    padding: 0.5rem 1.5rem;
-    cursor: pointer;
-}
-

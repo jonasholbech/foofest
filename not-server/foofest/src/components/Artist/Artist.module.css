@@ -1,78 +1,76 @@
-.artist_card{
-    border: 5px dashed white;
-    font-size: 1.5rem;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 5rem;
-    padding: 1rem;
-    margin: 1rem auto 5rem auto;
-    width: 80%;
-    height: 50vh;
-    gap: 2rem;
-    transition: all 0.5s ease-in;
-    border-radius: 5px;
-    overflow: hidden;
-
+.artist_card {
+  border: 5px dashed white;
+  font-size: 1.5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  padding: 1rem;
+  margin: 1rem auto 5rem auto;
+  width: 80%;
+  /* height: 50vh; */
+  gap: 2rem;
+  transition: all 0.5s ease-in;
+  border-radius: 5px;
+  overflow: hidden;
 }
 
-.artistImg{
-    max-width: 100%;
-    background-color: var(--shrek);
-    height: 100%;
+.artistImg {
+  max-width: 100%;
+  background-color: var(--shrek);
+  height: 100%;
 }
 
-.artistData{
-    max-width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-around;
+.artistData {
+  max-width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-around;
 }
 
-
-.name{
-    font-size: 1.8rem;
-    font-weight: 800;
-    margin-bottom: 2rem;
+.name {
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin-bottom: 2rem;
 }
 
-.bio{
-    font-style: italic;
-    max-width: 60ch;
-    text-align: left;
-    padding: 0.5rem;
-    overflow: auto;
-    height: 30%;
-    border-top: 1px solid white;
+.bio {
+  font-style: italic;
+  max-width: 60ch;
+  text-align: left;
+  padding: 0.5rem;
+  overflow: auto;
+  height: 30%;
+  border-top: 1px solid white;
 }
 
-.members{
-    border-top: 1px solid white;
-    font-weight: 200;
-    margin: 1rem auto;
+.members {
+  border-top: 1px solid white;
+  font-weight: 200;
+  margin: 1rem auto;
 }
 
-.genre{
-    font-style: italic;
-    max-width: 60ch;
-    text-align: left;
-    border-top: 1px solid white;
-
+.genre {
+  font-style: italic;
+  max-width: 60ch;
+  text-align: left;
+  border-top: 1px solid white;
 }
 
-.button{
-    padding: 0.5rem 1.5rem;
-    cursor: pointer;
-}
+.collapseDivBtn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 
+  width: 100%;
 
-.collapseDivBtn{
-    width: 100%;
-    height: 8vh;
-    font-family: "Josefin Sans", sans-serif;
-    font-size: 1rem;
-    cursor: pointer;
-    border-radius: 5px;
+  padding: 1rem 1rem;
 
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1rem;
+  cursor: pointer;
+  background-color: gray;
+  border-bottom: 2px;
+  border-color: aqua;
 }
