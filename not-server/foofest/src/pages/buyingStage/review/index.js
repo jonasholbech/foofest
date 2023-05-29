@@ -1,11 +1,10 @@
 import React from 'react'
 import { useContext, useState, useEffect, useRef } from 'react'
-import TicketsContext from '@/context/ticketsContext'
+import TicketsContext from "../../../context/ticketsContext"
 import styles from "./review.module.css"
-import ThirdTitle from '@/components/ThirdTitle/ThirdTitle'
+import ThirdTitle from "../../../components/ThirdTitle/ThirdTitle"
 import Link from 'next/link'
-import Button from '@/components/button/Button'
-import Checkout_collapse from '@/components/Checkout_collapse/Checkout_collapse'
+import Button from "../../../components/button/Button"
 
 function index() {
 

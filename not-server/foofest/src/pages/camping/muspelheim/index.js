@@ -1,10 +1,10 @@
 import React from 'react'
 import { useEffect, useState, useContext } from 'react';
 import styles from "./muspelheim.module.css"
-import ThirdTitle from '@/components/ThirdTitle/ThirdTitle';
-import Button from '@/components/button/Button';
+import ThirdTitle from "../../../components/ThirdTitle/ThirdTitle"
+import Button from "../../../components/button/Button"
 import Link from 'next/link';
-import TicketsContext from '@/context/ticketsContext';
+import TicketsContext from "../../../context/ticketsContext"
 
 
 function muspelheim() {

@@ -1,9 +1,8 @@
 import React from 'react'
-import MainTitle from '@/components/MainTitle/MainTitle'
+import MainTitle from "../../components/MainTitle/MainTitle"
 import tickets from "./tickets.module.css"
-import SecondaryTitle from '@/components/SecondaryTitle/SecondaryTitle'
 import { useState, useEffect } from 'react'
-import Camp_card from '@/components/Camp_card/Camp_card'
+import Camp_card from "../../components/Camp_card/Camp_card"
 
 
 function Tickets() {

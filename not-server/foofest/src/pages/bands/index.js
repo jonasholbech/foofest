@@ -1,8 +1,8 @@
 import React from 'react'
 import { useEffect, useState, useRef } from 'react';
 import bands from "./Bands.module.css"
-import Artist from '@/components/Artist/Artist';
-import MainTitle from '@/components/MainTitle/MainTitle';
+import Artist from "../../components/Artist/Artist"
+import MainTitle from "../../components/MainTitle/MainTitle"
 import Image from 'next/image';
 
 function Bands() {

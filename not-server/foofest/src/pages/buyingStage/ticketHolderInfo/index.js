@@ -1,11 +1,11 @@
-import TicketHolderCard from '@/components/TicketHolderCard/TicketHolderCard'
+import TicketHolderCard from "../../../components/TicketHolderCard/TicketHolderCard"
 import React from 'react'
-import TicketsContext from '@/context/ticketsContext';
+import TicketsContext from "../../../context/ticketsContext"
 import { useEffect, useState, useContext } from 'react';
 import styles from "./ticketHolderInfo.module.css"
-import ThirdTitle from '@/components/ThirdTitle/ThirdTitle';
+import ThirdTitle from "../../../components/ThirdTitle/ThirdTitle";
 import Link from 'next/link';
-import Button from '@/components/button/Button';
+import Button from "../../../components/button/Button"
 
 
 function ticketHolderInfo() {

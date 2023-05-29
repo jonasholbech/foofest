@@ -2,11 +2,13 @@ import React from 'react'
 import { useState } from 'react'
 import { useEffect } from 'react'
 import styles from "./Line_up.module.css"
-import MainTitle from '@/components/MainTitle/MainTitle'
-import Stage from '@/components/Stage/Stage'
 import Link from 'next/link'
-import CalendarTable from '@/components/CalendarTable/CalendarTable'
-import LineupNav from '@/components/LineupNav/LineupNav'
+import MainTitle from "../../components/MainTitle/MainTitle"
+import Stage from "../../components/Stage/Stage"
+import CalendarTable from "../../components/CalendarTable/CalendarTable"
+import LineupNav from "../../components/LineupNav/LineupNav"
+
+
 
 
 

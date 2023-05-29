@@ -1,7 +1,8 @@
 import React from 'react'
 import styles from "./success.module.css"
 import Link from 'next/link'
-import Button from '@/components/button/Button'
+import Button from "../../../components/button/Button"
+
 
 
 

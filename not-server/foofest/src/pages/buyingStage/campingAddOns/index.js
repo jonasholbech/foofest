@@ -1,10 +1,10 @@
 import React from 'react'
 import { useContext, useState, useEffect } from 'react'
-import TicketsContext from '@/context/ticketsContext'
+import TicketsContext from "../../../context/ticketsContext"
 import styles from "./campingAddOns.module.css"
-import ThirdTitle from '@/components/ThirdTitle/ThirdTitle'
+import ThirdTitle from "../../../components/ThirdTitle/ThirdTitle"
 import Link from 'next/link'
-import Button from '@/components/button/Button'
+import Button from "../../../components/button/Button"
 
 
 
