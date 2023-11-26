@@ -20,6 +20,7 @@ const copy = Bands.map((b) => {
     slug: slugify(b.name),
   };
 }); */
+
 /* let start = Bands.length;
 const imageTypes = [
   "abstract",

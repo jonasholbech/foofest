@@ -10,7 +10,7 @@ app.use(function (req, res, next) {
     "Access-Control-Allow-Headers",
     "Origin, X-Requested-With, Content-Type, Accept"
   );
-  res.header("Access-Control-Allow-Methods", "GET, POST, PUT, OPTIONS"); //OPTIONS
+  res.header("Access-Control-Allow-Methods", "GET, POST, PUT, OPTIONS");
   next();
 });
 app.use(express.static("public"));
