@@ -33,7 +33,7 @@ The main endpoints you should be working with are:
 
 The bands won't change over time, but the schedule and events will.
 
-### Notes
+#### Notes
 
 Using the `/events` endpoint is optional.
 Cancellations happen on a regular basis, it is optional if you want to reflect that in your UI or not.

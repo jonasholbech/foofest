@@ -36,6 +36,8 @@ This will give you a server running on http://localhost:8080 try hitting that in
 
 1. The remote server spins down whenever it can. So the first time you hit it there can be a delay ranging from 5-30 seconds, maybe implement a loader/spinner?
 
+This will probably mess up Next when fetching serverside, this is OK, it's a free service after all, just refresh and everything will be fine
+
 ### Endpoints
 
 All endpoints are [documented here](https://jonasholbech.github.io/Foofest-Exam-API-Docs/)
