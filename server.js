@@ -10,7 +10,7 @@ app.use(function (req, res, next) {
     "Access-Control-Allow-Headers",
     "Origin, X-Requested-With, Content-Type, Accept"
   );
-  res.header("Access-Control-Allow-Methods", "GET, POST, PUT, OPTIONS");
+  res.header("Access-Control-Allow-Methods", "GET, POST, PUT, OPTIONS"); //PATCH?
   next();
 });
 app.use(express.static("public"));
@@ -92,3 +92,4 @@ app.post("/fullfill-reservation", function (req, res) {
 });
 
 app.listen(process.env.PORT || 8080);
+console.log(`Server started on port ${process.env.PORT || 8080}`);

@@ -25,4 +25,5 @@ const observer = (function () {
     },
   };
 })();
+
 module.exports = { observer };

@@ -1,6 +1,5 @@
 //var faker = require("faker");
 const Bands = require("./static/bands.json");
-//var random = require("just-random-integer");
 //const { initialSettings } = require("./static/settings");
 
 //const numBands = 6 * 7 * 3;

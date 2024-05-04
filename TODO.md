@@ -1,11 +1,11 @@
 # TODO
 
-Docs
-test deployment instructions
+[x] Docs
+[x] test deployment instructions
 
 ## Events.js
 
-subscriber for (almost?) all events
+[] subscriber for (almost?) all events (overvejes, observer pattern implementeret)
 
 ## Schedule.js
 

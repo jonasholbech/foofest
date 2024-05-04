@@ -60,6 +60,7 @@ class Booking {
         thisArea.available += cleanAmount;
         clearTimeout(timeoutId);
       }, this.fest.reservationDuration);
+
       const id = uniqid();
       this.timeoutIds.push({
         clearCallback: timeoutId,

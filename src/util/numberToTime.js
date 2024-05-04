@@ -4,4 +4,5 @@ function numberToTime(num) {
   }
   return `0${num}:00`;
 }
+
 module.exports = { numberToTime };

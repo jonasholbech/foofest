@@ -2,6 +2,6 @@
   "name": "FooFest exam project, express server",
   "description": "Minimal express wrapper around client side code",
   "repository": "https://github.com/jonasholbech/foofest",
-  "logo": "https://kea-alt-del.dk/2020/front/foobar.png",
+  "logo": "https://kea-alt-del.dk/2024/front/foobar.png",
   "keywords": ["node", "express", "static"]
 }

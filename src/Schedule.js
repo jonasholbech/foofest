@@ -1,4 +1,3 @@
-//var faker = require("faker");
 const bands = require("./static/bands.json");
 const { shuffle } = require("./util/shuffle");
 const { numberToTime } = require("./util/numberToTime");

@@ -7,4 +7,5 @@ function shuffle(array) {
     array[j] = temp;
   }
 }
+
 module.exports = { shuffle };

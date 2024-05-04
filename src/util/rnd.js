@@ -7,5 +7,4 @@ function rndBetweenEven(min, max) {
   const number = Math.floor((Math.random() * max) / 2) * 2 + min;
   return number;
 }
-
 module.exports = { rndBetween, rndBetweenEven };

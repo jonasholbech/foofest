@@ -30,4 +30,5 @@ class Festival {
     setTimeout(this.tick.bind(this), this.eventFrequency * 1000);
   }
 }
+
 module.exports = { Festival };
