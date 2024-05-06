@@ -2,9 +2,11 @@
 
 ## Overview
 
-Your task is to build two systems for our festival called FooFest.
+Your task is to build a site for our festival called FooFest.
 
 For that purpose, we have a lot of data, but more on that later.
+
+The site is one big site, but you can think of it as two sub-systems.
 
 ## System 1, the booking site
 
