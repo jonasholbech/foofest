@@ -1,10 +1,10 @@
 # Front End Design Elective - Spring 2024
 
-## System 1, the booking site, requirements
+## System 1, the booking sub-system, requirements
 
-The following are the minimal requirements for the booking site.
+The following are the minimal requirements for the booking sub system.
 
-- The site should be a "form flow" where the user can buy multiple tickets.
+- The sub-system should be a "form flow" where the user can buy multiple tickets.
 
   - ticket prizes
     - Regular 799,-
@@ -21,7 +21,7 @@ The following are the minimal requirements for the booking site.
 - The flow should contain everything you would expect from an online shopping experience, like personal info, checkout, etc.
 - We need the personal info for the owner of each ticket.
 - Content from the form (except payment info) should be stored in a database. That database is not provided by the API
-- The site itself will be the landing page of our festival, so make it awesome. We do not yet have a logo or a visual identity, go crazy
+- The sub-system itself will be the landing page of our festival, so make it awesome. We do not yet have a logo or a visual identity, go crazy
 
 You are free, and encouraged, to add other features.
 
