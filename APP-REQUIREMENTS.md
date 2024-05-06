@@ -1,8 +1,8 @@
 # Front End Design Elective - Spring 2024
 
-## System 2, the festival app, requirements
+## System 2, the festival sub-system, requirements
 
-The following are the minimal requirements for the festival app.
+The following are the minimal requirements for the festival sub-system.
 
 You are free to add other features to help the guests explore the music, like browsing by genre, searching, adding to favourites etc
 
